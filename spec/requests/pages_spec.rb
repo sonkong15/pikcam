@@ -5,7 +5,7 @@ describe "Pages" do
 	describe "Home" do
 		it "should have h1 home" do
 			visit root_path
-			page.should have_selector("h1", text: "Homes" )
+			page.should have_selector("h1", text: "Home" )
 			
 		end
 		
