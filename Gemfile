@@ -18,6 +18,7 @@ group :assets do
   # gem 'therubyracer'
   gem 'bootstrap-sass'
   gem 'bcrypt-ruby'
+  gem 'simple_form'
 
   gem 'uglifier', '>= 1.0.3'
 end

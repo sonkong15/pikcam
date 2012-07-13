@@ -1,9 +1,27 @@
 <%= provide(:title, "Sign up")%>
 <div class= "graybox" >
+	
 
 		<div class="home-box thumbnail"><h1>sign up</h1>
+			
+				<div class="signup">
+	<%= simple_form_for(@user, :html => { :class => '' }) do |f| %>
+	<%= f.input :name,:required => false, :input_html => { :class => "span3 font" } %>
+	<%= f.input :email, :required => false,  :input_html => { :class => "span3 font" } %>
+	<%= f.input :password,:required => false, :input_html => { :class => "span3 font" } %>
+	<%= f.input :password_confirmation,:required => false, :input_html => { :class => "span3" }  %>
+	<%= f.submit "create my account", class: "btn btn-large btn-inverse " %>
 	
+
+	
+    
+		 <%end %>
+		 </div>
+		
+
+
 	</div>
+
 
 </div>
 <p>Find me in app/views/users/new.html.erb</p>
