@@ -30,13 +30,18 @@ font-size: 20px;}
 	width:100%;
 }
 .home-box{
+	background-color: #999999;
+	margin: 0px 0px 40px 25%;
+	height:400px;
+	width:930px;
+	padding: 0px 0px 0px 0px;
+}
+.signup-box{
 	background-color: #fff;
 	margin: 0px 0px 40px 25%;
 	height:400px;
-	width:900px;
-	
-	
-	
+	width:980px;
+	padding: 0px 0px 0px 0px;	
 }
 .debug_dump {
 	clear: both;
@@ -47,8 +52,20 @@ font-size: 20px;}
 }
 
 .signup{
-	margin: 20px 0px 40px 10%;
+	margin: 20px 0px 0px 5%;
+
 }
 input, textarea, select .uneditable-input{
 	font-size: 30px;
+}
+.signup-guy{
+	float: right;
+	padding: 0px 0px 0px 0px;
+	height: 400px;
+	
+}
+.signup-h1{
+	background-color: #00ff99;
+	position: relative;
+	width: 759px
 }
