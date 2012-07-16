@@ -12,7 +12,11 @@
 
 class User < ActiveRecord::Base
 	attr_accessible :name, :email, :bio, :password, :password_confirmation
-	has_secure_password
+	
+	acts_as_authentic do |c|
+    c.act_like_restful_authentication = true
+	end
+
 
 	before_save { |user| user.email = email.downcase }
 

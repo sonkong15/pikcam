@@ -19,6 +19,7 @@ group :assets do
   gem 'bootstrap-sass'
   gem 'bcrypt-ruby'
   gem 'simple_form'
+  gem 'authlogic'
 
   gem 'uglifier', '>= 1.0.3'
 end

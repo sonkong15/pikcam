@@ -1,0 +1,9 @@
+<div class= " login-box thumbnail">
+<h1>login</h1>
+<%= simple_form_for(@user_session,:as => :user_session, :url => { :action => "create" }, :html => { :class => 'form-horizontal' }) do |f| %>
+  <%= f.input :email, :placeholder => 'user@domain.com' %>
+  <%= f.input :password %>
+  <%= f.input :remember_me, :as => :boolean %>
+  <%= f.button :submit %>
+<% end %>
+</div>

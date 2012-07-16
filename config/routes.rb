@@ -1,5 +1,12 @@
 TheBrands::Application.routes.draw do
-  resources :users
+  
+  resources :users 
+  resources :user_sessions, only: [:new, :create, :destroy]
+  match 'login', to: 'user_sessions#new'
+  match 'loginout', to: 'user_sessions#destroy'
+
+  
+
   match "/signup", to: "users#new"
 
   match '/about', to: "Pages#about"
