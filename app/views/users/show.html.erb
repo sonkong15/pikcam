@@ -1,4 +1,26 @@
-<div>
-	<%=h @user.name %> 
-	<%=h @user.email %> 
-</div>
+<%= provide(:title, @user.name.capitalize)%>
+<div class= "profile-box">
+	<div class="">
+		<ul class="clirle-nav ">
+			<li><%= link_to "Photos","#", :class => "clirle-l  ex1" %></li>
+			<li><%= link_to "Albums","#", :class  => "clirle-l ex1" %></li>
+			<li><%= link_to "Friends","#", :class => "clirle-l ex1" %></li>
+			<li><%= link_to "Wall","#", :class => "clirle-l ex1" %></li>
+
+
+		</ul>
+
+	</div>
+	<h1><%= @user.name.capitalize %>'s Photos </h1> 
+	
+	<h3>Joined <%= l @user.created_at, :format => :long %></h3>
+	
+	</div>
+	<div class="profile-font"> 
+		<b>facebook-link:</b><br><br>
+		<b>website-link:</b>
+
+	</div>
+	<div class="black-line"></div>
+	<div class= "bio-box">
+	<h3>Bio:</h3><p><%= @user.bio %></div>

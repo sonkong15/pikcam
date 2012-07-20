@@ -17,9 +17,11 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
   gem 'bootstrap-sass'
-  gem 'bcrypt-ruby'
   gem 'simple_form'
   gem 'authlogic'
+  gem 'client_side_validations'
+  gem 'client_side_validations-simple_form'
+
 
   gem 'uglifier', '>= 1.0.3'
 end

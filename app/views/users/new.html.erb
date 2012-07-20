@@ -7,11 +7,13 @@
 			<div class="signup-h1"><h1 style= "padding-left: 45%;">Sign up</h1></div>
 			
 				<div class="signup">
-	<%= simple_form_for(@user, :html => { :class => '' }) do |f| %>
+	<%= simple_form_for @user, :validate => true  do |f| %>
 	<%= f.input :name,:required => false, :input_html => { :class => "span3 font" } %>
-	<%= f.input :email, :required => false,  :input_html => { :class => "span3 font" } %>
-	<%= f.input :password,:required => false, :input_html => { :class => "span3 font" } %>
-	<%= f.input :password_confirmation,:required => false, :input_html => { :class => "span3" }  %>
+	<%= f.input :email,:required => false,:placeholder => 'user@domain.com',
+	 :input_html => { :class => "span3 font" } %>
+	<%= f.input :password,:validate => false, :input_html => { :class => "span3 font" } %>
+	<%= f.input :password_confirmation,:validate => false, :input_html => { :class => "span3" }  %>
+	
 	<%= f.submit "create my account", class: "btn btn-large btn-inverse " %>
 	
 
