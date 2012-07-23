@@ -25,15 +25,14 @@ font-size: 20px;}
 	padding: 0px 0px 0px 0px;
 }
 .graybox{
-	padding-top: 90px;
-	background-color: #999999;
 	width:100%;
+
 }
 .home-box{
-	background-color: #999999;
-	margin: 0px 0px 40px 25%;
-	height:400px;
-	width:930px;
+	background-color: #EDF5F4;
+	margin: 5px 0px 5px 5px;
+	height:250px;
+	width:330px;
 	padding: 0px 0px 0px 0px;
 }
 .signup-box{
@@ -66,7 +65,7 @@ label, input, textarea, select{
 	
 }
 .signup-h1{
-	background-color: #00ff99;
+	background-color: #749BC5;
 	position: relative;
 	width: 759px
 }
@@ -92,18 +91,16 @@ label, input, textarea, select{
 }
 .help-pop{
 	margin: 10px 0px 0px 0px;
-	background-color: #00ff99;
+	background-color: rgba(15, 89, 245, 0.75);
 	position: relative;
 	width: 850px
 }
 .footer{
 	background-color: #DDD;
-	padding: 10px 0px 0px 20px;
+	padding: 10px 0px 0px 0px;
 	height: 40px;
 	width: 100%;
-	position:absolute;
-  	bottom:0;
-  	width:100%;
+  	
 
 }
 .bio-box{
@@ -142,8 +139,8 @@ margin: 0px 0px 0px 20px;
 	margin: 15px 0px 0px 20px;
 }
 .profile-font{
-	background-color: #D3D3D3;
-	width: 330px;
+	background-color: #EE6F6F;
+	width: 350px;
 	margin: 110px 0px 0px 20px;
 	font-size: 14px;
 	-moz-box-shadow: 5px 5px 5px #E9CECE;
@@ -205,4 +202,14 @@ background-color: #DDD;
 	height: 5px;
 	width: 600px;
 	margin: 2px 0px 5px 0px;
+}
+a{
+	color: #DDD;
+}
+a:hover{
+	color: #7366D1;
+}
+.graybox1{
+	background-color: #d9d7db;
+	padding: 30px 0px 0px 0px;
 }

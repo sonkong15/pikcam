@@ -11,7 +11,8 @@
 #
 
 class User < ActiveRecord::Base
-	attr_accessible :name, :email, :bio, :password, :password_confirmation
+	attr_accessible :name, :email, :bio, :password, :password_confirmation, :facebook_link,
+	:website_link
 	
 	acts_as_authentic do |c|
     c.act_like_restful_authentication = true
@@ -29,6 +30,7 @@ class User < ActiveRecord::Base
 	validates :email, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false}
 	validates :password, presence: true, length: { minimum: 6 }
 	validates :password_confirmation, presence: true
+	validates :bio, length: {maximum: 1000}
 
 	
 

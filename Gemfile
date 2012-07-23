@@ -19,8 +19,10 @@ group :assets do
   gem 'bootstrap-sass'
   gem 'simple_form'
   gem 'authlogic'
+  gem "cancan"
   gem 'client_side_validations'
   gem 'client_side_validations-simple_form'
+  gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 
   gem 'uglifier', '>= 1.0.3'

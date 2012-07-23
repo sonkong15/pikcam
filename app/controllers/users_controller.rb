@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-  
+ 
+  def show
+    @user = User.find(params[:id])
+  end
 
   def new
   	@user = User.new
@@ -15,12 +18,11 @@ class UsersController < ApplicationController
   	end
   end
     
-    def show
-    @user = User.find(params[:id])
-    end
+    
   
     def edit
       @user = User.find(params[:id])
+      authorize! :update, @user
     end
     
     def update
@@ -33,7 +35,5 @@ class UsersController < ApplicationController
         render 'edit'
       end
     end
-
-  	
   
 end

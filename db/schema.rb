@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120715051532) do
+ActiveRecord::Schema.define(:version => 20120722024154) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(:version => 20120715051532) do
     t.string   "password_salt"
     t.string   "perishable_token"
     t.string   "persistence_token"
+    t.boolean  "admin"
+    t.string   "website_link"
+    t.string   "facebook_link"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

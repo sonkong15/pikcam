@@ -17,8 +17,8 @@
 	
 	</div>
 	<div class="profile-font"> 
-		<b>facebook-link:</b><br><br>
-		<b>website-link:</b>
+		<b>facebook link: <a href="<%=@user.facebook_link%>"><%=@user.facebook_link%></a></b><br><br>
+		<b>website link: <%= link_to @user.website_link, @user.website_link %></b>
 
 	</div>
 	<div class="black-line"></div>
