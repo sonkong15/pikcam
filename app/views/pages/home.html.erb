@@ -4,6 +4,11 @@
 
 		<div class="home-box thumbnail"><h1 class= "center">Home</h1>
 			<p>hey</p>
+			<% @user.each do |user| %>
+			<p>
+			<%= link_to user.name , user %>
+		    </p>
+			<% end %>
 	
 	</div>
 

@@ -1,26 +1,52 @@
 <%= provide(:title, @user.name.capitalize)%>
-<div class= "profile-box">
-	<div class="">
+<div class="profile">
+	
+	<div class= "profile-box">
 		<ul class="clirle-nav ">
 			<li><%= link_to "Photos","#", :class => "clirle-l  ex1" %></li>
 			<li><%= link_to "Albums","#", :class  => "clirle-l ex1" %></li>
 			<li><%= link_to "Friends","#", :class => "clirle-l ex1" %></li>
 			<li><%= link_to "Wall","#", :class => "clirle-l ex1" %></li>
-
-
 		</ul>
 
-	</div>
-	<h1><%= @user.name.capitalize %>'s Photos </h1> 
 	
-	<h3>Joined <%= l @user.created_at, :format => :long %></h3>
-	
-	</div>
-	<div class="profile-font"> 
-		<b>facebook link: <a href="<%=@user.facebook_link%>"><%=@user.facebook_link%></a></b><br><br>
-		<b>website link: <%= link_to @user.website_link, @user.website_link %></b>
+		<h1>
+			<%= @user.name.capitalize %>'s Photos 
+		</h1> 
+		<p>
 
+		</p>
+		
+	
+		<% if @user.avatar_file_name.blank? %>
+
+		<%= image_tag "profile-pic.jpg", :class => "profile-pic" %>
+
+		<% else %>
+		
+		<%= image_tag @user.avatar.url(:small), :class => "profile-pic" %>
+
+		<% end %>
+		
+		<h4>
+			Joined <%= l @user.created_at, :format => :long %>
+		</h4>
+	
+	
+		<div class="profile-font"> 
+		 <b>facebook link: <a href="<%=@user.facebook_link %>" target="_blank"><%=@user.facebook_link%></a></b><br><br>
+		 <b>website link: <a href="<%= @user.website_link %>" target="_blank"><%=@user.website_link %></a></b>
+
+		</div>
+		
+		<div class="black-line">
+		</div>
+		
+		<div class= "bio-box">
+		 <h3>Bio:</h3>
+		 	<p>
+			 <%= @user.bio %>
+			</p>
+		</div>
 	</div>
-	<div class="black-line"></div>
-	<div class= "bio-box">
-	<h3>Bio:</h3><p><%= @user.bio %></div>
+</div>

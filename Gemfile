@@ -22,7 +22,7 @@ group :assets do
   gem "cancan"
   gem 'client_side_validations'
   gem 'client_side_validations-simple_form'
-  gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+  gem "paperclip"
 
 
   gem 'uglifier', '>= 1.0.3'

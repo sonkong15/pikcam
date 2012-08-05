@@ -3,9 +3,15 @@
 	<div class="edit-page">
 	 <h2> Name & Email </h2>
 	 <div class="edit-line"></div>
-	 <%= simple_form_for(@user, :html => { :class => 'form-horizontal' }) do |f| %> 
-		  <%= f.input :name, :required => false, :input_html => { :class => "span3 font" } %>
+
+	    <%= simple_form_for @user, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+
+		  <%= f.input :name, :required => false,:disabled => true, :input_html => { :class => "span3 font" } %>
 		  <%= f.input :email, :required => false, :input_html => { :class => "span4 font" } %>
+		  <div class="avatar">
+
+		  <%= f.input :avatar, :as => :file %>
+		  </div>
 		  <h2> About Me </h2>
 		  <div class="about-line"></div>
 		  <%= f.input :bio, :label => 'Bio', :input_html => { :rows => 10, :class => "span4 font" } %>
@@ -15,11 +21,13 @@
 		  <%= f.input :facebook_link, :label => 'facebook link', :input_html => { :class => "span4 font" } %>
 		  <%= f.input :website_link, :label => 'website Links', :input_html => { :class => "span4 font" } %>
 		  <div class="about-line"></div>
-		  <%= f.input :password,:validate => false, :input_html => { :class => "span3 font" } %>
-		  <%= f.input :password_confirmation,:validate => false, :input_html => { :class => "span3" }%>
-		  <%= f.submit "Save changes", class: "btn btn-large btn-inverse " %>
+		  <%= f.input :password, :input_html => { :class => "span3 font" } %>
+		  <%= f.input :password_confirmation, :input_html => { :class => "span3" }%>
+	 	          
+	 	  	<%= f.submit "Save changes", class: "btn btn-large btn-inverse " %>
 
-		<% end %>
+	    <% end %>
+		
 	</div>
 	
 		

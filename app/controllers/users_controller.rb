@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def new
-  	@user = User.new
+  	@user = User.new 
   end
   
   def create
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     
   
     def edit
-      @user = User.find(params[:id])
+      @user = User.find(params[:id]) 
       authorize! :update, @user
     end
     
@@ -33,6 +33,7 @@ class UsersController < ApplicationController
 
       else
         render 'edit'
+
       end
     end
   

@@ -11,13 +11,14 @@
 #
 
 class User < ActiveRecord::Base
-	attr_accessible :name, :email, :bio, :password, :password_confirmation, :facebook_link,
-	:website_link
 	
+	attr_accessible :name, :email, :bio, :password, :password_confirmation, :facebook_link,
+	:website_link,:avatar
+
 	acts_as_authentic do |c|
     c.act_like_restful_authentication = true
 	end
-
+    has_attached_file :avatar, :styles =>{ :small => "150x150>"}
 
 	before_save { |user| user.email = email.downcase }
 

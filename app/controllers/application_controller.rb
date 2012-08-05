@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  rescue_from CanCan::AccessDenied, :with => :not_allow
 
 
   helper_method :current_user_session, :current_user
@@ -7,6 +8,11 @@ class ApplicationController < ActionController::Base
 
 
   private
+
+  def not_allow
+    redirect_to root_path, :notice => "Not Allow"
+  end
+
     def current_user_session
       return @current_user_session if defined?(@current_user_session)
       @current_user_session = UserSession.find
