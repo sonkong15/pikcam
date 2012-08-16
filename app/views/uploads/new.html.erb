@@ -1,0 +1,37 @@
+
+
+<div >
+  <%= form_for @upload, :html => { :class => "upload-new", :multipart => true } do |up| %>
+  <div class="category">
+    <h3>Select one or more Categories</h3>
+
+  <% Category.all.each do |cat| %>  
+  <%= check_box_tag :category_ids,  
+                    cat.id,  
+                    @upload.categories.include?(cat),  
+                    :name => 'upload[category_ids][]' %>  
+    
+  
+   <b><%= cat.name %></b> 
+
+<% end %>  
+  </div>
+  <p>
+  <%= up.label :caption %>
+  </p>
+  <p>
+  <%= up.text_field :title  %>
+  </p>
+  <p>
+  <%= up.file_field :picture %>
+  </p><br>
+
+  <p>
+  <%= up.submit "Upload Now!", class: "btn btn-large btn-inverse " %>
+  <p>
+    By clicking the Upload button, you indicate that you have read and agree to the Pikcam Terms of Use and Privacy Policy.
+  </p>
+  
+  <% end %>
+</div>
+ 

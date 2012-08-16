@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 	
 	def home
+	 @upload = Upload.new
 	 @user = User.all
 	end
 

@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
 	
 	attr_accessible :name, :email, :bio, :password, :password_confirmation, :facebook_link,
 	:website_link,:avatar
+	has_many :uploads
+
 
 	acts_as_authentic do |c|
     c.act_like_restful_authentication = true

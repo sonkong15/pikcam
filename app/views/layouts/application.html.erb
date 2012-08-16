@@ -14,13 +14,14 @@
 	<ul class="nave pull-right">
 		<li><%= link_to "Home", root_path %></li>
 		<li><%= link_to "About", about_path %></li>
-		<li><%= link_to "Explore", about_path %></li>
+		<li><%= link_to "Explore", categories_path %></li>
 		
 		<% if current_user %>
 			<li id="fat-menu" class="dropdown">
 			<a href="#" class="dropdown" data-toggle="dropdown">Account<b class="caret"></b></a>
 			<ul class= "dropdown-menu">
-				<li><%= link_to "profile", current_user %></li>
+				<li><%= link_to "Profile", current_user %></li>
+				<li><%= link_to "Upload Pic", new_upload_url %></li>
 				<li><%= link_to "settings", edit_user_path(current_user) %></li>
 				<li><%= link_to "Help", help_path %></li>
 
@@ -46,12 +47,15 @@
 
 	
 
-<%= debug(params) if Rails.env.development? %>
+
 
 </div>
+
 <footer class= "footer">
 	<p> &#169; The brands </p>
 </footer>
+<%= debug(params) if Rails.env.development? %>
+
 
 </body>
 </html>

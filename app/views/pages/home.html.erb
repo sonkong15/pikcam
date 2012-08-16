@@ -1,15 +1,76 @@
+<script>  
+$(function ()  
+{ $("#example").popover();
+
+});  
+</script>
 <div class= "graybox" >
-	<%= image_tag "polaroy.png" %>
+  <div class="ad-home">
 
+  </div>
 
+  <div class="files"> 
+    <%= form_for @upload, :html => { :class => "upload home-up", :multipart => true } do |f| %>
+    <div class="category-1">
+	     <h3>Select A Category</h3>
+        <% Category.all.each do |cat| %>  
+        <%= check_box_tag :category_ids,  
+                    cat.id,  
+                    @upload.categories.include?(cat),  
+                    :name => 'upload[category_ids][]' %>  
+    
+      <b><%= cat.name %></b> 
+      <% end %>  
+    </div>
+    <%= f.label :caption %>
+    <%= f.text_field :title  %><br>
+    <%= f.file_field :picture, :html => {:class => "ups"} %><br>
+    <p>
+  	or upload with Url 
+  	
+    </p>
+  
+   <%= f.submit "Upload Now!", class: "btn btn-large btn-inverse " %><br><br>
+    <p style="width: 400px;">
+  	By clicking the Upload button, you indicate that you have read and agree to the Pikcam Terms of Use and Privacy Policy.
+    </p>
+    <% end %>
+  </div>
+  <div class="top-share">
+    <h2>Get your friends addicted</h2>
+    <!-- Place this tag where you want the badge to render. -->
+<div class="g-plus" data-height="69" data-href="//plus.google.com/103812452465040044420?rel=publisher"></div>
+
+<!-- Place this tag after the last badge tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+  </div>
+  <div class= "top-photo">
+  </div>
+
+	<div class="home-category">
 		<div class="home-box thumbnail"><h1 class= "center">Home</h1>
 			<p>hey</p>
-			<% @user.each do |user| %>
+			<% for user in @user %>
 			<p>
 			<%= link_to user.name , user %>
 		    </p>
 			<% end %>
 	
-	</div>
+	  </div>
+  </div>
+  
+  <div class="ad-bottom">
+  
 
+  <div class="ad-bottom-home">
+    
+  </div>
+  </div>
 </div>
+

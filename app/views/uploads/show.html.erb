@@ -1,0 +1,27 @@
+<div class="browse">
+</div>
+<div class="upload-bacgraound">
+<div class="upload-side">
+	<h2>Share A Pik</h2>
+	<p>Direct Link for Layouts</p>
+	 <textarea rows="1" cols="2"><%=@upload.picture.url %></textarea>
+	 <p>HTML for Websites</p> 
+	 <textarea rows="2" cols="2"><a href="<%= upload_url %>"><img src="<%=@upload.picture.url %>"  alt="Uploaded on pikcam" /></a> </textarea>
+	 <p>URL for E-Mail & IM</p>
+	 <textarea rows="1" cols="2"> <%= upload_url %>  </textarea>
+	 
+</div>
+<div class="ad-upload">
+</div>
+<div class="upload-show">
+	<h3 style="color: #DDD;"><%=  @upload.title %></h3>
+<%= image_tag @upload.picture.url(:large) %>
+</div>
+<div class="share-box">
+</div>
+<div class="for-comment">
+
+</div>
+
+</div>
+

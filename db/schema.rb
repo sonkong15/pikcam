@@ -11,7 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731041142) do
+ActiveRecord::Schema.define(:version => 20120806221851) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "categorizations", :force => true do |t|
+    t.integer  "upload_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "uploads", :force => true do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.string   "picture_file_type"
+    t.integer  "picture_file_size"
+    t.string   "picture_content_type"
+    t.string   "picture_file_name"
+    t.datetime "picture_updated_at"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
