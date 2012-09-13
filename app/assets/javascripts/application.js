@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
+//= require chosen-jquery
+//= require bootstrap-dropdown
 //= require rails.validations
 //= require rails.validations.simple_form
+//= require jquery_nivo_slider_pack
+//= jquery.tokeninput
 //= require_tree .
 

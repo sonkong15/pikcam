@@ -1,0 +1,16 @@
+
+ $(document).ready(function(){
+ 	$(".pagination a").css("color", "#333");
+	$(".pagination a").hover( function(){
+	  $(this).css("color", "#7366D1");
+	  	},function(){
+	  	$(this).css("color", "#333");
+	  });
+$('#slider').nivoSlider({
+    	effect: "sliceDown",
+    	slices: 15,
+    	pauseTime: 4000,
+    	animSpeed: 1000
+    });
+});
+ 

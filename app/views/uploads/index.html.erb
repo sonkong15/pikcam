@@ -1,0 +1,15 @@
+
+<div class="category-title">
+<h1>Most Recent</h1>
+</div>
+<div class="category-div">
+
+<% @uploads.each do |up|  %>
+<%= link_to image_tag(up.picture.url(:thumb)), up, { :class => "img_index"} %>
+
+<% end %>
+<%= paginate @uploads %>
+</div>
+ <div class="cat-showad">
+    
+  </div>

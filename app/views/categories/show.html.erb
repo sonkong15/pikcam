@@ -1,0 +1,15 @@
+
+<div class="category-title">
+<h1><%= @category.name %></h1>
+</div>
+<div class="category-div">
+
+<% @upload.map do |up|  %>
+<a  class="href-cate" title ="<%= up.title %>" href="http://127.0.0.1:3000/uploads/<%= up.id %>"><img src="<%= up.picture.url(:thumb) %>"></a>
+
+<% end %>
+<%= paginate @upload %>
+</div>
+ <div class="cat-showad">
+    
+  </div>

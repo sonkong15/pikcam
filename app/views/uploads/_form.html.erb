@@ -1,0 +1,23 @@
+<div class="files"> 
+    <%= form_for @upload, :html => { :class => "upload home-up", :multipart => true } do |f| %>
+    <% @upload.errors.full_messages.each do |msg| %>
+      <p class="upload-errors"><%= msg %></p>
+    <% end %>
+    <%= f.label :caption %>
+    <%= f.text_field :title  %>
+    <%= f.file_field :picture, :html => {:class => "ups"} %>
+    <div class="home-private">
+    <%= f.check_box :private, :default => false %>
+    <%= f.label :For_private, :class =>"label-private" %>
+    <p>Only you and who every you share the link with can see the image</p>
+   </div>
+    <h3>pick only two Categories</h3>
+      <div>
+       <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {}, {multiple: true} %>
+       </div>
+   <%= f.submit "Upload Now!", class: "btn btn-large btn-inverse " %>
+    <p style="width: 400px; margin-top: 5px;">
+    By clicking the Upload button, you indicate that you have read and agree to the Pikcam <a href="/terms">Terms</a>  of Use and Privacy Policy.
+    </p>
+    <% end %>
+  </div>

@@ -2,12 +2,19 @@
 <div class="profile">
 	
 	<div class= "profile-box">
-		<ul class="clirle-nav ">
-			<li><%= link_to "Photos","#", :class => "clirle-l  ex1" %></li>
-			<li><%= link_to "Wall","#", :class => "clirle-l ex1" %></li>
-		</ul>
+		<div class="photo-count"><p style="font-size: 25px; padding: 5px 0px 0px 25px;"><%= @user.uploads.count %></p>
+			<p style="font-size: 20px; padding: 0px 0px 0px 10px;">Photos</p>
+			 
+		</div>
+		<div class="user_pic">
+		<% @user_uploads.each do |up| %>
+			 <%= link_to image_tag(up.picture.url(:thumb)), up , {:class => "img_user"}, {:title => " #{up.title} "} %>
+			 <% end %>
+			 <div class="user-paginate">
+			 <%= paginate @user_uploads, :outer_window => 3 %>
+			 </div>
+		</div>
 
-	
 		<h1>
 			<%= @user.name.capitalize %>'s Photos 
 		</h1> 
@@ -46,5 +53,8 @@
 			 <%= @user.bio %>
 			</p>
 		</div>
+			<div class="user-showad">
+    
+ 		 </div>
 	</div>
 </div>

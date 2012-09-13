@@ -23,9 +23,10 @@ group :assets do
   gem 'client_side_validations'
   gem 'client_side_validations-simple_form'
   gem "paperclip"
-
-
+  gem 'kaminari'
+  gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
   gem 'uglifier', '>= 1.0.3'
+  gem "friendly_id", "~> 4.0.1"
 end
 
 gem 'jquery-rails'
@@ -44,6 +45,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'rack-mini-profiler'
 
 gem "rspec-rails" , :group => [:test, :development]
 group :test do

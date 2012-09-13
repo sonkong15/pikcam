@@ -4,13 +4,13 @@ class ApplicationController < ActionController::Base
 
 
   helper_method :current_user_session, :current_user
-
+  
 
 
   private
 
   def not_allow
-    redirect_to root_path, :notice => "Not Allow"
+    redirect_to r_u_lost_path, :notice => "sorry wrong URL"
   end
 
     def current_user_session

@@ -7,9 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= render "layouts/facebooklike" %>
+        
+    
 	<header class= "navber navber-fixed-top" >
 
 		<div class="navbar-inner">
+			<div class="containe">
 			<%= link_to image_tag("pikcam-logo.png"), root_path %>
 	<ul class="nave pull-right">
 		<li><%= link_to "Home", root_path %></li>
@@ -34,7 +38,8 @@
 		<li><%= link_to "Help", help_path %></li>
 		<% end %>
 
-	</ul>
+		</ul>
+	</div>
 </div>
 	</header>
 
@@ -50,10 +55,17 @@
 
 
 </div>
-
 <footer class= "footer">
-	<p> &#169; The brands </p>
+	<p class="brands"> &#169; The brands </p>
+	<ul class="nve pull-lef">
+		<li><%= link_to "Home", root_path %></li>
+		<li><%= link_to "Terms", terms_path %></li>
+		<li><%= link_to "Privacy Policy", "/privacy" %></li>
+		<li><%= link_to "Contact", about_path %></li>
+	</ul>
+	
 </footer>
+
 <%= debug(params) if Rails.env.development? %>
 
 

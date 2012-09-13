@@ -9,33 +9,7 @@ $(function ()
 
   </div>
 
-  <div class="files"> 
-    <%= form_for @upload, :html => { :class => "upload home-up", :multipart => true } do |f| %>
-    <div class="category-1">
-	     <h3>Select A Category</h3>
-        <% Category.all.each do |cat| %>  
-        <%= check_box_tag :category_ids,  
-                    cat.id,  
-                    @upload.categories.include?(cat),  
-                    :name => 'upload[category_ids][]' %>  
-    
-      <b><%= cat.name %></b> 
-      <% end %>  
-    </div>
-    <%= f.label :caption %>
-    <%= f.text_field :title  %><br>
-    <%= f.file_field :picture, :html => {:class => "ups"} %><br>
-    <p>
-  	or upload with Url 
-  	
-    </p>
-  
-   <%= f.submit "Upload Now!", class: "btn btn-large btn-inverse " %><br><br>
-    <p style="width: 400px;">
-  	By clicking the Upload button, you indicate that you have read and agree to the Pikcam Terms of Use and Privacy Policy.
-    </p>
-    <% end %>
-  </div>
+  <%= render "uploads/form" %>
   <div class="top-share">
     <h2>Get your friends addicted</h2>
     <!-- Place this tag where you want the badge to render. -->
@@ -49,20 +23,32 @@ $(function ()
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
 </script>
+<div class="fb-like" data-href="http://www.facebook.com/pikcam" data-send="true" data-width="300" data-show-faces="true"></div>
   </div>
   <div class= "top-photo">
   </div>
 
 	<div class="home-category">
-		<div class="home-box thumbnail"><h1 class= "center">Home</h1>
-			<p>hey</p>
-			<% for user in @user %>
-			<p>
-			<%= link_to user.name , user %>
-		    </p>
+    <div class="top-line"></div>
+			<p class="top-5"><b>Random 5 categories</b></p>
+
+			<%  Category.home_random.each do |user| %>
+			
+        <div class="home-box thumbnail">
+			<H2 class="cat-name"><%= link_to user.name , user %></H2>
+		    </div>
 			<% end %>
+      <div class="top-photos">
+        <h3>Recent Images</h3>
+        <% @uploads.each do |uploads| %>
+        <div class="uploads-border">
+        <%= link_to image_tag(uploads.picture.url(:thumb)), uploads %>
+        </div>
+        <% end %>
+
+      </div>
 	
-	  </div>
+	  
   </div>
   
   <div class="ad-bottom">
@@ -71,6 +57,13 @@ $(function ()
   <div class="ad-bottom-home">
     
   </div>
+  
   </div>
 </div>
 
+<div class="addthis_toolbox addthis_default_style">
+     <a class="addthis_button_google_plusone"></a> 
+     <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+</div> 
+ 
+ 

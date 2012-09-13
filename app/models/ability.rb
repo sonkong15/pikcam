@@ -2,20 +2,26 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user||=User.new
-
-     
-         can :manage, User do |u|
-            u.id == user.id
+    user ||= User.new
+    if user.admin?
+    can :manage, :all
+    else
+     can :read, :all
+     can :manage, Upload do |upload|
+        upload.try(:user) == user
         end
-        user||=User.new
+        can :manage, User do |us|
+        us.id == user.id 
+      end
+    end
+
        
          
       
     #
     # The first argument to `can` is the action you are giving the user permission to do.
     # If you pass :manage it will apply to every action. Other common actions here are
-    # :read, :create, :update and :destroy.
+    # :read, :create, :update and :destroy.can :manage, User do |u|u.id == user.id
     #
     # The second argument is the resource the user can perform the action on. If you pass
     # :all it will apply to every resource. Otherwise pass a Ruby class of the resource.

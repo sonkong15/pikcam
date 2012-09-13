@@ -1,13 +1,15 @@
 TheBrands::Application.routes.draw do
   
   resources :users 
-  resources :uploads
+  resources :uploads 
   resources :categories 
 
 
   
   
   resources :user_sessions, only: [:new, :create, :destroy]
+  match "/r_u_lost", to: "Pages#lost_page"
+  match '/terms', to: 'Pages#terms'
   match 'login', to: 'user_sessions#new'
   match 'loginout', to: 'user_sessions#destroy'
 
@@ -16,6 +18,7 @@ TheBrands::Application.routes.draw do
   match '/about', to: "Pages#about"
   match '/help', to: "Pages#help"
   match '/contact', to: "Pages#contact"
+  match '/privacy', to: "Pages#privacy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

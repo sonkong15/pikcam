@@ -15,6 +15,10 @@ class User < ActiveRecord::Base
 	attr_accessible :name, :email, :bio, :password, :password_confirmation, :facebook_link,
 	:website_link,:avatar
 	has_many :uploads
+	has_many :comments
+	def role?(role)
+		user.id == current_user.id
+	end
 
 
 	acts_as_authentic do |c|
@@ -31,8 +35,8 @@ class User < ActiveRecord::Base
 
 	validates_presence_of(:email)
 	validates :email, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false}
-	validates :password, presence: true, length: { minimum: 6 }
-	validates :password_confirmation, presence: true
+	validates :password, presence: true, length: { minimum: 6 }, :on => :create
+	validates :password_confirmation, presence: true, :on => :create
 	validates :bio, length: {maximum: 1000}
 
 	

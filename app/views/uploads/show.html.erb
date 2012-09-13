@@ -1,27 +1,107 @@
-<div class="browse">
-</div>
 <div class="upload-bacgraound">
+	<div class="list-more">
+	<ul class="clirle-nav ">
+		
+			
+			<h2 class="browse-more " >Browse more piks</h2>
+		</ul>
+
+
+</div>
+<div class="show-container">
+<div class="up-ad"></div>
+<p class="p-title"><%=  @upload.title %></p>
+<div class="upload-show">
+
+<%= image_tag @upload.picture.url(:large), {:class => "displayed"} %>
+</div>
+<div class="side-bar">
+<div class="browse">
+	<% @uploads.each do |upload| %>
+<%= link_to image_tag(upload.picture.url(:thumb)), upload,{:class => "img_user"}, {:title => " #{upload.title} "}  %>
+<% end %>
+</div>
+
 <div class="upload-side">
 	<h2>Share A Pik</h2>
 	<p>Direct Link for Layouts</p>
-	 <textarea rows="1" cols="2"><%=@upload.picture.url %></textarea>
+	<input value="<%= upload_url %>" />
+	<p> Page url</p>
+	 <input value="http://127.0.0.1:3000<%=@upload.picture.url %>"/>
 	 <p>HTML for Websites</p> 
-	 <textarea rows="2" cols="2"><a href="<%= upload_url %>"><img src="<%=@upload.picture.url %>"  alt="Uploaded on pikcam" /></a> </textarea>
+	 <input value="<a href='<%= upload_url %>'><img src='http://127.0.0.1:3000<%=@upload.picture.url %>'  alt='Uploaded on pikcam' /></a>" />
 	 <p>URL for E-Mail & IM</p>
-	 <textarea rows="1" cols="2"> <%= upload_url %>  </textarea>
+	 <input  value="<%= upload_url %>"  />
 	 
 </div>
 <div class="ad-upload">
 </div>
-<div class="upload-show">
-	<h3 style="color: #DDD;"><%=  @upload.title %></h3>
-<%= image_tag @upload.picture.url(:large) %>
 </div>
+
 <div class="share-box">
+
+	<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_reddit"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
 </div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-502d791f3a21278e"></script>
+<!-- AddThis Button END -->
+
+<% if @upload.user.blank? %>
+<p class="user-name"> Upload By ANONYMOUS </p>
+	<% else %>
+ <p class="user-name"> Upload By <%=  link_to @upload.user.name.capitalize,  @upload.user %></p>
+ <% end %>
+ <p class="strftime"> <b>Upload at:</b> <%= @upload.created_at.strftime("%b %d %y") %></p>
+	
+<p class= "category-nam"> 
+	  <b>Categories:</b>
+	</p>
+
+	 <% @upload.categories.map do |map|  %>
+
+	<p class= "category-namd"> 
+ <%= link_to map.name, map %> |
+
+</p>
+<% end %>
+<div class="edit_link">
+		<% if can? :destroy, @upload %>
+  			<%= link_to "Edit", edit_upload_path(@upload) %>   
+		<% end %>
+		<% if can? :destroy, @upload %>
+    		<%= link_to "Destroy", @upload, :method => :delete, :confirm => "Are you sure you want to delete?" %> 
+    		<span><strong>Only you can see this</strong></span>
+  		<% end %>
+  		
+	</div>
+</div>
+
+
 <div class="for-comment">
-
+<div id="fb-root"></div>
+<script type="text/javascript">
+$(document).ready(function(){
+$("input").click(function() {
+   $(this).select();
+  }); 
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=357983834258531";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="<%= upload_url %>" data-num-posts="8" data-width="550"></div>
 </div>
-
 </div>
-
+<%= link_to("Previous Post", @upload.previous_upload) if @upload.previous_upload %>
+<%= link_to("Next Post", @upload.next_upload) if @upload.next_upload %>
+</div>
