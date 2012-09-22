@@ -1,7 +1,16 @@
 TheBrands::Application.routes.draw do
   
-  resources :users 
-  resources :uploads 
+  resources :users do
+     get ':id/page/:page', "user#show", :action => :show, :on => :collection
+  end
+  resources :uploads do
+    get 'page/:page', :action => :index, :on => :collection
+  member do
+    get "like"
+    get "hate"
+    end
+  end 
+  match "/top_pics", to: "uploads#top"
   resources :categories 
 
 

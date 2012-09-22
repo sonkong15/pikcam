@@ -13,7 +13,7 @@
 <p class="p-title"><%=  @upload.title %></p>
 <div class="upload-show">
 
-<%= image_tag @upload.picture.url(:large), {:class => "displayed"} %>
+<%= link_to image_tag(@upload.picture.url(:large)), @upload.picture.url, :class => "displayed" %>
 </div>
 <div class="side-bar">
 <div class="browse">
@@ -27,7 +27,7 @@
 	<p>Direct Link for Layouts</p>
 	<input value="<%= upload_url %>" />
 	<p> Page url</p>
-	 <input value="http://127.0.0.1:3000<%=@upload.picture.url %>"/>
+	 <input value="http://pikcam.com<%=@upload.picture.url %>"/>
 	 <p>HTML for Websites</p> 
 	 <input value="<a href='<%= upload_url %>'><img src='http://127.0.0.1:3000<%=@upload.picture.url %>'  alt='Uploaded on pikcam' /></a>" />
 	 <p>URL for E-Mail & IM</p>
@@ -54,9 +54,9 @@
 <!-- AddThis Button END -->
 
 <% if @upload.user.blank? %>
-<p class="user-name"> Upload By ANONYMOUS </p>
+<p class="user-name"> Upload By: ANONYMOUS </p>
 	<% else %>
- <p class="user-name"> Upload By <%=  link_to @upload.user.name.capitalize,  @upload.user %></p>
+ <p class="user-name"> Upload By: <%=  link_to @upload.user.name.capitalize,  @upload.user %></p>
  <% end %>
  <p class="strftime"> <b>Upload at:</b> <%= @upload.created_at.strftime("%b %d %y") %></p>
 	
@@ -82,7 +82,18 @@
   		
 	</div>
 </div>
-
+<div class="likehate">
+		<h2 class="like"><%= @upload.flaggings.where("flag = ?", "like").count %></h2>
+		<h2 class="hate"><%= @upload.flaggings.where("flag = ?", "hate").count %></h2>
+		<% if current_user %>
+		<ul>
+ 		<li class= "coolli"><%= toggle_like(@upload, current_user ) %></li>
+ 		<li class="coolli"><%= link_to "Hate", hate_upload_path(@upload), :remote => true %></li>
+ 		</ul>
+ 		<% else %>
+ 		<p> <b>To like or hate pics <%= link_to "sigin up", "/signup" %></b></p>
+		<% end %>
+	</div>
 
 <div class="for-comment">
 <div id="fb-root"></div>
@@ -104,4 +115,5 @@ $("input").click(function() {
 </div>
 <%= link_to("Previous Post", @upload.previous_upload) if @upload.previous_upload %>
 <%= link_to("Next Post", @upload.next_upload) if @upload.next_upload %>
+	
 </div>

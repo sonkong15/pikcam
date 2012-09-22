@@ -49,5 +49,32 @@ class UploadsController < ApplicationController
      	redirect_to current_user, notice: "Successfully destroyed Picture."
      	authorize! :destroy, @upload
   	end
+  	def like
+  		@upload = Upload.find(params[:id])
+  		if current_user.flagged?(@upload, :like)
+  			current_user.unflag(@upload, :like)
+  			redirect_to upload_url(@upload), :notice => " you unlike the picture "
+  			else
+  			current_user.flag(@upload, :like)
+  			redirect_to upload_url(@upload), :notice => " you like the picture "
 
+  		end
+  		
+  	end
+	def hate
+  		@upload = Upload.find(params[:id])
+  		if current_user.flagged?(@upload, :hate)
+  			current_user.unflag(@upload, :hate)
+  			redirect_to upload_url(@upload)	
+  			else
+  			current_user.flag(@upload, :hate) 
+  			redirect_to upload_url(@upload), :notice => " you hate the picture :( "
+
+  		end
+  	end
+
+  	def top
+  		@upload_top = Upload.joins(:flaggings).where("flag = ? ", "like").uniq.page(params[:page]).per(40)
+  		
+  	end
 end

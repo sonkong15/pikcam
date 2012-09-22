@@ -1,0 +1,17 @@
+<div id="user_pics" class="user_pic">
+		<% @user_uploads.each do |up| %>
+			 <%= link_to image_tag(up.picture.url(:thumb)), up , {:class => "img_user"}, {:title => " #{up.title} "} %>
+			 <% end %>
+			 <div class="user-paginate">
+			 <%= paginate @user_uploads, :outer_window => 3 %>
+			 </div>
+		</div>
+
+		<div id="like_pics" class="user_pic">
+			<% @user_flaggings.each do |user_flag| %>
+				<%=  link_to image_tag(user_flag.picture.url(:thumb)), user_flag  %>
+			<% end %>
+			<div class="user-paginate ">
+			 <%= paginate @user_flaggings, :outer_window => 3, :remote => true %>
+			 </div>
+		</div>

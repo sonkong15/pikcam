@@ -1,18 +1,31 @@
 <%= provide(:title, @user.name.capitalize)%>
 <div class="profile">
-	
+	<div class="cat-showad2">
+    
+  </div>
 	<div class= "profile-box">
-		<div class="photo-count"><p style="font-size: 25px; padding: 5px 0px 0px 25px;"><%= @user.uploads.count %></p>
-			<p style="font-size: 20px; padding: 0px 0px 0px 10px;">Photos</p>
-			 
+		<div class="photo-count">
+			<div class="ph">
+			<p class="photo_counter"><%= @user.uploads.count %></p>
+			<p class="photo_name">Photos</p>
+			</div>
+			<div class="l_h">
+		<p class="photo_counter"><%= @user.flaggings.count %></p>
+		<p class ="photo_name">Like/Hate</p>
 		</div>
-		<div class="user_pic">
-		<% @user_uploads.each do |up| %>
-			 <%= link_to image_tag(up.picture.url(:thumb)), up , {:class => "img_user"}, {:title => " #{up.title} "} %>
-			 <% end %>
-			 <div class="user-paginate">
-			 <%= paginate @user_uploads, :outer_window => 3 %>
-			 </div>
+		</div>
+		
+		<div class="my_nav">
+			<ul>
+				<li class="link_change"><%= link_to "MY Pics", "" %></li>
+				<li class="link_change"><%= link_to "MY Likes", "" %></li>
+
+			</ul>
+
+		</div>
+
+		<div class="ajax_pics">
+		<%= render "user_pics" %>
 		</div>
 
 		<h1>
@@ -57,4 +70,8 @@
     
  		 </div>
 	</div>
+	
+</div>
+<diV>
+	
 </div>

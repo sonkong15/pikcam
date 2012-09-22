@@ -25,6 +25,7 @@ group :assets do
   gem "paperclip"
   gem 'kaminari'
   gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
+  gem "aws-sdk", "~> 1.6.5"
   gem 'uglifier', '>= 1.0.3'
   gem "friendly_id", "~> 4.0.1"
 end

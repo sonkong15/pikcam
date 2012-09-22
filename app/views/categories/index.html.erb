@@ -19,7 +19,7 @@
 	<%  @categories.each do |category| %>
 			
         
-			<H2 class="cat-list "><%= link_to category.name, category,  :class => "ex3 cat" %> | </H2>
+			<H2 class="cat-list "><%= link_to category.name, category,  :class => "ex3 cat" %>  </H2>
 		    
 			<% end %>
 </div>
@@ -29,7 +29,7 @@
   </div>
   
 </div>
-<h2 class="recent-add"> Most recent upload</h2>
+<h2 class="recent-add"> Most Recent Upload</h2>
 <div class=""></div>
 <div class="most-recent">
   <% @uploads.each do |uploads| %>
@@ -37,4 +37,13 @@
   <% end %>
   </div>
  <a class="show"href="/uploads"><h2 class="show_more "> Show More</h2></a> 
+</div>
+<div>
+<h2 class="recent-add"> Most Like </h2>
+<div class="most-recent">
+<% @upload_top.each do |top| %>
+ <%= link_to image_tag(top.picture.url(:small)), top %>
+ <% end %>
+</div>
+ <a class="show"href="/top_pics"><h2 class="show_more "> Show More</h2></a>
 </div>

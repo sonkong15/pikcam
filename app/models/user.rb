@@ -13,13 +13,11 @@
 class User < ActiveRecord::Base
 	
 	attr_accessible :name, :email, :bio, :password, :password_confirmation, :facebook_link,
-	:website_link,:avatar
+	:website_link,:avatar, :admin
 	has_many :uploads
 	has_many :comments
-	def role?(role)
-		user.id == current_user.id
-	end
-
+	make_flagger 
+	
 
 	acts_as_authentic do |c|
     c.act_like_restful_authentication = true
@@ -38,7 +36,8 @@ class User < ActiveRecord::Base
 	validates :password, presence: true, length: { minimum: 6 }, :on => :create
 	validates :password_confirmation, presence: true, :on => :create
 	validates :bio, length: {maximum: 1000}
-
+extend FriendlyId
+		friendly_id :name
 	
 
 end
