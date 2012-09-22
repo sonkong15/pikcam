@@ -2,11 +2,15 @@
 <div class="category-title">
 <h1><%= @category.name %></h1>
 </div>
+<div class="hold_ad">
+<div class="side_ad">
+	</div>
+	</div>
 <div class="category-div">
 
-<% @upload.map do |up|  %>
-<a  class="href-cate"  title ="<%= up.title %>" href="http://127.0.0.1:3000/uploads/<%= up.id %>"><img src="<%= up.picture.url(:thumb) %>"></a>
 
+<% @upload.each do |hope| %>
+<%= link_to image_tag(hope.picture.url(:thumb)), hope, {:class => "href-cate", :title => " #{hope.title}"} %>
 <% end %>
 <%= paginate @upload %>
 </div>

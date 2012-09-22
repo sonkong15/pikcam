@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
     c.act_like_restful_authentication = true
 	end
     has_attached_file :avatar, :styles =>{ :small => "150x150>"}
+    
 
 	before_save { |user| user.email = email.downcase }
 

@@ -213,7 +213,7 @@ a.ex1:hover,a.ex1:active {color:#7CE4C3;text-decoration:none;}
 	border-color: #D86666;
 	border-width: 10px;
 	width: 700px;
-	height: 800px;
+	height: 870px;
 	padding: 15px 0px 0px 35px;
 	-moz-border-radius: 45px;
 border-radius: 45px;
@@ -322,9 +322,9 @@ a:hover{
 
 }
 .home-category{
-	margin: 300px 0px 0px 18%;
+	margin: 285px 0px 0px 18%;
 	background-color: #C7C7C7;
-	height: 350px;
+	height: 370px;
 
 	
 }
@@ -453,10 +453,11 @@ a:hover{
     border-top-left-radius: 10px;
 }
 .top-photo{
+
 	clear: right;
 	margin: 0px 0px 0px 0px;
 	float: right;
-	height: 100px;
+	height: 85px;
 	width: 310px;
 	background-color: #DDD;
 	-moz-border-radius-topleft: 10px;
@@ -554,7 +555,7 @@ a.cat:hover {color: #DDD;}
 	margin: 0px 0px 0px 900px;
 	position: absolute;
 	width: 200px;
-	height: 50px;
+	height: 60px;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 10px;
     border-bottom-right-radius: 10px;
@@ -701,42 +702,37 @@ font-size: 16px;
 display: inline-table;
 
 }
+
 .page{
 	float: left;
 	line-height: 54px;
 	font-size: 13px
 
 }
-.current{
-float: left;
-padding: 0 14px;
-line-height: 34px;
-text-decoration: none;
-border: 1px solid #333;
-background-color: #766CBE;
-font-size: 15px;
-}
+
 .containe{
 	width: 100%;
 }
 .user-paginate{
 	background-color: #949294;
 }
-.pagination a {
+.pagination a, .pagination span {
 float: left;
 padding: 0 14px;
 line-height: 34px;
 text-decoration: none;
 border: 1px solid #838383;
 border-left-width: 0;
+background-color: rgb(139, 139, 139); 
 }
+
 a.pagin{
 	color: #333;
 }
 .top-photos{
 	padding-left: 10px;
 	margin-left: 10px;
-	height: 249px;
+	height: 260px;
 	width: 885px;
 	border: 3px solid #333;
 	-moz-border-radius-bottomright: 10px;
@@ -760,6 +756,7 @@ a.pagin{
 	height: 90px;
 	width: 728px;
 	float: left;
+	clear: both;
 }
 .uploads-border{
 	margin: 0px 10px 10px 0px;
@@ -977,4 +974,42 @@ background-image: -webkit-gradient(
 .ph{
 	position: absolute;
 	
+}
+h3{
+	line-height: 10px
+}
+h2{
+	margin: 0px;
+	font-size: 25px;
+}
+.navbar-inner{
+	background-image: -moz-linear-gradient(top, #727171, #222);
+background-image: -ms-linear-gradient(top, #727171, #222);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#727171), to(#222));
+background-image: -webkit-linear-gradient(top, #727171, #222);
+background-image: -o-linear-gradient(top, #727171, #222);
+background-image: linear-gradient(top, #727171, #222);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF333333', endColorstr='#FF222222', GradientType=0);
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	padding: 10px 0px 0px 0px;
+	height: 60px;
+	width: 100%;
+}
+.side_ad{
+	position: fixed;
+	margin: 0px 0px 0px 100px;
+	float: left;
+	width: 160px;
+	height: 600px;
+	border: 2px solid black
+}
+.hold_ad{
+	float: left;
+	height: 600px;
 }

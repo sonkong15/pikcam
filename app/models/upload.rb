@@ -11,7 +11,8 @@ class Upload < ActiveRecord::Base
 	
 
 
-	has_attached_file :picture, :styles =>{ :thumb => "130x100#", :small => "200x160#", :large => "600x500>"} 
+	has_attached_file :picture, :styles =>{ :thumb => "130x100#", :small => "200x160#", :large => "600x500>"}
+	
 	
 	validates_attachment_presence :picture, presence: true
 	

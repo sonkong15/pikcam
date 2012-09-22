@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @user_uploads = @user.uploads.order("created_at DESC").page(params[:page]).per(30)
-    @user_flaggings = Upload.joins(:flaggings, :user).where( "flagger_id = ? AND flag = ?", "#{@user.id}", "like" ).page(params[:page]).per(3)
+    @user_flaggings = Upload.joins(:flaggings, :user).where( "flagger_id = ? AND flag = ?", "#{@user.id}", "like" ).page(params[:page]).per(30)
   end
 
   def new
