@@ -18,18 +18,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-  gem 'bootstrap-sass'
-  gem 'simple_form'
-  gem 'authlogic'
   
-  gem 'client_side_validations'
-  gem 'client_side_validations-simple_form'
-  gem "paperclip"
-  gem 'kaminari'
-  gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
-  gem "aws-sdk", "~> 1.6.5"
-  gem 'uglifier', '>= 1.0.3'
-  gem "friendly_id", "~> 4.0.1"
 end
 
 gem 'jquery-rails'
@@ -52,6 +41,17 @@ gem 'jquery-rails'
   gem 'thin'
   gem 'bcrypt-ruby', '~> 3.0.0'
   gem "cancan"
+  gem 'bootstrap-sass'
+  gem 'simple_form'
+  gem 'authlogic'
+  gem 'client_side_validations'
+  gem 'client_side_validations-simple_form'
+  gem "paperclip"
+  gem 'kaminari'
+  gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
+  gem "aws-sdk", "~> 1.6.5"
+  gem 'uglifier', '>= 1.0.3'
+  gem "friendly_id", "~> 4.0.1"
   end
 
 
