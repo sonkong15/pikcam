@@ -4,5 +4,5 @@ class Comment < ActiveRecord::Base
 	belongs_to :commentable, :polymorphic => true
 
 
-	validates :body, legnth: { maximum: 1000 }
+	#validates :body, legnth: { maximum: 1000 }
 end
