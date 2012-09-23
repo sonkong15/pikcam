@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
 	def index
 	@uploads_slideshow = Upload.order("RANDOM()").where("private = ?", false).limit(4)
 	@uploads = Upload.order("created_at DESC").where("private = ?", false).limit(8)
-	@upload_top = Upload.joins(:flaggings).where("flag = ? ", "like").order("flaggings.flag DESC").uniq.limit(8)
+	@upload_top = Upload.joins(:flaggings).where("flag = ? ", "like").order("flaggings.flag DESC").select("DISTINCT ON (flaggings.flag)*").limit(8)
 	@categories = Category.order(:name)
 	respond_to do |format|
 		format.html
