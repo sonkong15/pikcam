@@ -39,8 +39,8 @@ class User < ActiveRecord::Base
 	validates :password, presence: true, length: { minimum: 6 }, :on => :create
 	validates :password_confirmation, presence: true, :on => :create
 	validates :bio, length: {maximum: 1000}
-extend FriendlyId
-		friendly_id :name
+#extend FriendlyId
+		#friendly_id :name
 	
 
 end
