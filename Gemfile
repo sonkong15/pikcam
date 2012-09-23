@@ -21,7 +21,7 @@ group :assets do
   gem 'bootstrap-sass'
   gem 'simple_form'
   gem 'authlogic'
-  gem "cancan"
+  
   gem 'client_side_validations'
   gem 'client_side_validations-simple_form'
   gem "paperclip"
@@ -51,6 +51,7 @@ gem 'jquery-rails'
   group :production do
   gem 'thin'
   gem 'bcrypt-ruby', '~> 3.0.0'
+  gem "cancan"
   end
 
 
