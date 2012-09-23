@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  rescue_from CanCan::AccessDenied, :with => :not_allow
+  
 
 
   helper_method :current_user_session, :current_user
