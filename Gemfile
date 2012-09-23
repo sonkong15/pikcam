@@ -49,13 +49,13 @@ gem 'jquery-rails'
   group :production do
   gem 'thin'
   end
-gem 'rack-mini-profiler'
+
 
 gem "rspec-rails" , :group => [:test, :development]
 group :test do
 	gem "factory_girl_rails"
 	gem "capybara"
 	gem "guard-rspec"
+  gem 'rack-mini-profiler'
 	end
   
-  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git', group: :development
