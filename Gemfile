@@ -39,7 +39,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+ gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -47,7 +47,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
   group :production do
-  gem 'thin'
+  #gem 'thin'
   gem 'bcrypt-ruby', '~> 3.0.0'
   end
 
