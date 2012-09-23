@@ -55,7 +55,7 @@ group :test do
 	gem "guard-rspec"
 	end
   # this is for production
-  #group :production do
-  #gem 'thin'
-  #end
+  group :production do
+  gem 'thin'
+  end
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git', group: :development
