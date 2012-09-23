@@ -16,13 +16,13 @@ class User < ActiveRecord::Base
 	:website_link,:avatar, :admin
 	has_many :uploads
 	has_many :comments
-	#make_flagger 
+	make_flagger 
 	
 
 	acts_as_authentic do |c|
     c.act_like_restful_authentication = true
 	end
-    #has_attached_file :avatar, :styles =>{ :small => "150x150>"}
+    has_attached_file :avatar, :styles =>{ :small => "150x150>"}
     #:storage => :s3,
     #:s3_credentials => "#{Rails.root}/config/aws.yml",
     #:path => ":id/:hash/:style.:extension"
@@ -39,8 +39,8 @@ class User < ActiveRecord::Base
 	validates :password, presence: true, length: { minimum: 6 }, :on => :create
 	validates :password_confirmation, presence: true, :on => :create
 	validates :bio, length: {maximum: 1000}
-#extend FriendlyId
-		#friendly_id :name
+extend FriendlyId
+		friendly_id :name
 	
 
 end

@@ -6,7 +6,7 @@ class Upload < ActiveRecord::Base
 	belongs_to :user
 	has_many :categorizations
 	has_many :categories, :through => :categorizations
-	#make_flaggable :like, :hate
+	make_flaggable :like, :hate
 	
 	
 

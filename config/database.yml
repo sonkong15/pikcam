@@ -5,7 +5,7 @@ development:
   database: the_brands_DEVELOPMENT
   pool: 5
   username: postgres
-  password: 
+  password: sonkong15
   host: localhost
 
 test:
@@ -15,7 +15,7 @@ test:
   database: the_brands_TEST
   pool: 5
   username: postgres
-  password: 
+  password: sonkong15
   host: localhost
 
 production:
