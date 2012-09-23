@@ -23,5 +23,5 @@ production:
   encoding: unicode
   database: the_brands_production
   pool: 5
-  username: pikcam
+  username: postgres
   password:

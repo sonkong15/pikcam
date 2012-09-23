@@ -46,6 +46,9 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+  group :production do
+  gem 'thin'
+  end
 gem 'rack-mini-profiler'
 
 gem "rspec-rails" , :group => [:test, :development]
@@ -54,8 +57,5 @@ group :test do
 	gem "capybara"
 	gem "guard-rspec"
 	end
-  # this is for production
-  group :production do
-  gem 'thin'
-  end
+  
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git', group: :development
