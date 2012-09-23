@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 	:website_link,:avatar, :admin
 	has_many :uploads
 	has_many :comments
-	make_flagger 
+	#make_flagger 
 	
 
 	acts_as_authentic do |c|
