@@ -4,9 +4,9 @@ class Category < ActiveRecord::Base
 	 has_many :uploads, :through => :categorizations
    scope :home_random, order("RANDOM()").limit(5)
    scope :category_show, order("created_at DESC")
-   Category.joins(:Uploads)
-   extend FriendlyId
-    friendly_id :name
+   #Category.joins(:Uploads)
+   #extend FriendlyId
+    #friendly_id :name
 
 	def self.tokens(query)
     	categories = where("name like ?", "%#{query}%")
