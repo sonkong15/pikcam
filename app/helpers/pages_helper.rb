@@ -1,6 +1,6 @@
 module PagesHelper
 def full_title(page_title)
-		base_title = " The Brands"
+		base_title = "Pikcam"
 	if page_title.empty?
 		base_title
 	else

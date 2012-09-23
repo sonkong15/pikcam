@@ -5,7 +5,7 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -54,4 +54,8 @@ group :test do
 	gem "capybara"
 	gem "guard-rspec"
 	end
+  # this is for production
+  #group :production do
+  #gem 'thin'
+  #end
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git', group: :development

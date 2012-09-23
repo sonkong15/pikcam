@@ -11,8 +11,10 @@ class Upload < ActiveRecord::Base
 	
 
 
-	has_attached_file :picture, :styles =>{ :thumb => "130x100#", :small => "200x160#", :large => "600x500>"}
-	
+	has_attached_file :picture, :styles =>{ :thumb => "130x100#", :small => "200x160#", :large => "600x500>"},
+	:storage => :s3,
+    :s3_credentials => "#{Rails.root}/config/aws.yml",
+    :path => ":id/:hash/:style.:extension"
 	
 	validates_attachment_presence :picture, presence: true
 	
