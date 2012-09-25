@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
 
 	def show 
 		@category = Category.find(params[:id])
-		@upload = @category.uploads.page(params[:page]).per(40).order("created_at DESC").where("private = ?", false )
+		@upload = @category.uploads.page(params[:page]).per(50).order("created_at DESC").where("private = ?", false )
 	end
 
 	def new

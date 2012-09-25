@@ -15,7 +15,7 @@
     <%= f.label :For_private, :class =>"label-private" %>
     <p>Only you and whoever you share the link with can see this image</p>
    </div>
-    <h3>pick only two Categories</h3>
+    <h3>Pick only two Categories</h3>
       <div>
        <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {}, {multiple: true} %>
        </div>

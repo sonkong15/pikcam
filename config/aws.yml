@@ -10,6 +10,6 @@ test:
   secret_access_key: gxiV3v+uPN1yscJzvlz/Jsb615NVWH9iwX0QIG8P
 
 production:
-  bucket: pikcam
+  bucket: pik.pikcam.com
   access_key_id: AKIAJMHSRAY4L3DJKNPQ
   secret_access_key: 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
