@@ -1,3 +1,4 @@
+<%= provide(:title, "#{@upload.title}") %>
 <div class="upload-bacgraound">
 	<div class="list-more">
 	<ul class="clirle-nav ">
@@ -25,11 +26,11 @@
 <div class="upload-side">
 	<h2>Share A Pik</h2>
 	<p>Direct Link for Layouts</p>
-	<input value="<%= upload_url %>" />
+	<input value="<%=@upload.picture.url %>" />
 	<p> Page url</p>
-	 <input value="http://pikcam.com<%=@upload.picture.url %>"/>
+	 <input value="<%= upload_url %>"/>
 	 <p>HTML for Websites</p> 
-	 <input value="<a href='<%= upload_url %>'><img src='http://127.0.0.1:3000<%=@upload.picture.url %>'  alt='Uploaded on pikcam' /></a>" />
+	 <input value="<a href='<%= upload_url %>'target='_blank'><img src='<%=@upload.picture.url %>'  alt='Uploaded on pikcam' /></a>" />
 	 <p>URL for E-Mail & IM</p>
 	 <input  value="<%= upload_url %>"  />
 	 

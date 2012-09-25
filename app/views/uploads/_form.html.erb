@@ -1,4 +1,8 @@
 <div class="files"> 
+  <div class="loading">
+    <p style="margin-bottom: 0px;"><b>Pik Saving</b></p>
+    <%= image_tag("ajax-loader.gif") %>
+  </div>
     <%= form_for @upload, :html => { :class => "upload home-up", :multipart => true } do |f| %>
     <% @upload.errors.full_messages.each do |msg| %>
       <p class="upload-errors"><%= msg %></p>

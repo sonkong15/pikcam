@@ -16,35 +16,37 @@
 			    
 		       </ul>
 	        </div>
-			<div class= "signup-guy thumbnail"> <%= image_tag "picmanRweb.jpg"%>
+			<div class= "signup-guy thumbnail"> 
+					<%= image_tag "picmanRweb.jpg"%>
 			</div>
 
-			<div class="signup-h1"><h1 style= "padding-left: 45%;">Sign up</h1></div>
+			<div class="signup-h1">
+				<h1 style= "padding-left: 45%;">Sign up</h1>
+			</div>
 			
 				<div class="signup">
-	<%= simple_form_for @user, :validate => true  do |f| %>
-	<%= f.input :name,:required => false, :input_html => { :class => "span3 font" } %>
-	<%= f.input :email,:required => false,:placeholder => 'user@domain.com',
-	 :input_html => { :class => "span3 font" } %>
-	<%= f.input :password,:validate => false, :input_html => { :class => "span3 font" } %>
-	<%= f.input :password_confirmation,:validate => false, :input_html => { :class => "span3" }  %>
+					<%= simple_form_for @user, :validate => true  do |f| %>
+					<%= f.input :name,:required => false, :input_html => { :class => "span3 font" } %>
+					<%= f.input :email,:required => false,:placeholder => 'user@domain.com',
+	 					:input_html => { :class => "span3 font" } %>
+					<%= f.input :password,:validate => false, :input_html => { :class => "span3 font" } %>
+					<%= f.input :password_confirmation,:validate => false, :input_html => { :class => "span3" }  %>
 	
-	<%= f.submit "Create my Account", class: "btn btn-large btn-inverse " %>
-	
+					<%= f.submit "Create my Account", class: "btn btn-large btn-inverse " %>
 
-	
-    
-		 <%end %>
-		 </div>
+		 			<%end %>
+		 
+		 		</div>
 		
+			
 
+		</div>
 
+		<div class="cat-showad">
+    
+  		   </div>
 	</div>
 
 
-</div>
-<div class="cat-showad">
-    
-  </div>
 
 

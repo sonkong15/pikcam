@@ -12,5 +12,17 @@ $('#slider').nivoSlider({
     	pauseTime: 4000,
     	animSpeed: 1000
     });
+$("input[value*=Upload]").click( function(){
+$(".loading").show();
+ });
+$('.dropdown-toggle').dropdown();
+$('.help-box > div').hide();
+
+$(".help-box h3").click(function(){
+$(this).next().animate(
+	{"height" : ["toggle", 'swing']}, 'slow' 
+	);
+});
+
 });
  

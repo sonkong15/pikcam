@@ -22,10 +22,11 @@ class User < ActiveRecord::Base
 	acts_as_authentic do |c|
     c.act_like_restful_authentication = true
 	end
-    has_attached_file :avatar, :styles =>{ :small => "150x150>"}
-    #:storage => :s3,
-    #:s3_credentials => "#{Rails.root}/config/aws.yml",
-    #:path => ":id/:hash/:style.:extension"
+    has_attached_file :avatar, :styles =>{ :small => "150x150>"},
+    :storage => :s3,
+    :s3_credentials => "#{Rails.root}/config/aws.yml",
+    :path => ":id/:style.:extension",
+    :hash_secret => ''
 
 	before_save { |user| user.email = email.downcase }
 

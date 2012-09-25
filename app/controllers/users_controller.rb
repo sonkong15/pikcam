@@ -12,9 +12,10 @@ class UsersController < ApplicationController
   
   def create
   	@user = User.new(params[:user])
+    @user_session = UserSession.new(params[:user_session])
   	if @user.save
      flash[:notice] = "Registration successfull."
-  		render "show"
+  		redirect_to proc { user_url(@user) }
   	else
   		render "new"
   	end

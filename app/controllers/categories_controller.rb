@@ -25,7 +25,7 @@ class CategoriesController < ApplicationController
 	  @category = Category.new(params[:category])
 
 	  if @category.save
-	  	render "show"
+	  	redirect_to proc { category_url(@category) }
 	  	
 	  end
 		
