@@ -11,9 +11,15 @@
     <%= f.text_field :title  %>
     <%= f.file_field :picture, :html => {:class => "ups"} %>
     <div class="home-private">
+    <% if current_user %>
     <%= f.check_box :private, :default => false %>
     <%= f.label :For_private, :class =>"label-private" %>
     <p>Only you and whoever you share the link with can see this image</p>
+    <% else %>
+    <h5>
+     Must create a user account to make piks <b> private</b> so yea sign up </h5>
+    <% end %>
+    
    </div>
     <h3>Pick only two Categories</h3>
       <div>
