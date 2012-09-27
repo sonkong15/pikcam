@@ -74,7 +74,7 @@ class UploadsController < ApplicationController
   	end
 
   	def top
-  		@upload_top = Upload.joins(:flaggings).where("flag = ? ", "like").uniq.page(params[:page]).per(40)
+  		@upload_top = Upload.order("RANDOM()").page(params[:page]).per(50)
   		
   	end
 end
