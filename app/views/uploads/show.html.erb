@@ -1,4 +1,4 @@
-<%= provide(:title, "#{@upload.title}") %>
+<% @title = @upload.title %>
 <div class="upload-bacgraound">
 	<div class="list-more">
 	<ul class="clirle-nav ">
@@ -91,7 +91,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	 <% @upload.categories.map do |map|  %>
 
 	<p class= "category-namd"> 
- <%= link_to map.name, map %> |
+ <%= link_to map.name, map %> 
 
 </p>
 <% end %>

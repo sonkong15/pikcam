@@ -1,3 +1,4 @@
+<% @title = 'Edit' %>
 <div class="files"> 
     <%= form_for @upload, :html => { :class => "upload home-up", :multipart => true } do |f| %>
     <% @upload.errors.full_messages.each do |msg| %>

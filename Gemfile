@@ -18,7 +18,7 @@ group :assets do
   
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-  
+
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -52,6 +52,7 @@ gem 'jquery-rails'
   gem 'kaminari'
   gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
   gem "aws-sdk", "~> 1.6.5"
+  
   end
 
 
