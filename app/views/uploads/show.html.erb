@@ -34,19 +34,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <%= link_to image_tag(upload.picture.url(:thumb)), upload,{:class => "img_user"}, {:title => " #{upload.title} "}  %>
 <% end %>
 </div>
-
-<div class="upload-side">
-	<h2>Share A Pik</h2>
-	<p>Direct Link for Layouts</p>
-	<input value="<%=@upload.picture.url %>" />
-	<p> Page url</p>
-	 <input value="<%= upload_url %>"/>
-	 <p>HTML for Websites</p> 
-	 <input value="<a href='<%= upload_url %>'target='_blank'><img src='<%=@upload.picture.url %>'  alt='Uploaded on pikcam' /></a>" />
-	 <p>URL for E-Mail & IM</p>
-	 <input  value="<%= upload_url %>"  />
-	 
-</div>
 <div class="ad-upload">
 	<script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
@@ -60,6 +47,20 @@ google_ad_height = 250;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div>
+
+<div class="upload-side">
+	<h2>Share A Pik</h2>
+	<p>Direct Link for Layouts</p>
+	<input value="<%=@upload.picture.url %>" />
+	<p> Page url</p>
+	 <input value="<%= upload_url %>"/>
+	 <p>HTML for Websites</p> 
+	 <input value="<a href='<%= upload_url %>'target='_blank'><img src='<%=@upload.picture.url %>'  alt='Uploaded on pikcam' /></a>" />
+	 <p>URL for E-Mail & IM</p>
+	 <input  value="<%= upload_url %>"  />
+	 
+</div>
+
 </div>
 
 <div class="share-box">
