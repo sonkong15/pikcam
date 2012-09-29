@@ -1,42 +1,38 @@
 <% @title = 'Home' %>
-<div class= "graybox" >
-  <div class="ad-home">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-3387068696014466";
-/* pik-cam large 336x280 */
-google_ad_slot = "4368008933";
-google_ad_width = 336;
-google_ad_height = 280;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-  </div>
+  <div class= "graybox" >
+     <div class="mainbox">
+     <div class="ad-home">
+   <script type="text/javascript"><!--
+   google_ad_client = "ca-pub-3387068696014466";
+   /* pik-cam large 336x280 */
+   google_ad_slot = "4368008933";
+   google_ad_width = 336;
+   google_ad_height = 280;
+   //-->
+   </script>
+   <script type="text/javascript"
+   src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+   </script>
+     </div>
   
 
-  <%= render "uploads/form" %>
+   <%= render "uploads/form" %>
+  </div>
   <div class="top-share">
-    <h2>Get your friends addicted</h2>
-    <!-- Place this tag where you want the badge to render. -->
-<div class="g-plus" data-height="69" data-href="//plus.google.com/103812452465040044420?rel=publisher"></div>
-
-<!-- Place this tag after the last badge tag. -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-<div class="fb-like" data-href="http://www.facebook.com/pikcam" data-send="true" data-width="300" data-show-faces="true"></div>
+    <div class="slider-wrapper theme-default">
+    <div id="slider" class="nivoSlider">
+      <% @uploads_slideshow.each do |ups| %>
+      <%= link_to image_tag(ups.picture.url(:large)), ups %>
+      <% end %>
+    </div>
+</div>
   </div>
-  <div class= "top-photo">
-    <%= link_to image_tag( "donloren.png"), "http://www.donloren.com", :target => "_blank" %>
-  </div>
-
-	<div class="home-category">
-    <div class="top-line"></div>
+  <!--<div class= "top-photo">
+    <%# link_to image_tag( "donloren.png"), "http://www.donloren.com", :target => "_blank" %>
+  </div>-->
+  <div class="mainbox2">
+	  <div class="home-category">
+  
 			<p class="top-5"><b>Random 5 categories</b></p>
 
 			<%  Category.home_random.each do |user| %>
@@ -53,8 +49,21 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         </div>
         <% end %>
 
+
       </div>
-	
+      <!-- Place this tag where you want the badge to render. -->
+<div class="g-plus" data-height="69" data-href="//plus.google.com/103812452465040044420?rel=publisher"></div>
+
+<!-- Place this tag after the last badge tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<div class="fb-like" data-href="http://www.facebook.com/pikcam" data-send="true" data-width="300" data-show-faces="true"></div>
+	</div>
 	  
   </div>
   

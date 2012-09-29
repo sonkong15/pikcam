@@ -7,9 +7,11 @@
     <% @upload.errors.full_messages.each do |msg| %>
       <p class="upload-errors"><%= msg %></p>
     <% end %>
-    <%= f.label :caption %>
+    <%= f.label :caption, :class => "inlinefrom" %>
     <%= f.text_field :title  %>
-    <%= f.file_field :picture, :html => {:class => "ups"} %>
+    <%= f.label :Categories, :class => "inlinefrom" %>
+    <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {}, {multiple: true} %>
+    <%= f.file_field :picture, :class => "ups" %>
     <div class="home-private">
     <% if current_user %>
     <%= f.check_box :private, :default => false %>
@@ -21,13 +23,14 @@
     <% end %>
     
    </div>
-    <h3>Pick only two Categories</h3>
-      <div>
-       <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {}, {multiple: true} %>
-       </div>
+    
+    <div class="inlinefrom2">
    <%= f.submit "Upload Now!", class: "btn btn-large btn-inverse " %>
-    <p style="width: 400px; margin-top: 5px;">
+   </div>
+   <div class="inlinefrom">
+    <p style="width: 400px; margin: 5px 0px -15px 0px; ">
     By clicking the Upload button, you indicate that you have read and agreed to the Pikcam <a href="/terms">Terms</a>  of Use and <a href="/Privacy">Privacy Policy</a>.
     </p>
+    </div>
     <% end %>
   </div>

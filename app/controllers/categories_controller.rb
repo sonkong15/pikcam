@@ -1,7 +1,6 @@
 class CategoriesController < ApplicationController
 	def index
-	@uploads_slideshow = Upload.order("RANDOM()").where("private = ?", false).limit(4)
-	@uploads = Upload.order("created_at DESC").where("private = ?", false).limit(8)
+	@uploads = Upload.order("created_at DESC").where("private = ?", false).limit(16)
 	@upload_top = Upload.order("RANDOM()").limit(8)
 	@categories = Category.order(:name)
 	respond_to do |format|
