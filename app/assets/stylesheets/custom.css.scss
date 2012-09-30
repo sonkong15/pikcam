@@ -1035,7 +1035,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 .loading{
 	display: none;
 	position: absolute;
-	margin: 5px 0% 0px 44%
+	margin: 45px 0% 0px 44%
 }
 .categories_new{
 	margin: 40px 0px 0px 100px;
@@ -1060,4 +1060,22 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	margin-top: 30px;
 	width: 336px;
 	height: 280px;
+}
+.next_photo{
+	font-size: 16px;
+	color: black;
+	position: absolute;
+	top: 45%;
+	left: 56.5%;
+	z-index: 9;
+	cursor: pointer;
+}
+.pre_photo{
+	font-size: 16px;
+	color: black;
+	position: absolute;
+	top: 45%;
+	left: 16%;
+	z-index: 9;
+	cursor: pointer;
 }

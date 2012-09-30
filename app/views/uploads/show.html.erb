@@ -138,7 +138,7 @@ $("input").click(function() {
 <div class="fb-comments" data-href="<%= upload_url %>" data-num-posts="8" data-width="550"></div>
 </div>
 </div>
-<%= link_to("Previous Post", @upload.previous_upload) if @upload.previous_upload %>
-<%= link_to("Next Post", @upload.next_upload) if @upload.next_upload %>
+<%= link_to("Previous Photo", @upload.previous_upload,:class => "pre_photo") if @upload.previous_upload %>
+<%= link_to("Next Photo", @upload.next_upload, :class => "next_photo")  if @upload.next_upload %>
 	
 </div>
