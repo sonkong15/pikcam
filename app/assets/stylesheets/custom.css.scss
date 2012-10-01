@@ -35,7 +35,7 @@ font-size: 20px;}
 }
 .home-box{
 	display: inline-block;
-	margin: 0px 0px 0px 10px;
+	margin: 0px 0px 10px 10px;
 	height: 50px;
 	width: 170px;
 	padding: 0px 0px 0px 0px;
@@ -335,9 +335,9 @@ a:hover{
 
 }
 .home-category{
-	margin: 505px 0px 0px 18%;
+	margin: 490px 0px 0px 18%;
 	background-color: #C7C7C7;
-	height: 440px;
+	height: 470px;
 
 	
 }
@@ -391,7 +391,7 @@ a:hover{
 	float: left;
 }
 .ad-bottom-home{
-	margin: 10px 0px 0px 530px;
+	margin: 10px 0px 0px 20%;
 	border: 2px solid #999;
 	height: 90px;
 	width: 728px;
@@ -555,8 +555,7 @@ a.cat:hover {color: #DDD;}
 	font-size: 30px;
 }
 .fb-like{
-	padding: 10px 0px 10px 0px;
-	background-color: #fff;
+	
 }
 .strftime{
 	margin: 20px 0px 0px 0px;
@@ -700,7 +699,7 @@ background-repeat: repeat-x;
 	margin: 10px 0px 0px -50px;
 }
 .home-private{
-	width: 410px;
+	width: 630px;
 	position: relative;
 	background-color: rgb(116, 116, 231);
 }
@@ -1080,5 +1079,9 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	cursor: pointer;
 }
 .homep{
-	margin: 0px 0px 0px 350px;
+	margin: 0px 0px 0px 0px;
+}
+.bottom_pfg{
+	clear: both;
+	width: 800px;
 }

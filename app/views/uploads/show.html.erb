@@ -4,7 +4,7 @@
 	<ul class="clirle-nav ">
 		
 			
-			<h2 class="browse-more " >Browse more piks</h2>
+			<h2 class="browse-more " >Browse more Pics</h2>
 		</ul>
 
 
@@ -26,12 +26,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <p class="p-title"><%=  @upload.title %></p>
 <div class="upload-show">
 
-<%= link_to image_tag(@upload.picture.url(:large)), @upload.picture.url, :class => "displayed" %>
+<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>
 </div>
 <div class="side-bar">
 <div class="browse">
 	<% @uploads.each do |upload| %>
-<%= link_to image_tag(upload.picture.url(:thumb)), upload,{:class => "img_user"}, {:title => " #{upload.title} "}  %>
+<%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %>
 <% end %>
 </div>
 <div class="ad-upload">
@@ -49,7 +49,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 
 <div class="upload-side">
-	<h2>Share a pics</h2>
+	<h2>Share a Pic</h2>
 	<p>Direct Link for Layouts</p>
 	<input value="<%=@upload.picture.url %>" />
 	<p> Page url</p>

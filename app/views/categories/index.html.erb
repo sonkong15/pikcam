@@ -1,7 +1,7 @@
-<% @title = "Explore" %>
+<% @title = "Explore Funny Pics" %>
 <div class="background-explore">
 <div class="cateoriesh2">
-<h1 style="margin-left: 700px;">Explore The Categories</h1>
+<h1 style="margin-left: 30%;">Explore Pictures</h1>
 </div>
 
 <h2 class="cateories-title"> Categories </h2>
@@ -32,15 +32,15 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
   
 </div>
-<h2 class="recent-add"> Most Recent Upload</h2>
+<h2 class="recent-add"> Most Recent pictures</h2>
 <div class=""></div>
 <div class="most-recent">
   <% @uploads.each do |uploads| %>
-  <%= link_to image_tag(uploads.picture.url(:small)), uploads %>
+  <%= link_to image_tag(uploads.picture.url(:small), :alt => uploads.title, :title => uploads.title), uploads, :title => "#{uploads.title}" %>
   <% end %>
 
   </div>
- <a class="show"href="/uploads"><h2 class="show_more "> Show More</h2></a> 
+ <a class="show"href="/uploads"><h2 class="show_more "> Show More Pics</h2></a> 
    <div class="ad-bottom1">
   <div class="ad-bottom-home">
     <script type="text/javascript"><!--
@@ -59,12 +59,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 </div>
 <div>
-<h2 class="recent-add"> Most Like </h2>
+<h2 class="recent-add"> Most Like pictures </h2>
 <div class="most-recent">
 <% @upload_top.each do |top| %>
- <%= link_to image_tag(top.picture.url(:small)), top %>
+ <%= link_to image_tag(top.picture.url(:small), :alt => top.title, :title => top.title), top, :title => top.title  %>
  <% end %>
 </div>
- <a class="show"href="/top_pics"><h2 class="show_more "> Show More</h2></a>
+ <a class="show"href="/top_pics"><h2 class="show_more "> Show More Pics</h2></a>
 
 </div>

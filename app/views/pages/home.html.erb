@@ -1,31 +1,31 @@
-<% @title = 'Home page Upload A Pic ' %>
-  <div class= "graybox" >
-     <div class="mainbox">
-     <div class="ad-home">
-   <script type="text/javascript"><!--
-   google_ad_client = "ca-pub-3387068696014466";
-   /* pik-cam large 336x280 */
-   google_ad_slot = "4368008933";
-   google_ad_width = 336;
-   google_ad_height = 280;
-   //-->
-   </script>
-   <script type="text/javascript"
-   src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-   </script>
-     </div>
+<% @title = 'Cool Pictures of anything ' %>
+<div class= "graybox" >
+  <div class="mainbox">
+    <div class="ad-home">
+      <script type="text/javascript"><!--
+       google_ad_client = "ca-pub-3387068696014466";
+        /* pik-cam large 336x280 */
+       google_ad_slot = "4368008933";
+       google_ad_width = 336;
+        google_ad_height = 280;
+         //-->
+      </script>
+     <script type="text/javascript"
+       src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+     </script>
+    </div>
   
 
    <%= render "uploads/form" %>
   </div>
   <div class="top-share">
     <div class="slider-wrapper theme-default">
-    <div id="slider" class="nivoSlider">
-      <% @uploads_slideshow.each do |ups| %>
-      <%= link_to image_tag(ups.picture.url(:large)), ups %>
-      <% end %>
+      <div id="slider" class="nivoSlider">
+        <% @uploads_slideshow.each do |ups| %>
+        <%= link_to image_tag(ups.picture.url(:large), :alt => ups.title, :title => ups.title ), ups   %>
+        <% end %>
+      </div>
     </div>
-</div>
   </div>
   <!--<div class= "top-photo">
     <%# link_to image_tag( "donloren.png"), "http://www.donloren.com", :target => "_blank" %>
@@ -33,44 +33,48 @@
   <div class="mainbox2">
 	  <div class="home-category">
   
-			<p class="top-5"><b>Random 5 categories</b></p>
+			<p class="top-5">
+        <b>Random 5 categories</b>
+      </p>
 
 			<%  Category.home_random.each do |user| %>
 			
         <div class="home-box thumbnail">
-			<H2 class="cat-name"><%= link_to user.name , user %></H2>
+			   <H2 class="cat-name">
+           <%= link_to user.name , user %>
+          </H2>
 		    </div>
 			<% end %>
       <div class="top-photos">
         <h3>Recent add Pics</h3>
         <% @uploads.each do |uploads| %>
-        <div class="uploads-border">
-        <%= link_to image_tag(uploads.picture.url(:thumb)), uploads %>
-        </div>
+          <div class="uploads-border">
+            <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title ), uploads %>
+          </div>
         <% end %>
-
-
       </div>
-      <!-- Place this tag where you want the badge to render. -->
-<div class="g-plus" data-height="69" data-href="//plus.google.com/103812452465040044420?rel=publisher"></div>
+      <div class="bottom_pfg">
+        <!-- Place this tag where you want the badge to render. -->
+        <div class="g-plus" data-height="69" data-href="//plus.google.com/103812452465040044420?rel=publisher"></div>
 
-<!-- Place this tag after the last badge tag. -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-<div class="fb-like" data-href="http://www.facebook.com/pikcam" data-send="true" data-width="300" data-show-faces="true"></div>
-	</div>
-  <p class="homep"> funny, humorous pics and strange pics can be found here at pikcam.com  </p>
-	  
-  </div>
-  
+        <!-- Place this tag after the last badge tag. -->
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+        <div class="fb-like" data-href="http://www.facebook.com/pikcam" data-send="true" data-width="300" data-show-faces="true">
+        
+	     </div>
+        <p class="homep"> Pikcam, A website where you can share & find cool pics of just about anything. We also have 
+         humorous pictures, strange pictures, gif and more. Oh! I can forget cars pics...  
+        </p>
+      </div>
+     </div>
+    </div>
   <div class="ad-bottom">
-  
-
   <div class="ad-bottom-home5">
     <script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
@@ -89,8 +93,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 
 <div class="addthis_toolbox addthis_default_style">
-     <a class="addthis_button_google_plusone"></a> 
-     <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+  <a class="addthis_button_google_plusone"></a> 
+  <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
 </div> 
  
  

@@ -21,7 +21,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 <% @upload.each do |hope| %>
-<%= link_to image_tag(hope.picture.url(:thumb)), hope, {:class => "href-cate", :title => " #{hope.title}"} %>
+<%= link_to image_tag(hope.picture.url(:thumb), :alt => hope.title, :title => hope.title), hope, {:class => "href-cate", :title => " #{hope.title}"} %>
 <% end %>
 <%= paginate @upload %>
 </div>

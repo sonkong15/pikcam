@@ -20,7 +20,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <div class="category-div">
 	
 <% @uploads.each do |up|  %>
-<%= link_to image_tag(up.picture.url(:thumb)), up, { :class => "img_index"} %>
+<%= link_to image_tag(up.picture.url(:thumb), :alt => up.title, :alt => up.title ), up, { :class => "img_index"} %>
 
 <% end %>
 <%= paginate @uploads %>
