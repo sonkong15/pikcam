@@ -49,7 +49,7 @@
         <h3>Recent add Pics</h3>
         <% @uploads.each do |uploads| %>
           <div class="uploads-border">
-            <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 116px; width: 149px;" ), uploads %>
+            <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 110px; width: 149px;" ), uploads %>
           </div>
         <% end %>
       </div>
