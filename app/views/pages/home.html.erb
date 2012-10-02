@@ -49,7 +49,7 @@
         <h3>Recent add Pics</h3>
         <% @uploads.each do |uploads| %>
           <div class="uploads-border">
-            <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title ), uploads %>
+            <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 116px; width: 149px;" ), uploads %>
           </div>
         <% end %>
       </div>
@@ -69,7 +69,7 @@
         
 	     </div>
         <p class="homep"> Pic cam, A website where you can share & find cool pics of just about anything. We also have 
-         humorous / funny pictures, strange pictures, gif and more. Oh! I can forget pics of women...  
+         humorous / funny pictures, strange pictures, gif and more. Oh! I can forget pics of women... <%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "humorous", "http://www.pikcam.com/categories/Humorous" %>
         </p>
       </div>
      </div>
