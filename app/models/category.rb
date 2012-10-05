@@ -2,7 +2,7 @@ class Category < ActiveRecord::Base
 	attr_accessible :name
 	 has_many :categorizations
 	 has_many :uploads, :through => :categorizations
-   scope :home_random, order("RANDOM()").limit(5)
+   scope :home_random, order("RANDOM()").limit(10)
    scope :category_show, order("created_at DESC")
    Category.joins(:Uploads)
    extend FriendlyId

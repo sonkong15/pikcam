@@ -26,6 +26,9 @@ class PagesController < ApplicationController
 	def lost_page
 		
 	end
+	def link_up
+		
+	end
 
 
 end

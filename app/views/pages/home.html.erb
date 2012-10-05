@@ -2,7 +2,7 @@
 <div class= "graybox" >
   <div class="mainbox">
     <div class="ad-home">
-      <script type="text/javascript"><!--
+     <!-- <script type="text/javascript"><!--
        google_ad_client = "ca-pub-3387068696014466";
         /* pik-cam large 336x280 */
        google_ad_slot = "4368008933";
@@ -17,7 +17,14 @@
   
 
    <%= render "uploads/form" %>
-  </div>
+   <div class="home-list">
+   <%  Category.home_random.each do |user| %>
+      
+          <ul class="home-box">
+            <li><H3 class="cat-name"><%= link_to user.name , user %></H3></li>
+          </ul>
+        <% end %>
+      </div>
   <div class="top-share">
     <div class="slider-wrapper theme-default">
       <div id="slider" class="nivoSlider">
@@ -27,24 +34,19 @@
       </div>
     </div>
   </div>
+  </div>
+  
   <!--<div class= "top-photo">
     <%# link_to image_tag( "donloren.png"), "http://www.donloren.com", :target => "_blank" %>
   </div>-->
   <div class="mainbox2">
 	  <div class="home-category">
   
-			<p class="top-5">
+			<!--<p class="top-5">
         <b>Random 5 categories</b>
-      </p>
+      </p>-->
 
-			<%  Category.home_random.each do |user| %>
 			
-        <div class="home-box thumbnail">
-			   <H2 class="cat-name">
-           <%= link_to user.name , user %>
-          </H2>
-		    </div>
-			<% end %>
       <div class="top-photos">
         <h3>Recent add Pictures</h3>
         <% @uploads.each do |uploads| %>
@@ -71,12 +73,21 @@
         <p class="homep"> Pic cam, A website where you can share & find cool pics of just about anything lol. We also have 
          humorous / funny pictures, strange pictures, gif and more. Oh! I can forget pics of women... hope you enjoy the funny pics we have   <%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "humorous", "http://www.pikcam.com/categories/Humorous" %> <%= link_to "gif", "http://www.pikcam.com/categories/Gif_animation" %> 
         </p>
+        <div class="our-link">
+          <h4> Our friends </h4>
+          <ul>
+            <li><a href="http://www.donloren.com/">Donloren</a></li>
+
+          </ul>
+          <a href="/link-up">add your site to our friends list</a>
+
+        </div>
       </div>
      </div>
     </div>
   <div class="ad-bottom">
   <div class="ad-bottom-home5">
-    <script type="text/javascript"><!--
+    <!--<script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
 /* pik-cam */
 google_ad_slot = "9765718544";

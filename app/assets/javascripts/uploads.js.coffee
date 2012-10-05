@@ -5,4 +5,7 @@ jQuery ->
  $("div.upload-side input").click( ()-> 
     $(this).select();
     )
+ $("div.link-up-main input").click( ()-> 
+    $(this).select();
+    )
  $("div.upload-side p").css({"padding-top":"5px", "font-size": "14"});

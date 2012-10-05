@@ -17,6 +17,7 @@ TheBrands::Application.routes.draw do
   
   
   resources :user_sessions, only: [:new, :create, :destroy]
+  match "/link-up", to: "Pages#link_up"
   match "/r_u_lost", to: "Pages#lost_page"
   match '/terms', to: 'Pages#terms'
   match 'login', to: 'user_sessions#new'
