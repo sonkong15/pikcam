@@ -52,7 +52,7 @@ gem 'jquery-rails'
   gem "paperclip"
   gem 'kaminari'
   gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
-  gem 'pristine rmagick'
+  gem 'rmagick'
   gem "aws-sdk", "~> 1.6.5"
  
   end
