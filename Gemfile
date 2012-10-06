@@ -39,6 +39,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
   group :production do
+    
   gem 'thin'
   gem 'bcrypt-ruby', '~> 3.0.0'
   gem "friendly_id", "~> 4.0.1"
@@ -52,8 +53,6 @@ gem 'jquery-rails'
   gem 'kaminari'
   gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
   gem "aws-sdk", "~> 1.6.5"
-
-
  
   end
 
