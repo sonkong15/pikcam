@@ -7,7 +7,6 @@ class Upload < ActiveRecord::Base
 	has_many :categorizations
 	has_many :categories, :through => :categorizations
 	make_flaggable :like, :hate
-	require 'RMagick'
 	
 
 
