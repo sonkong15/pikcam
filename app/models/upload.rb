@@ -20,6 +20,7 @@ class Upload < ActiveRecord::Base
 	
 	validates_attachment_presence :picture, presence: true
 	
+	validates_attachment_content_type :picture, :content_type => ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
 
 	validates_attachment_size :picture, :less_than => 4.megabyte
 	
