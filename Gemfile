@@ -51,6 +51,7 @@ gem 'jquery-rails'
   gem 'client_side_validations-simple_form'
   gem "paperclip", "~> 3.0"
   gem 'kaminari'
+  gem "mini_magick"
   gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
   gem "aws-sdk", "~> 1.6.5"
  
