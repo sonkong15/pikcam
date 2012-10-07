@@ -49,7 +49,7 @@ gem 'jquery-rails'
   gem 'client_side_validations'
   gem 'client_side_validations-simple_form'
   gem "paperclip", "~> 3.0"
-  gem "cocaine", "=< 0.3.2"
+  gem "cocaine", ">= 0.3.2"
   gem 'kaminari'
   gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
   gem "aws-sdk", "~> 1.6.5"
