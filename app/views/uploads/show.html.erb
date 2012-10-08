@@ -11,7 +11,7 @@
 </div>
 <div class="show-container">
 <div class="up-ad">
-<script type="text/javascript"><!--
+<!--<script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
 /* pik-cam */
 google_ad_slot = "9765718544";
@@ -35,7 +35,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <% end %>
 </div>
 <div class="ad-upload">
-	<script type="text/javascript"><!--
+	<!--<script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
 /* pik-cam 300x250 */
 google_ad_slot = "6391302218";
@@ -106,8 +106,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   		<% end %>
   		
 	</div>
-</div>
-<div class="likehate">
+	<div class="likehate">
 		<h2 class="like"><%= @upload.flaggings.where("flag = ?", "like").count %></h2>
 		<h2 class="hate"><%= @upload.flaggings.where("flag = ?", "hate").count %></h2>
 		<% if current_user %>
@@ -119,6 +118,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  		<p> <b>To like or hate pics <%= link_to "sigin up", "/signup" %></b></p>
 		<% end %>
 	</div>
+</div>
+
 
 <div class="for-comment">
 <div id="fb-root"></div>

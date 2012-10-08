@@ -324,21 +324,19 @@ a:hover{
 .upload-show{
 	display: inline-block;
 	width: 600px;
-	background-color: #CFCFCF;
-	padding: 0px 10px 0px 10px;
+	background-color: rgba(0, 0, 0, 0.56);
+	padding: 0px 10px 10px 10px;
 	margin: 160px 0px 0px 0px;
 	border: 10px solid #161817;
-	-moz-border-radius-bottomright: 0px;
-	-moz-border-radius-bottomleft: 0px;
-    border-bottom-right-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-topright: 0px; 
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-    -moz-box-shadow: 0px 0px 5px 10px rgba(128, 123, 123, 0.77);
-    -webkit-box-shadow: 0px 0px 5px 10px rgba(128, 123, 123, 0.77);
-    box-shadow: 0px 0px 5px 10px rgba(128, 123, 123, 0.77);
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px; 
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
 
 
 }
@@ -359,7 +357,7 @@ a:hover{
 .upload-side{
 	clear: right;
 	width: 290px;
-	background-color: #6951C7;
+	background-color: rgba(0, 0, 0, 0.42);
 	padding: 9px 10px 10px 10px;
 	margin: 20px 0px 0px 0px;
 	-moz-border-radius-bottomright: 10px;
@@ -371,14 +369,14 @@ a:hover{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     height:300px;
-    -moz-box-shadow: 5px 6px 10px rgba(128, 123, 123, 0.77);
-    -webkit-box-shadow: 5px 6px 10px rgba(128, 123, 123, 0.77);
-    box-shadow: 5px 6px 10px rgba(128, 123, 123, 0.77);
+    -moz-box-shadow: 5px 6px 10px rgba(27, 26, 26, 0.66);
+    -webkit-box-shadow: 5px 6px 10px rgba(27, 26, 26, 0.66);
+    box-shadow: 5px 6px 10px rgba(27, 26, 26, 0.66);
 }
 .upload-bacgraound{
 	height: 100%;
 	padding: 0px 0px 0px 0px;
-	background-color: #C7C7C7;
+	background-color: #161817;
 }
 .category{
 	width: 420px;
@@ -427,7 +425,7 @@ a:hover{
 .for-comment{
 	width: 620px;
 	
-	background-color: #DDD;
+	background-color: rgba(0, 0, 0, 0.56);
 	padding: 9px 10px 10px 10px;
 	margin: 120px 0px 0px 0px;
 	border: 0px solid #161817;
@@ -439,17 +437,21 @@ a:hover{
     border-bottom-left-radius: 10px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
-    -webkit-box-shadow: -5px 3px 8px rgba(50, 50, 50, 0.66);
-	-moz-box-shadow:    -5px 3px 8px rgba(50, 50, 50, 0.66);
-	box-shadow:         -5px 3px 8px rgba(50, 50, 50, 0.66);
+    -webkit-box-shadow: -5px 3px 8px rgba(27, 26, 26, 0.66);
+	-moz-box-shadow:    -5px 3px 8px rgba(27, 26, 26, 0.66);
+	box-shadow:         -5px 3px 8px rgba(27, 26, 26, 0.66);
 	
 }
 .share-box{
 	position: absolute;
 	width: 640px;
-	background-color: #1A1A1A;
-	height:50px;
-	margin: -4px 0px 0px 0px;
+	background-color: rgba(0, 0, 0, 0.56);
+	height:132px;
+	margin: -12px 0px 0px 0px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-topright: 20px; 
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 .cateoriesh2{
 
@@ -475,7 +477,7 @@ a:hover{
 .ad-upload{
 	
 	margin: 15px 0px 0px 0px;
-	border: 10px solid #161817;
+	border: 5px solid #6951C7;
 	height: 250px;
 	width: 300px;
 	-moz-border-radius-bottomright: 10px;
@@ -511,7 +513,7 @@ a:hover{
 }
 .browse{
 	margin: 0px 0px 0px 0px;
-	background-color: #FFF;
+	background-color: rgba(0, 0, 0, 0.42);
 	width: 470px;
 	height: 250px;
 	-moz-border-radius-bottomright: 10px;
@@ -556,18 +558,19 @@ a.cat:hover {color: #DDD;}
 	width: 100%;
 	float: right;
 	margin: 0px 0px 0px 0px;
-	background-color: #fff;
+	background-color: rgba(0, 0, 0, 0.42);
 }
 .browse-more{
 	
 }
 .p-title{
+	
 	padding: 5px 0px 5px 0px;
 	position: absolute;
-	margin: 133px 0px 0px 0px;
-	width: 640px;
+	margin: 140px 0px 0px 10px;
+	width: 620px;
 	color: #DDD; 
-	background-color: #1A1A1A; 
+	background-color: rgba(0, 0, 0, 0.42); 
 	font-size: 30px;
 }
 .fb-like{
@@ -603,7 +606,7 @@ a.cat:hover {color: #DDD;}
 	width: 1000px;
 }
 body{
-	background-color: #C7C7C7;
+	background-color: #161817;
 }
 .top-5{
 	margin: 0px 0px 10px 5px;
@@ -709,10 +712,18 @@ background-repeat: repeat-x;
 }
 .up-ad{
 	position: absolute;
-	border: 1px solid black;
+	border: 5px solid #6951C7;
 	width: 728px;
 	height: 90px;
 	margin: 10px 0px 0px -50px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 }
 .home-private{
 	width: 630px;
@@ -909,7 +920,7 @@ border-radius: 5px 5px 5px;
 }
 .likehate{
 	float: right;
-	margin: 50px 100px 0px 0px;
+	margin: -30px 10px 0px 0px;
 }
 .my_nav{
 	float: right;
@@ -1037,6 +1048,8 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	 -webkit-box-shadow: -5px 3px 8px rgba(50, 50, 50, 0.66);
 	-moz-box-shadow:    -5px 3px 8px rgba(50, 50, 50, 0.66);
 	box-shadow:         -5px 3px 8px rgba(50, 50, 50, 0.66);
+	border: none;
+
 }
 .side_ad{
 	position: fixed;
