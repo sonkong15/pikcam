@@ -5,7 +5,7 @@ atom_feed :language => 'en-US' do |feed|
 	@uploades.each do |uploades|
 		feed.entry(uploades) do |entry|
 			entry.title(uploades.title)
-			entry.summary('<img src="'uploades.picture.url(:small)'">', :type => 'html')
+			entry.summary '<img src="' + uploades.picture.url(:small) + '">', :type => 'html' 
 
 			 entry.author do |author|
         author.name  ANONYMOUS
