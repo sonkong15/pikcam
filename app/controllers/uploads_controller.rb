@@ -1,6 +1,11 @@
 class UploadsController < ApplicationController
 	def index
 		@uploads = Upload.order("created_at DESC").where("private = ?", false).page(params[:page]).per(50)
+     respond_to do |format|
+    format.html     # index.html.erb
+    format.atom     # index.atom.builder
+    format.xml  { render :xml => @articles }
+  end
 	end
 	def new
 		@upload = Upload.new 
@@ -77,4 +82,11 @@ class UploadsController < ApplicationController
   		@upload_top = Upload.order("RANDOM()").page(params[:page]).per(50)
   		
   	end
+    def feed
+      @uploades = Upload.order(" created_at DESC")
+      
+      respond_to do |format|
+      format.atom
+      end
+    end
 end
