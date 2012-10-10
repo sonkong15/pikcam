@@ -7,8 +7,6 @@ atom_feed :language => 'en-US' do |feed|
 			entry.title(uploades.title)
 			entry.summary image_tag(uploades.picture.url(:small)), :type => 'html' 
 
-			 entry.author do |author|
-        author.name  ANONYMOUS
       end
 	 end
 	end
