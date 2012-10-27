@@ -685,7 +685,7 @@ background-image: -webkit-gradient(
 	margin: 30px;
 	background-color: #161817;
 	padding: 10px 0px 15px 20px;
-	margin: auto;
+	margin: 0px 0px 0px 500px;
 }
 
 .recent-add{
@@ -1090,6 +1090,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	height: 300px;
 }
 .index-adc{
+	position: fixed;
 	margin-left: 10px;
 	clear: left;
     border: 2px solid black;
