@@ -1,13 +1,36 @@
 <% @title = "Explore Funny Pics" %>
-<div class="background-explore">
 <div class="cateoriesh2">
 <h1 style="margin-left: 30%;">Explore Pictures</h1>
 </div>
+<div class="ad-bottom1">
+  <div class="ad-bottom-home">
+   <script type="text/javascript"><!--
+google_ad_client = "ca-pub-3387068696014466";
+/* explore page */
+google_ad_slot = "0866937747";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+  </div>
+</div>
+<div class="background-explore">
+
 
 <h2 class="cateories-title"> Categories </h2>
 <div class="list-cateories">
+  <%  @categories.each do |category| %>
+      <H2 class="cat-list "><%= link_to category.name, category,  :class => "ex3 cat" %>  </H2>
+      <% end %>
   
-  <div class="index-adc">
+	
+</div>
+<div class="index-adc">
+    
   <script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
 /* pik-cam large 336x280 */
@@ -20,28 +43,25 @@ google_ad_height = 280;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div>
-	<%  @categories.each do |category| %>
-			
-        
-			<H2 class="cat-list "><%= link_to category.name, category,  :class => "ex3 cat" %>  </H2>
-		    
-			<% end %>
-</div>
  
-      <div class="ad-bottom1">
-  
-</div>
   
 </div>
 <h2 class="recent-add"> Most Recent pictures</h2>
 <div class=""></div>
 <div class="most-recent">
   <% @uploads.each do |uploads| %>
-  <%= link_to image_tag(uploads.picture.url(:small), :alt => uploads.title, :title => uploads.title), uploads, :title => "#{uploads.title}" %>
-  <% end %>
+  <table class=<%=cycle("post-table", "post-table2")%>>
+  <tr>
+  <td><%= link_to image_tag(uploads.picture.url(:small), :alt => uploads.title, :title => uploads.title), uploads %></td>
+  <td class="tb-text"><%= uploads.title %></td>
+  </tr>
+  
 
+  
+  </table>
+  <% end %>
   </div>
- <a class="show"href="/uploads"><h2 class="show_more "> Show More Pics</h2></a> 
+  
    <div class="ad-bottom1">
   <div class="ad-bottom-home">
    <script type="text/javascript"><!--
@@ -58,14 +78,15 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
   </div>
 </div>
+<div class="show_more "><%= paginate @uploads, :outer_window => 3 %></div>
 </div>
 <div>
-<h2 class="recent-add"> Most Like pictures </h2>
+<!--<h2 class="recent-add"> Most Like pictures </h2>
 <div class="most-recent">
-<% @upload_top.each do |top| %>
- <%= link_to image_tag(top.picture.url(:small), :alt => top.title, :title => top.title), top, :title => top.title  %>
- <% end %>
+<%# @upload_top.each do |top| %>
+ <%# link_to image_tag(top.picture.url(:small), :alt => top.title, :title => top.title), top, :title => top.title  %>
+ <%# end %>
 </div>
  <a class="show"href="/top_pics"><h2 class="show_more "> Show More Pics</h2></a>
 
-</div>
+</div>-->
