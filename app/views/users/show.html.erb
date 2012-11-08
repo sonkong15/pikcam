@@ -28,7 +28,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		<div class="my_nav">
 			<ul>
 				<li class="link_change"><%= link_to "MY Pics", "" %></li>
-				<li class="link_change"><%= link_to "MY Likes", "" %></li>
+				<li class="link_change"><%= link_to "MY Fav", "" %></li>
 
 			</ul>
 
@@ -44,18 +44,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		<p>
 
 		</p>
-		
-	
-		<% if @user.avatar_file_name.blank? %>
-
-		<%= image_tag "profile-pic.jpg", :class => "profile-pic" %>
-
-		<% else %>
-		
-		<%= image_tag @user.avatar.url(:small), :class => "profile-pic" %>
-
-		<% end %>
-		
+		<%= user_profile_pics %>
 		<h4>
 			Joined <%= l @user.created_at, :format => :long %>
 		</h4>
@@ -93,5 +82,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	
 </div>
 <diV>
+<div class="idk">
+
 	
+	<% if facebook_token %>
+	 <%= image_tag(@profile_image) %>
+	 <%= @fbprofile %>
+	 <%# @friends %>
+	 <%# @wall %>
+	 <%# @pic %>
+
+	 <% else %>
+	 
+	 <% end %>
+
+	 </div>
 </div>

@@ -1,4 +1,6 @@
 <% @title = @upload.title %>
+<meta property="og:image" content="<%= @upload.picture.url(:thumb) %>" />
+<meta property="fb:admins" content="100000200037582" />
 <div class="upload-bacgraound">
 	<div class="list-more">
 	<ul class="clirle-nav ">
@@ -108,11 +110,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</div>
 	<div class="likehate">
 		<h2 class="like"><%= @upload.flaggings.where("flag = ?", "like").count %></h2>
-		<h2 class="hate"><%= @upload.flaggings.where("flag = ?", "hate").count %></h2>
+
 		<% if current_user %>
 		<ul>
  		<li class= "coolli"><%= toggle_like(@upload, current_user ) %></li>
- 		<li class="coolli"><%= link_to "Hate", hate_upload_path(@upload), :remote => true %></li>
+ 		<li class="coolli2"><div class="fb-like" data-href="http://www.pikcam.com/uploads/<%= @upload.id %>" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div></li>
  		</ul>
  		<% else %>
  		<p> <b>To like or hate pics <%= link_to "sigin up", "/signup" %></b></p>

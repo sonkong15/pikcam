@@ -12,7 +12,11 @@ TheBrands::Application.routes.draw do
   end 
   match "/top_pics", to: "uploads#top"
   resources :categories 
-
+   match '/auth/:provider/callback' => 'user_oauth#create', :as => :callback
+  match '/auth/failure' => 'user_oauth#failure', :as => :failure
+  
+  match '/auth/facebook' => 'user_oauth#create', :as => :fb_login
+  match '/auth/twitter' => 'user_oauth#create', :as => :tw_login
 
   
   

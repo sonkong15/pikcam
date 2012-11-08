@@ -30,7 +30,7 @@ class UploadsController < ApplicationController
 	def show
 		@upload = Upload.find(params[:id])
 		@uploads = Upload.order("RANDOM ()").where("private = ?", false).limit(6)
-		@category = Category.joins(:uploads) 	
+		@category = Category.joins(:uploads) 
 	end
 
 	def edit
@@ -89,4 +89,8 @@ class UploadsController < ApplicationController
       format.atom
       end
     end
+
+    private
+
+    
 end

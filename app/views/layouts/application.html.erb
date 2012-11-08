@@ -27,6 +27,7 @@
 </script>
 </head>
 <body>
+	
 	<%= render "layouts/facebooklike" %>
         
     
@@ -36,6 +37,10 @@
 			<div class="containe">
 			<%= link_to image_tag("pikcam-logo.png"), root_path %>
 	<ul class="nave pull-right">
+		<% unless current_user %>
+		<li class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "/auth/facebook" %></li>
+		<li class="twitter"><%= link_to image_tag("twitter.png", :alt => "twitter sign"), '/auth/twitter' %></li>
+		<% end %>
 		<li><%= link_to "Home", root_path %></li>
 		<li><%= link_to "About", about_path %></li>
 		<li><%= link_to "Explore", categories_path %></li>
@@ -68,10 +73,11 @@
 		<% flash.each do |key, value| %>
 		<div class="alert alert-<%= key %>"><%= value %></div>
 	<% end %>
-		
+		<div class="simple_overlay"></div>
 		<%= yield %>
 
-	
+	<!--<div style="position: absolute; z-index:100">This is in background</div>--> 
+    
 
 
 

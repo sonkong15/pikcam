@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
 	def index
-	@uploads = Upload.order("created_at DESC").where("private = ?", false).page(params[:page]).per(20)
-	@upload_top = Upload.order("RANDOM()").limit(18)
+	@uploads = Upload.order("created_at DESC").where("private = ?", false).page(params[:page]).per(15)
+	@upload_top = Upload.order("RANDOM()").where("private = ?", false).limit(10)
 	@categories = Category.order(:name)
 	respond_to do |format|
 		format.html

@@ -3,9 +3,8 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied, :with => :not_allow
 
 
-  helper_method :current_user_session, :current_user
+  helper_method :current_user_session, :current_user, :facebook_token
   
-
 
   private
 
@@ -23,6 +22,13 @@ class ApplicationController < ActionController::Base
       @current_user = current_user_session && current_user_session.user
     end
 
- 
+    def facebook_token
+      if current_user.present?
+        current_user.id == @user.id
+      else
+        
+      end
+      
+    end
 end
 

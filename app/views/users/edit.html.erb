@@ -7,8 +7,8 @@
 
 	    <%= simple_form_for @user, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
 
-		  <%= f.input :name, :required => false,:disabled => true, :input_html => { :class => "span3 font" } %>
-		  <%= f.input :email, :required => false, :input_html => { :class => "span4 font" } %>
+		  <%= f.input :name, :required => true, :input_html => { :class => "span3 font" } %>
+		  <%= f.input :email, :required => false,:disabled => true, :input_html => { :class => "span4 font" } %>
 		  <div class="avatar">
 
 		  <%= f.input :avatar, :as => :file %>

@@ -160,6 +160,7 @@ border-bottom-left-radius: 20px 15px;
 margin: 0px 0px 0px 0px;
 }
 .profile{
+	width: 100%;
 	height: 930px;
 	background-color: #DDD;
 }
@@ -292,7 +293,7 @@ a:hover{
 	background-color: #161817;
 	padding: 10px 10px 5px 10px;
 	
-	margin: 40px 0px 0px 470px;
+	margin: 40px 0px 0px 450px;
 	border: 5px solid #161817;
 	-moz-box-shadow: 10px 10px 10px #BEC1C2;
     -webkit-box-shadow: 10px 10px 10px #BEC1C2;
@@ -395,17 +396,21 @@ a:hover{
 	margin: 0px 140px auto;
 }
 .mainbox2{
+	background-color: black;
 	clear: both;
+	-moz-box-shadow: -5px -10px 20px rgba(50, 67, 189, 0.73);
+    -webkit-box-shadow: -5px -10px 20px rgba(50, 67, 189, 0.73);
+    box-shadow: -5px -10px 20px rgba(50, 67, 189, 0.73);
 }
 .ad-home{
 	margin: 0px 0px 0px 90px;
 	border: 2px solid #181818;
-	height: 280px;
-	width: 336px;
+	height: 250px;
+	width: 300px;
 	float: left;
 }
 .ad-bottom-home{
-	margin: 10px 0px 0px 20%;
+	margin: 10px 0px 0px 25%;
 	border: 2px solid #999;
 	height: 90px;
 	width: 728px;
@@ -455,16 +460,20 @@ a:hover{
 }
 .cateoriesh2{
 
-	padding: 10px 0px 0px 0px;
+	padding: 5px 0px 10px 0px;
 	height: 50px;
 	width: 100%;
-	background-image: -moz-linear-gradient(top, white, #161817);
-background-image: -ms-linear-gradient(top, white, #161817);
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#161817));
-background-image: -webkit-linear-gradient(top, white, #161817);
-background-image: -o-linear-gradient(top, white, #161817);
-background-image: linear-gradient(top, white, #161817);
+	background-image: -moz-linear-gradient(top, black, #161817);
+background-image: -ms-linear-gradient(top, black, #161817);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(#161817));
+background-image: -webkit-linear-gradient(top, black, #161817);
+background-image: -o-linear-gradient(top, black, #161817);
+background-image: linear-gradient(top, black, #161817);
 background-repeat: repeat-x;
+-moz-box-shadow: -5px 3px 15px rgba(50, 67, 189, 0.73);
+    -webkit-box-shadow: -5px 3px 15px rgba(50, 67, 189, 0.73);
+    box-shadow: -5px 3px 15px rgba(50, 67, 189, 0.73);
+
 }
 .list-cateories{
 	width: 400px;
@@ -507,7 +516,7 @@ background-repeat: repeat-x;
 }
 .top-share{
 	position: absolute;
-	margin: 15px 0px 0px 476px;
+	margin: 10px 0px 0px 456px;
 	height: 450px;
 	width: 650px;
 	background-color: #39B8A9;
@@ -681,34 +690,67 @@ background-image: -webkit-gradient(
 
 }
 .most-recent{
-	width: 950px;
+	width: 480px;
 	margin: 30px;
 	background-color: #161817;
 	padding: 10px 0px 15px 20px;
 	margin: 0px 0px 0px 500px;
+
+}
+.recent-add2{
+	margin: 10px;
+	padding-right: 10px;
+	background-image: -moz-linear-gradient(top, black, #161817);
+background-image: -ms-linear-gradient(top, black, #161817);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(#161817));
+background-image: -webkit-linear-gradient(top, black, #161817);
+background-image: -o-linear-gradient(top, black, #161817);
+background-image: linear-gradient(top, black, #161817);
+background-repeat: repeat-x;
 }
 
 .recent-add{
+	margin: 10px;
 	padding-right: 10px;
-	background-image: -moz-linear-gradient(top, white, #161817);
-background-image: -ms-linear-gradient(top, white, #161817);
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#161817));
-background-image: -webkit-linear-gradient(top, white, #161817);
-background-image: -o-linear-gradient(top, white, #161817);
-background-image: linear-gradient(top, white, #161817);
+	background-image: -moz-linear-gradient(top, black, #161817);
+background-image: -ms-linear-gradient(top, black, #161817);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(#161817));
+background-image: -webkit-linear-gradient(top, black, #161817);
+background-image: -o-linear-gradient(top, black, #161817);
+background-image: linear-gradient(top, black, #161817);
+background-repeat: repeat-x;
+-moz-box-shadow: 0px 0px 15px rgba(50, 67, 189, 0.73);
+-webkit-box-shadow: 0px 0px 15px rgba(50, 67, 189, 0.73);
+box-shadow: 0px  0px 15px rgba(50, 67, 189, 0.73);
+}
+.category-explore{
+	padding-right: 10px;
+	background-image: -moz-linear-gradient(top, black, #161817);
+background-image: -ms-linear-gradient(top, black, #161817);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(#161817));
+background-image: -webkit-linear-gradient(top, black, #161817);
+background-image: -o-linear-gradient(top, black, #161817);
+background-image: linear-gradient(top, black, #161817);
 background-repeat: repeat-x;
 }
 .cateories-title{
-	text-align: center;
-	width: 350px;
-	padding-right: 10px;
-	background-image: -moz-linear-gradient(top, #FFFFFF, #161817);
-background-image: -ms-linear-gradient(top, #FFFFFF, #161817);
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFFFFF), to(#161817));
-background-image: -webkit-linear-gradient(top, #FFFFFF, #161817);
-background-image: -o-linear-gradient(top, #FFFFFF, #161817);
-background-image: linear-gradient(top, #FFFFFF, #161817);
+	z-index: -1;
+position: absolute;
+margin: 10px 0px;
+float: left;
+height: 40px;
+text-align: center;
+width: 100%;
+background-image: -moz-linear-gradient(top, black, #161817);
+background-image: -ms-linear-gradient(top, black, #161817);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(#161817));
+background-image: -webkit-linear-gradient(top, black, #161817);
+background-image: -o-linear-gradient(top, black, #161817);
+background-image: linear-gradient(top, black, #161817);
 background-repeat: repeat-x;
+-moz-box-shadow: 0px 0px 15px rgba(50, 67, 189, 0.73);
+-webkit-box-shadow: 0px 0px 15px rgba(50, 67, 189, 0.73);
+box-shadow: 0px 0px 15px rgba(50, 67, 189, 0.73);
 }
 .show-container{
 	 clear: both;
@@ -798,7 +840,7 @@ a.pagin{
 .category-title{
 	width: 100%;
 	padding: 0px 0px 0px 40%;
-	background-color: #fff;
+	background-color: #000;
 }
 .cat-showad{
 	margin: 10px 0px 0px 530px;
@@ -876,11 +918,55 @@ height: 90px;
 width: 728px;
 float: left;
 }
+.coolli2{
+	font-size: 16px;
+	display: inline;
+	line-height: 30px;
+	margin: 0px 30px 0px 30px;
+	height: 30px;
+	width: 45px;
+padding: 0px 0px 0px 0px;
+-moz-border-radius: 5px 5px 5px;
+border-radius: 5px 5px 5px;
+
+text-align: center;
+float:left;
+}
+.coolli-facebook{
+	font-size: 16px;
+	display: inline;
+	line-height: 30px;
+	margin: 0px 10px 0px 0px;
+	height: 30px;
+padding: 0px 0px 0px 0px;
+-moz-border-radius: 5px 5px 5px;
+border-radius: 5px 5px 5px;
+
+text-align: center;
+float:left;
+-webkit-box-shadow: inset 5px 5px 10px 10px #0E0E0E;
+        
+        box-shadow: inset 5px 5px 10px 10px #0E0E0E;
+background-image: linear-gradient(bottom, rgb(20,19,20) 0%, rgb(43,40,43) 100%);
+background-image: -o-linear-gradient(bottom, rgb(20,19,20) 0%, rgb(43,40,43) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(20,19,20) 0%, rgb(43,40,43) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(20,19,20) 0%, rgb(43,40,43) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(20,19,20) 0%, rgb(43,40,43) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(20,19,20)),
+	color-stop(1, rgb(43,40,43))
+);
+
+}
 .coolli{
 	font-size: 16px;
 	display: inline;
 	line-height: 30px;
-	margin: 0px 0px 0px 50px;
+	margin: 0px 0px 0px 0px;
 	height: 30px;
 	width: 45px;
 padding: 0px 0px 0px 0px;
@@ -918,7 +1004,7 @@ border-radius: 5px 5px 5px;
 .like{
 display: inline;
 background-color: #6951C7;
-margin: 0px 0px 0px 80px;
+margin: 0px 0px 0px 30px;
 padding: 0px 10px 0px 10px;
 -moz-border-radius: 5px 5px 5px;
 border-radius: 5px 5px 5px;
@@ -929,7 +1015,7 @@ border-radius: 5px 5px 5px;
 }
 .my_nav{
 	float: right;
-	margin: 70px 62% 0px 0px;
+	margin: 70px 28% 0px 0px;
 
 	
 }
@@ -1033,12 +1119,12 @@ h2{
 	font-size: 25px;
 }
 .navbar-inner{
-	background-image: -moz-linear-gradient(top, #252525, #222);
-background-image: -ms-linear-gradient(top, #252525, #222);
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#252525), to(#222));
-background-image: -webkit-linear-gradient(top, #252525, #222);
-background-image: -o-linear-gradient(top, #252525, #222);
-background-image: linear-gradient(top, #252525, #222);
+	background-image: -moz-linear-gradient(top, #252525, #000);
+background-image: -ms-linear-gradient(top, #252525, #000);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#252525), to(#000));
+background-image: -webkit-linear-gradient(top, #252525, #000);
+background-image: -o-linear-gradient(top, #252525, #000);
+background-image: linear-gradient(top, #252525, #000);
 background-repeat: repeat-x;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF333333', endColorstr='#FF222222', GradientType=0);
 -webkit-border-radius: 0px;
@@ -1172,7 +1258,7 @@ background-image: -webkit-linear-gradient(top, #161817, #7474E7);
 background-image: -o-linear-gradient(top, #161817, #7474E7);
 background-image: linear-gradient(top, #161817, #7474E7);
 background-repeat: repeat-x; 
-	margin: 15px 0px 10px 30%;
+	margin: 15px 0px 10px 0%;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 10px;
     border-bottom-right-radius: 10px;
@@ -1188,4 +1274,21 @@ background-repeat: repeat-x;
 .background-explore {
 	width: 460;
 	float: left;
+}
+.simple_overlay {
+	display:none; 
+	margin-top: -70px; 
+	position: fixed;
+ 	z-index: 5000;
+   background-color: #ddd ;
+    color:#efefef;
+    width: 100%;
+    height: 100%;
+}
+.explore-main{
+	width: 980px;
+	margin: 0px auto;
+}
+.twitter-tweet{
+	padding: 5px 0px 0px 5px;
 }

@@ -1,10 +1,10 @@
 module PagesHelper
 def full_title(title)
-		@base_title = "Humorous Pikcam pictures"
+		@base_title = "Humorous & cool pictures"
 	if @title.empty?
 		@base_title
 	else
-		@base_title + " & " + @title
+		@base_title + " - " + @title
 	end
 end
 end
