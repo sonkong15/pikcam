@@ -8,14 +8,6 @@
 	<meta name="keywords" content=" pikcam, pics, pic, share, cool pics of, lol, funny, strange, gif, humorous pictures, pictures, gif pictures, picture, pics of women, &, ">
 	<meta name="msvalidate.01" content="311FB0E2CA9902199189C9D56366BE11" />
 	<meta name="wot-verification" content="b0dc897ccb7ab98a0816"/>
-	<% if @upload.present? %>
-	<meta property="og:title" content="humorous pikcam - <% @upload.title %>" />
-	<meta property="og:type" content="Website" />
-	<meta property="og:url" content=  "<%= upload_url %>" />
-	<meta property="og:image" content= "<%= @upload.picture.url(:small) %>" />
-	<meta property="og:site_name" content="www.pikcam.com" />
-	<meta property="fb:admins" content="100000200037582" />
-	<% end %>
   <title><%=  full_title (yield (@title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
