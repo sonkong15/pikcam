@@ -93,7 +93,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 	<p class= "category-namd"> 
  <%= link_to map.name, map %> 
-
 </p>
 <% end %>
 <div class="edit_link">
@@ -109,7 +108,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	<div class="likehate">
 		<h2 class="like"><%= @upload.flaggings.where("flag = ?", "like").count %></h2>
 		<ul>
-		<li class="coolli2"><div class="fb-like" data-href="http://www.pikcam.com/uploads/<%= @upload.id %>" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div></li>
+		<li class="coolli2"><div class="fb-like" data-href="<%= upload_url %>" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div></li>
 		</ul>
 		<% if current_user %>
 		<ul>
@@ -118,7 +117,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  		<% else %>
  		<p> <b>To like or hate pics <%= link_to "sigin up", "/signup" %></b></p>
 		<% end %>
-		
+
 	</div>
 </div>
 
