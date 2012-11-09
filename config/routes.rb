@@ -3,7 +3,6 @@ TheBrands::Application.routes.draw do
   resources :users do
      get ':id/page/:page', "user#show", :action => :show, :on => :collection
   end
-  
   resources :uploads do
     get 'page/:page', :action => :index, :on => :collection
   member do
