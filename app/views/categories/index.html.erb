@@ -1,4 +1,4 @@
-<% @title = "Explore Funny Pics" %>
+<% @title = "lol at Funny Pics" %>
 
 <div class="cateoriesh2">
 <h1 style="margin-left: 30%;">Explore Pictures</h1>
@@ -54,9 +54,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <td class="tb-text"><%= uploadss.title %></td>
   </tr>
   <tr>
-    <td class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.pikcam.com/uploads/<%= uploadss.id %>" data-via="pikcams">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></td>
-<td><div class="fb-like" data-href="http://www.pikcam.com/uploads/<%= uploadss.id %>" data-send="true" data-layout="button_count" data-width="50" data-show-faces="false"></div></td>
+    <td class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= upload_url(uploadss) %>" data-via="pikcams">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-href="<%= upload_url(uploadss) %>"></div>
+</td>
+<td><div class="fb-like" data-href="<%= upload_url(uploadss) %>"  data-send="true" data-layout="button_count" data-width="50" data-show-faces="false"></div></td>
 
   </tr>
   
@@ -76,9 +79,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <td class="tb-text"><%= uploads.title %></td>
   </tr>
   <tr>
-    <td class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.pikcam.com/uploads/<%= uploads.id %>" data-via="pikcams">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></td>
-  <td><div class="fb-like" data-href="http://www.pikcam.com/uploads/<%= uploads.id %>" data-send="true" data-layout="button_count" data-width="50" data-show-faces="false"></div></td>
+    <td class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= upload_url(uploads) %>" data-via="pikcams">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-href="<%= upload_url(uploads) %>"></div>
+</td>
+  <td><div class="fb-like" data-href="<%= upload_url(uploads) %>" data-send="true" data-layout="button_count" data-width="50" data-show-faces="false"></div></td>
   </tr>
   
 

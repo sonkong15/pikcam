@@ -1,4 +1,4 @@
-<% @title = 'Cool Pics of anything ' %>
+<% @title = ' lol at Pics ' %>
 <div class= "graybox" >
   <div class="mainbox">
     <div class="ad-home">
@@ -29,7 +29,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     <div class="slider-wrapper theme-default">
       <div id="slider" class="nivoSlider">
         <% @uploads_slideshow.each do |ups| %>
-        <%= link_to image_tag(ups.picture.url(:large), :alt => ups.title, :title => ups.title ), ups   %>
+        <%= link_to image_tag(ups.picture.url(:large), :alt => ups.title, :title => ups.title ), upload_url(ups)   %>
         <% end %>
       </div>
     </div>
@@ -52,7 +52,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         <h3>Recent add Pictures</h3>
         <% @uploads.each do |uploads| %>
           <div class="uploads-border">
-            <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 110px; width: 149px;" ), uploads %>
+            <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 110px; width: 149px;" ), upload_url(uploads) %>
           </div>
         <% end %>
       </div>
