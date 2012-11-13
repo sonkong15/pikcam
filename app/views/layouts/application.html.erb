@@ -37,7 +37,7 @@
 <body>
 	
 	<%= render "layouts/facebooklike" %>
-        
+
     
 	<header class= "navber navber-fixed-top" >
 
@@ -46,7 +46,7 @@
 			<%= link_to image_tag("pikcam-logo.png"), root_path %>
 	<ul class="nave pull-right">
 		<% unless current_user %>
-		<li class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook" %></li>
+		<li class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook"%></li>
 		<li class="twitter">twitter coming soon<%# link_to image_tag("twitter.png", :alt => "twitter sign"), '/auth/twitter' %></li>
 		<% end %>
 		<li><%= link_to "Home", root_path %></li>
