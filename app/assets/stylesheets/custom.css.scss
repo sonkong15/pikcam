@@ -51,7 +51,7 @@ font-size: 20px;}
 }
 .signup-box{
 	background-color: #fff;
-	margin: 0px 0px 40px 25%;
+	margin: 0px auto;
 	height:400px;
 	width:980px;
 	padding: 0px 0px 0px 0px;	
@@ -250,6 +250,7 @@ a:hover{
 	background-color: #d9d7db;
 	padding: 30px 0px 0px 0px;
 	height: 820px;
+	min-width: 1060px;
 }
 .avatar{
 	background-color: #D86666;
@@ -677,9 +678,9 @@ a:hover{
 	position: absolute;
 	padding: 0px 20px 0px 20px;
 	display: inline-block;
-	margin: 120px 0px 0px 530px;
-	width: 820px;
-	min-height: 500px;
+	margin: 120px 0px 0px 500px;
+	width: 45%;
+	height: 500px;
 	-moz-border-radius: 5px 5px 5px;
     border-radius: 5px 5px 5px;
 	background-image: linear-gradient(bottom, rgb(148,146,148) 0%, rgb(221,221,221) 79%);
@@ -854,11 +855,10 @@ a.pagin{
 	background-color: #000;
 }
 .cat-showad{
-	margin: 10px 0px 0px 530px;
+	margin: 15px auto;
 	border: 2px solid #999;
 	height: 90px;
 	width: 728px;
-	float: left;
 	clear: both;
 }
 .uploads-border{
@@ -923,7 +923,7 @@ a.pagin{
     border-top-left-radius: 10px;
 }
 .cat-showad2 {
-margin: 10px 0px 0px 560px;
+margin: 10px 0px 0px 30%;
 border: 2px solid #999;
 height: 90px;
 width: 728px;
@@ -1154,7 +1154,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 
 }
 .side_ad{
-	margin: 0px 0px 0px 100px;
+	margin: 0px 0px 0px 0px;
 	float: left;
 	width: 160px;
 	height: 600px;
@@ -1163,6 +1163,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 .hold_ad{
 	float: left;
 	height: 600px;
+	margin: 10px 0px 10px 10%;
 }
 .loading{
 	display: none;
