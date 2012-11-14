@@ -161,8 +161,9 @@ border-bottom-left-radius: 20px 15px;
 margin: 0px 0px 0px 0px;
 }
 .profile{
+	min-width: 1120px;
 	width: 100%;
-	height: 930px;
+	height: 965px;
 	background-color: #DDD;
 }
 .profile-box{
@@ -676,10 +677,11 @@ a:hover{
 }
 .user_pic{
 	position: absolute;
-	padding: 0px 20px 0px 20px;
+	padding: 0px 20px 0px 0px;
 	display: inline-block;
-	margin: 120px 0px 0px 500px;
+	margin: 120px 0px 0px 450px;
 	width: 45%;
+	min-width: 624px;
 	height: 500px;
 	-moz-border-radius: 5px 5px 5px;
     border-radius: 5px 5px 5px;
