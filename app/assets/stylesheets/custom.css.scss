@@ -9,7 +9,7 @@
 }
 .nave li{display: inline; padding-left: 25px; font-family: Arial; 
 font-size: 20px;}
-.nave { margin-right: 8.5%; margin-top: 25px;}
+.nave { margin-right: 60px; margin-top: 15px;}
 
 @mixin box_sizing{
 	-moz-box-sizing: border-box;
@@ -29,7 +29,7 @@ font-size: 20px;}
 	background-image: image_url("polaroy.png");
 	background-repeat: no-repeat;
 	height: 900px;
-
+	min-width: 1060px;
 	width:100%;
 
 }
@@ -130,6 +130,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	padding: 10px 0px 0px 0px;
 	height: 70px;
 	width: 100%;
+	min-width: 1060px;
   	
 
 }
@@ -293,7 +294,7 @@ a:hover{
 	background-color: #161817;
 	padding: 10px 10px 5px 10px;
 	
-	margin: 40px 0px 0px 450px;
+	margin: 40px 0px 0px 350px;
 	border: 5px solid #161817;
 	-moz-box-shadow: 10px 10px 10px #BEC1C2;
     -webkit-box-shadow: 10px 10px 10px #BEC1C2;
@@ -376,6 +377,7 @@ a:hover{
     box-shadow: -1px 3px 21px rgba(50, 67, 189, 0.73);
 }
 .upload-bacgraound{
+	min-width: 1060px;
 	height: 100%;
 	padding: 0px 0px 0px 0px;
 	background-color: #161817;
@@ -393,8 +395,9 @@ a:hover{
 	margin: 0px 0px 0px 0px;
 }
 .mainbox{
+	width: 1040px;
 	height: 660px;
-	margin: 0px 8% auto;
+	margin: 0px auto ;
 }
 .mainbox2{
 	background-color: black;
@@ -404,7 +407,7 @@ a:hover{
     box-shadow: -5px -10px 20px rgba(50, 67, 189, 0.73);
 }
 .ad-home{
-	margin: 0px 0px 0px 90px;
+	margin: 0px 0px 0px 0px;
 	border: 2px solid #181818;
 	height: 250px;
 	width: 300px;
@@ -464,6 +467,7 @@ a:hover{
 	padding: 5px 0px 10px 0px;
 	height: 50px;
 	width: 100%;
+	min-width: 1060px;
 	background-image: -moz-linear-gradient(top, black, #161817);
 background-image: -ms-linear-gradient(top, black, #161817);
 background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(#161817));
@@ -517,7 +521,7 @@ background-repeat: repeat-x;
 }
 .top-share{
 	position: absolute;
-	margin: 10px 0px 0px 456px;
+	margin: 10px 0px 0px 356px;
 	height: 450px;
 	width: 650px;
 	background-color: #39B8A9;
@@ -738,6 +742,7 @@ background-image: linear-gradient(top, black, #161817);
 background-repeat: repeat-x;
 }
 .cateories-title{
+	min-width: 1060px;
 	z-index: -1;
 position: absolute;
 margin: 10px 0px;
@@ -827,7 +832,7 @@ a.pagin{
 }
 .top-photos{
 	padding-left: 10px;
-	margin: 0px 0px 0px 10.5%;
+	margin: 0px auto;
 	height: 274px;
 	width: 1044px;
 	border: 3px solid #7474E7;
@@ -844,6 +849,7 @@ a.pagin{
 .category-title{
 	text-align: center;
 	width: 100%;
+	min-width: 1060px;
 	padding: 0px 0px 0px 0%;
 	background-color: #000;
 }
@@ -864,7 +870,7 @@ a.pagin{
 }
 .about-div{
 	width: 900px;
-	margin: 20px 0px 20px 300px;
+	margin: 20px auto;
 	height: 730px;
 }
 .upload-errors{
@@ -1140,6 +1146,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	padding: 10px 0px 0px 0px;
 	height: 60px;
 	width: 100%;
+	min-width: 1060px;
 	 -webkit-box-shadow: -5px 3px 8px rgba(50, 50, 50, 0.66);
 	-moz-box-shadow:    -5px 3px 8px rgba(50, 50, 50, 0.66);
 	box-shadow:         -5px 3px 8px rgba(50, 50, 50, 0.66);
@@ -1169,7 +1176,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	margin-top: 30px;
 }
 .ad-bottom-home5{
-	margin: 10px 0px 0px 19%;
+	margin: 10px 0px 0px 22%;
 	border: 2px solid #999;
 	height: 90px;
 	width: 728px;
@@ -1210,9 +1217,9 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	margin: 0px 0px 0px 0px;
 }
 .bottom_pfg{
-	margin: 10px 0px 0px 10.5%;
+	margin: 10px auto;
 	clear: both;
-	width: 800px;
+	width: 1030px;
 }
 .our-link{
 	width: 600px;
@@ -1226,7 +1233,8 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	display: inline;
 }
 .mainbox2 h1{
-	margin: 0px 5px 0px 11%;
+
+	margin: 0px 5px 0px 22%;
 }
 .our-link h4{
  color: #7474E7;
@@ -1294,4 +1302,13 @@ background-repeat: repeat-x;
 }
 .twitter-tweet{
 	padding: 5px 0px 0px 5px;
+}
+.containe{
+	margin: auto;
+	width: 100%;
+
+}
+.home-logo{
+	float: left;
+	margin-left: 40px;
 }

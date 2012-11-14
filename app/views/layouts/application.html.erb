@@ -33,21 +33,23 @@
   })();
 
 </script>
+<%= render "layouts/facebooklike" %>
 </head>
 <body>
 	
-	<%= render "layouts/facebooklike" %>
+	
 
     
 	<header class= "navber navber-fixed-top" >
 
 		<div class="navbar-inner">
+			<%= link_to image_tag("pikcam-logo.png", :class =>"home-logo"), root_path %>
 			<div class="containe">
-			<%= link_to image_tag("pikcam-logo.png"), root_path %>
+			
 	<ul class="nave pull-right">
 		<% unless current_user %>
 		<li class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook"%></li>
-		<li class="twitter">twitter coming soon<%# link_to image_tag("twitter.png", :alt => "twitter sign"), '/auth/twitter' %></li>
+		<!--<li class="twitter">twitter coming soon<%# link_to image_tag("twitter.png", :alt => "twitter sign"), '/auth/twitter' %></li>-->
 		<% end %>
 		<li><%= link_to "Home", root_path %></li>
 		<li><%= link_to "About", about_path %></li>
