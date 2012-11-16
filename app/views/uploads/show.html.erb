@@ -29,11 +29,10 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>
 </div>
 <div class="side-bar">
-<div class="browse">
-	<% @uploads.each do |upload| %>
-<%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %>
-<% end %>
+<div class="around-web">
+<script src="http://knowd.com/w/776.js?swid=457"></script>
 </div>
+
 <div class="ad-upload">
 	<script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
@@ -47,6 +46,7 @@ google_ad_height = 250;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div>
+
 
 <div class="upload-side">
 	<h2>Share a Pic</h2>
@@ -121,7 +121,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</div>
 </div>
 
-
+<div class="browse">
+	<h4>More pics from Pikcam</h4>
+	<% @uploads.each do |upload| %>
+<%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %>
+<% end %>
+</div>
 <div class="for-comment">
 <div id="fb-root"></div>
 <script type="text/javascript">
@@ -142,6 +147,9 @@ $("input").click(function() {
 </div>
 <%= link_to("Previous Pic", @upload.previous_upload,:class => "pre_photo") if @upload.previous_upload %>
 <%= link_to("Next Pic", @upload.next_upload, :class => "next_photo")  if @upload.next_upload %>
+<div>
+
+</div>
 	
 </div>
 

@@ -51,8 +51,13 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       <div class="top-photos">
         <h3>Recent add Pictures</h3>
         <% @uploads.each do |uploads| %>
-          <div class="uploads-border">
-            <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 110px; width: 149px;" ), upload_url(uploads) %>
+          <div class="uploads-border" >
+            <table>
+              <caption class="for-font"><%= truncate( uploads.title, :length => 20)%></caption>
+              <tr>
+           <td class="td-home"> <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 110px; width: 149px;" ), upload_url(uploads) %></td>
+              </tr>
+            </table>
           </div>
         <% end %>
       </div>
@@ -72,7 +77,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         
 	     </div>
         <p class="homep"> Pic cam, A website where you can share & find cool pics of just about anything lol. We also have 
-         humorous / funny pictures, strange pictures, gif and more. Oh! I can forget pics of women... hope you enjoy the funny pics we have   <%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "gif", "http://www.pikcam.com/categories/Gif_animation" %> 
+         humorous / funny pictures, strange pictures, gif and more. Oh! I can forget pics of women... hope you enjoy the funny pics we have more links   <%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "gif", "http://www.pikcam.com/categories/Gif_animation" %> 
         </p>
         <div class="our-link">
           <h4> More of us  </h4>

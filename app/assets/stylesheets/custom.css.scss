@@ -362,7 +362,7 @@ a:hover{
 .upload-side{
 	clear: right;
 	width: 290px;
-	background-color: rgba(0, 0, 0, 0.42);
+	background-color: rgba(0, 0, 0, 0.63);
 	padding: 9px 10px 10px 10px;
 	margin: 20px 0px 0px 0px;
 	-moz-border-radius-bottomright: 10px;
@@ -438,7 +438,7 @@ a:hover{
 	
 	background-color: rgba(0, 0, 0, 0.56);
 	padding: 9px 10px 10px 10px;
-	margin: 120px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 	border: 0px solid #161817;
 	-moz-border-radius-bottomright: 50px;
 	-moz-border-radius-bottomleft: 10px;
@@ -497,7 +497,7 @@ background-repeat: repeat-x;
 }
 .ad-upload{
 	
-	margin: 15px 0px 0px 0px;
+	margin: 15px 0px 10px 0px;
 	border: 5px solid rgba(50, 67, 189, 0.73);
 	height: 250px;
 	width: 300px;
@@ -533,18 +533,20 @@ background-repeat: repeat-x;
 	border-bottom-left-radius: 10px;
 }
 .browse{
-	margin: 15px 0px 0px 0px;
-	background-color: rgba(0, 0, 0, 0.42);
-	width: 470px;
-	height: 250px;
-	-moz-border-radius-bottomright: 10px;
-	-moz-border-radius-bottomleft: 10px;
-    border-bottom-right-radius: 10px;
+	margin: 120px 0px 0px 0px;
+	background-color: rgba(0, 0, 0, 0.65);
+	width: 629px;
+	height: 170px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+    border-bottom-right-radius: 0px;
     -moz-border-radius-topleft: 0px;
     -moz-border-radius-topright: 0px; 
-    border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
+    padding: 0px 0px 0px 5px;
+    border: 3px solid rgba(50, 67, 189, 0.73);
    
 }
 .addthis_toolbox {
@@ -594,7 +596,7 @@ a.cat:hover {color: #DDD;}
 	margin: 140px 0px 0px 10px;
 	width: 620px;
 	color: #DDD; 
-	background-color: rgba(0, 0, 0, 0.42); 
+	background-color: rgba(0, 0, 0, 0.66); 
 	font-size: 30px;
 }
 .fb-like{
@@ -609,6 +611,7 @@ a.cat:hover {color: #DDD;}
 	float: right;
     margin-top: 0px;
     width: 315px;
+    margin: 0px 0px 15px 0px
 
 }
 .photo-count{
@@ -836,7 +839,7 @@ a.pagin{
 .top-photos{
 	padding-left: 10px;
 	margin: 0px auto;
-	height: 274px;
+	height: 322px;
 	width: 1044px;
 	border: 3px solid #7474E7;
 	-moz-border-radius-bottomright: 10px;
@@ -1314,4 +1317,13 @@ background-repeat: repeat-x;
 .home-logo{
 	float: left;
 	margin-left: 40px;
+}
+.td-home{
+
+}
+.for-font{
+	color: rgb(56, 68, 151);
+}
+.around-web{
+	margin-top: 15px;
 }
