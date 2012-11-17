@@ -124,7 +124,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <div class="browse">
 	<h4>More pics from Pikcam</h4>
 	<% @uploads.each do |upload| %>
-<%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %>
+	<table class="browse-show">
+		<tr>
+<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
+</tr>
+<tr>
+	<td class="for-font"><%= truncate( upload.title, :length => 35)%></td>
+</tr>
+</table>
 <% end %>
 </div>
 <div class="for-comment">

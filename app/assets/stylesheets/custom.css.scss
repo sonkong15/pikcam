@@ -536,7 +536,7 @@ background-repeat: repeat-x;
 	margin: 120px 0px 0px 0px;
 	background-color: rgba(0, 0, 0, 0.65);
 	width: 629px;
-	height: 170px;
+	height: 220px;
 	-moz-border-radius-bottomright: 0px;
 	-moz-border-radius-bottomleft: 0px;
     border-bottom-right-radius: 0px;
@@ -1326,4 +1326,7 @@ background-repeat: repeat-x;
 }
 .around-web{
 	margin-top: 15px;
+}
+.browse-show{
+	display: inline-block;
 }
