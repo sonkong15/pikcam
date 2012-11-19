@@ -26,11 +26,11 @@ class Upload < ActiveRecord::Base
 	validates_attachment_size :picture, :less_than => 4.megabyte
 	
 	def previous_upload
-  self.class.first(:conditions => ["created_at  < ?", created_at ], :order => "created_at desc")
+  self.class.first(:conditions => ["created_at  < ? AND private = ?", created_at, false ], :order => "created_at desc")
 	end
 
 	def next_upload
-  self.class.first(:conditions => ["created_at  > ?", created_at ], :order => "created_at asc")
+  self.class.first(:conditions => ["created_at  > ? AND private = ?", created_at, false  ], :order => "created_at asc")
 	end
 
  
