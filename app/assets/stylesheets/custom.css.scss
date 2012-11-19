@@ -352,9 +352,9 @@ a:hover{
     border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
-    
-    
-
+    -webkit-box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
+	-moz-box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
+	box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
 
 }
 .home-list{
@@ -460,8 +460,8 @@ a:hover{
     border-bottom-left-radius: 10px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
-    -webkit-box-shadow: -2px 3px 2px rgba(27, 26, 26, 0.66);
-	-moz-box-shadow: -2px 3px 2px rgba(27, 26, 26, 0.66);
+    -webkit-box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
+	-moz-box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
 	box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
 	
 }
@@ -606,9 +606,9 @@ a.cat:hover {color: #DDD;}
 	width: 100%;
 	margin: 0px auto;
 	background-color: rgba(0, 0, 0, 0.42);
-	-moz-box-shadow: -3px 0px 39px rgba(50, 67, 189, 0.73);
-	-webkit-box-shadow: -3px 0px 39px rgba(50, 67, 189, 0.73);
-	box-shadow: -3px 0px 39px rgba(50, 67, 189, 0.73);
+	-moz-box-shadow: -3px 0px 24px rgba(23, 50, 243, 0.93);
+	-webkit-box-shadow: -3px 0px 24px rgba(23, 50, 243, 0.93);
+	box-shadow: -3px 0px 24px rgba(23, 50, 243, 0.93);
 }
 .browse-more{
 	
@@ -817,11 +817,11 @@ box-shadow: 0px 0px 15px rgba(50, 67, 189, 0.73);
     width: 1050px;
     background: black;
     min-height: 1095px;
+
 }
 .up-ad{
 	margin: 2px auto;
 	margin-bottom: 10px;
-	border: 5px solid rgba(50, 67, 189, 0.73);
 	width: 728px;
 	height: 90px;
 	-moz-border-radius-bottomright: 10px;
