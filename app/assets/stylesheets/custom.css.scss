@@ -342,7 +342,7 @@ a:hover{
 	width: 600px;
 	background-color: black;
 	padding: 0px 10px 10px 10px;
-	margin: 228px 0px 0px 0px;
+	margin: 238px 0px 0px 0px;
 	border: 10px solid black;
 	-moz-border-radius-bottomright: 0px;
 	-moz-border-radius-bottomleft: 0px;
@@ -376,7 +376,7 @@ a:hover{
 	width: 290px;
 	background-color: black;
 	padding: 9px 10px 10px 10px;
-	margin: 20px 0px 0px 0px;
+	margin: 30px 0px 0px 0px;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 10px;
 	border-bottom-right-radius: 10px;
@@ -509,7 +509,7 @@ background-repeat: repeat-x;
 }
 .ad-upload{
 	
-	margin: 15px 0px 10px 0px;
+	margin: 30px 0px 10px 0px;
 	border: 5px solid rgba(50, 67, 189, 0.73);
 	height: 250px;
 	width: 300px;
@@ -547,24 +547,24 @@ background-repeat: repeat-x;
 .browse{
 	position: absolute;
 	display: inline-block;
-	margin: 0px 0px 0px -10px;
+	margin: 5px 0px 0px -10px;
 	background-color: black;
 	width: 639px;
 	height: 160px;
 	-moz-border-radius-bottomright: 10px;
-	-moz-border-radius-bottomleft: 0px;
-    border-bottom-right-radius: 10px;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-topright: 0px; 
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-    padding: 0px 0px 0px 5px;
-    border-top: 0px;
-    border-left: 0px;
-    -webkit-box-shadow: 3px 4px 10px rgba(27, 26, 26, 0.66);
-	-moz-box-shadow: 3px 4px 10px rgba(27, 26, 26, 0.66);
-	box-shadow: 3px 4px 10px rgba(17, 26, 243, 0.66);
+	-moz-border-radius-bottomleft: 27px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-topright: 0px;
+	border-bottom-left-radius: 27px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	padding: 0px 0px 0px 5px;
+	border-top: 0px;
+	border-left: 0px;
+	-webkit-box-shadow: 2px 3px 0px rgba(17, 26, 243, 0.66);
+	-moz-box-shadow: 2px 3px 0px rgba(17, 26, 243, 0.66);
+	box-shadow: 2px 3px 0px rgba(17, 26, 243, 0.66);
    
 }
 .addthis_toolbox {
@@ -617,7 +617,7 @@ a.cat:hover {color: #DDD;}
 	
 	padding: 10px;
 	position: absolute;
-	margin: 173px 0px 0px 0px;
+	margin: 185px 0px 0px 0px;
 	width: 620px;
 	color: #DDD; 
 	background-color: rgba(0, 0, 0, 0.97); 
@@ -1025,7 +1025,7 @@ background-image: -webkit-gradient(
 }
 .next-pev{
 	border-bottom: 2px solid black;
-	background: #3940E6;
+	background: black;
 	width: 339px;
 	margin: 12px 0px 0px 0px;
 	padding: 5px 0px 7px 0px;
@@ -1410,7 +1410,7 @@ background-repeat: repeat-x;
 	color: rgb(56, 68, 151);
 }
 .around-web{
-	margin-top: 15px;
+	margin-top: 30px;
 	width: 600px;
 }
 .browse-show{
@@ -1423,6 +1423,7 @@ background-repeat: repeat-x;
 	background: black;
 	width: 600px;
 	height: 25px;
+	margin: 5px 0px 0px 0px;
 }
 .black-sq h2{
 line-height: 27px;
@@ -1445,7 +1446,7 @@ background-color: rgba(50, 67, 189, 0.73);
 	color: black;
 	text-align: center;
 	width: 301px;
-	margin: 1px auto;
+	margin: 6px auto;
 	padding: 0px 0px 0px 0px;
 	height: 24px;
 	background-color: rgba(50, 67, 189, 0.73);
