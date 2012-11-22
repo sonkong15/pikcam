@@ -27,12 +27,18 @@ class FunnyVideosController < ApplicationController
 	end
 
 	def update
-		
+		@video = FunnyVideo.find(params[:id])
+		 if @video.update_attributes(params[:funny_video])
+		 	flash[:notice] = "video has been updated"
+			redirect_to proc { funny_video_url(@video) }
+		else
+			render "edit"
+
+		 end
 	end
 
 	def show
-		@videosy = FunnyVideo.where(:dailymotionid => nil ).limit(2)
-		@videosd = FunnyVideo.where(:youtubeid => nil ).limit(2)
+		@videosy = FunnyVideo.order("RANDOM ()").limit(4)
 		@video = FunnyVideo.find(params[:id])
 		@uploads = Upload.order("RANDOM ()").where("private = ?", false).limit(4)
 	end
