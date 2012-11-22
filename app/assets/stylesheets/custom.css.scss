@@ -367,7 +367,7 @@ a:hover{
 	padding-top: 10px;
 	margin: 0px 0px 0px 0%;
 	background-color: #161817;
-	height: 562px;
+	height: 703px;
 
 	
 }
@@ -820,6 +820,7 @@ box-shadow: 0px 0px 15px rgba(50, 67, 189, 0.73);
 
 }
 .up-ad{
+	border: 2px solid black;
 	margin: 2px auto;
 	margin-bottom: 10px;
 	width: 728px;
@@ -913,10 +914,9 @@ a.pagin{
 	clear: both;
 }
 .uploads-border{
-	margin: 0px 10px 10px 0px;
+	margin: 0px 25px 10px 0px;
 	width: 130px;
 	float: left;
-	border: 3px solid #000;
 
 }
 .about-div{
@@ -1451,4 +1451,140 @@ background-color: rgba(50, 67, 189, 0.73);
 	height: 24px;
 	background-color: rgba(50, 67, 189, 0.73);
 
+}
+.video-background{
+	width: 100%;
+	min-width: 1060px;
+	height: 100%;
+	background-image: linear-gradient(bottom, rgb(0,0,0) 55%, rgb(255,255,255) 55%);
+background-image: -o-linear-gradient(bottom, rgb(0,0,0) 55%, rgb(255,255,255) 55%);
+background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 55%, rgb(255,255,255) 55%);
+background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 55%, rgb(255,255,255) 55%);
+background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 55%, rgb(255,255,255) 55%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.55, rgb(0,0,0)),
+	color-stop(0.55, rgb(255,255,255))
+);
+}
+.mainbox-video{
+	margin: auto;
+	width: 1060px;
+	min-height: 1000px;
+}
+.black-line{
+	min-width: 1060px;
+	position: absolute;
+	width: 100%;
+	height: 42px;
+	margin: 484px 0px 0px 0px;
+	background-color: black;
+	-moz-box-shadow: 0px -4px 40px rgba(23, 50, 243, 0.63);
+	-webkit-box-shadow: 0px 0px 40px rgba(23, 50, 243, 0.63);
+	box-shadow: 0px -4px 40px rgba(23, 50, 243, 0.63);
+}
+.videoholder{
+	margin: 0px 0px 0px 100px;
+	width: 672px;
+	height: 387px;
+	background-image: image_url("videoshadow.png");
+}
+.share-boex{
+	background-color: black;
+	margin: -27px 0px 25px 258px;
+	width: 300px;
+	height: 92px;
+	-moz-border-radius-bottomleft: 20px;
+	-moz-border-radius-bottomright: 20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.next-video{
+	width: 292px;
+	margin: 54px -16px 0px 0px;
+	padding: 5px 0px 7px 0px;
+	float: right;
+}
+.video-sidebar{
+	width: 294px;
+	float: right;
+	height: 468px;
+	
+}
+.sideleft-ad{
+	float: left;
+	border: 2px solid black;
+	width: 160px;
+	height: 600px;
+}
+.browse-for{
+	margin: 70px 0px 0px 0px;
+	float: right;
+	background-color: black;
+	width: 639px;
+	height: 240px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 11px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-topright: 0px;
+	border-bottom-left-radius: 11px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	padding: 0px 0px 0px 5px;
+	border-top: 0px;
+	border-left: 0px;
+	-webkit-box-shadow: 0px 6px 16px rgba(17, 26, 243, 0.66);
+	-moz-box-shadow: 0px 6px 16px rgba(17, 26, 243, 0.66);
+	box-shadow: 0px 6px 16px rgba(17, 26, 243, 0.66);
+}
+.dailymotion_thumb{
+	width: 125px;
+	height: 90px;
+}
+.table-video{
+	display: inline-table;
+	width: 294px;
+	margin: 5px 0px 0px 0px;
+	background-color: black;
+}
+.for-damnie{
+	z-index: -1;
+	margin: 532px 0px 0px 0px;
+	position: absolute;
+	width: 100%;
+	min-height: 790px;
+	background-color: black;
+
+}
+.last-ad{
+	margin: 66px 0px 20px 0px;
+	float: left;
+	border: 2px solid;
+	width: 300px;
+	height: 250px;
+}
+.kowned{
+	clear: both;
+	height: 420px;
+	width: 750px;
+	margin: 10px auto;
+}
+.more-around{
+	position: absolute;
+clear: both;
+width: 1060px;
+height: 25px;
+margin: 8px 0px 0px 0px;
+background-color: red;
+
+}
+.home-video{
+	margin: 0px auto;
+	margin-bottom: 7px;
+	width: 1050px;
+	min-width: 150px;
 }

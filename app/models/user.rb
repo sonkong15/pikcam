@@ -16,7 +16,10 @@ class User < ActiveRecord::Base
 	:website_link,:avatar, :admin, :facebook_uid, :image_url, :twitter_uid, :user_token, :expires_at
 	has_many :uploads
 	has_many :comments
+  has_many :funny_videos
 	make_flagger 
+  extend FriendlyId
+    friendly_id :name
 	
 
 	acts_as_authentic do |c|

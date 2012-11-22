@@ -1,0 +1,131 @@
+<% @title = ' funny video upload new' %>
+<div class="video-background">
+	<div class="up-ad">
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-3387068696014466";
+		/* pik-cam */
+		google_ad_slot = "9765718544";
+		google_ad_width = 728;
+		google_ad_height = 90;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
+
+	<div class="black-line">
+		<div class="list-more">
+		<div class="navme2">
+			<ul class="clirle-nav ">
+				<li><%= link_to "POLITICS", "http://www.pikcam.com/categories/Politics", :class => "clirlink" %></li>
+				<li><%= link_to "SPORTS", "http://www.pikcam.com/categories/Sports", :class => "clirlink" %></li>
+				<li><%= link_to "HUMOROUS", "http://www.pikcam.com/categories/Humorous", :class => "clirlink" %></li>
+				<li><%= link_to "WTF", "http://www.pikcam.com/categories/WTF", :class => "clirlink" %></li>
+				<li><%= link_to "HOTTIES", "http://www.pikcam.com/categories/Hotties", :class => "clirlink" %></li>
+				<li><%= link_to "AMIMALS", "http://www.pikcam.com/categories/My_Pets", :class => "clirlink" %></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	<div class="for-damnie"></div>
+	<div class="mainbox-video">
+		<div class="video-sidebar">
+			<h2 class=""> More Videos </h2>
+			
+			<% @videosy.each do |vy| %>
+			<table class="table-video"> 
+			<tr>
+			<td><%= link_to image_tag(vy.youtubeid, :class => "dailymotion_thumb"), funny_video_url(vy) %><td>
+				<td><%= link_to vy.title, funny_video_url(vy) %></td>
+			</tr>
+			</table >
+			<% end %> 
+			
+		</div>
+		
+		<div class="videoholder">
+			<%= @video.youtube_html %>
+			<%= @video.dailymotion_html %>
+		</div>
+
+		<div class="share-boex">
+
+
+				<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+			<a class="addthis_button_preferred_1"></a>
+			<a class="addthis_button_preferred_2"></a>
+			<a class="addthis_button_preferred_3"></a>
+			<a class="addthis_button_preferred_4"></a>
+			<a class="addthis_button_reddit"></a>
+			<a class="addthis_button_compact"></a>
+			<a class="addthis_counter addthis_bubble_style"></a>
+			</div>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-502d791f3a21278e"></script>
+			<!-- AddThis Button END -->
+			<div class="next-video">
+				<ul>
+					<li class="next-box"><%= link_to("Previous ", @video.next_video, :class => "")  if @video.next_video %></li>
+					<li class="next-box"><%= link_to("Next ", @video.previous_video,:class => "") if @video.previous_video %></li>
+
+				</ul>
+
+			</div>
+		</div>
+
+				<div class="last-ad">
+					<script type="text/javascript"><!--
+					google_ad_client = "ca-pub-3387068696014466";
+					/* pik-cam 300x250 */
+					google_ad_slot = "6391302218";
+					google_ad_width = 300;
+					google_ad_height = 250;
+					//-->
+					</script>
+					<script type="text/javascript"
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
+				</div>
+				<div class="browse-for">
+					<h2> More pics </h2>
+				<% @uploads.each do |upload| %>
+				<table class="browse-show">
+				<tr>
+				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
+				</tr>
+				<tr>
+				<td class="for-font"><%= truncate( upload.title, :length => 35)%></td>
+				</tr>
+				</table>
+				<% end %>
+				</div>
+			
+
+				<div class="kowned">
+					<div class="black-sq"><h2>From site around the web</h2></div>
+					<script src="http://knowd.com/w/804.js?swid=457"></script>
+					<!-- Classic, created 11/21/12 -->
+					<div id="wahohaYrn4is"></div>
+					<script type="text/javascript">(function(){function a(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="http://wahoha.com/widget/Yrn4is";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(s,x);}a();})();</script>
+						<!-- end -->
+				</div>
+			
+			<div class="edit_link">
+		<%# if can? :destroy, @video %>
+  			<%= link_to "Edit", edit_funny_video_path(@video) %>   
+		<%# end %>
+		<%#if can? :destroy, @video %>
+    		<%= link_to "Destroy", @video, :method => :delete, :confirm => "Are you sure you want to delete?" %> 
+    		<span><strong>Only you can see this</strong></span>
+  		<%# end %>
+  		
+		</div>
+		</div>
+
+
+
+
+
+
+</div>

@@ -1,0 +1,17 @@
+
+<%= form_for @video do |v| %>
+ <% @video.errors.full_messages.each do |msg| %>
+      <p class="upload-errors"><%= msg %></p>
+      <% end %>
+      <%= v.label :caption, :class => "inlinefrom" %>
+   		 <%= v.text_field :title  %>
+          <div class="youtube-url">
+   		 <%= v.label :youtube_url, :class => "inlinefrom" %>
+   		 <%= v.text_field :youtube  %>
+          </div>
+          <div class="dailymotion-url" >
+   		 <%= v.label :Dailymotion_url, :class => "inlinefrom" %>
+   		 <%= v.text_field :dailymotion  %>
+          </div>
+   		 <%= v.submit "Add Video" %>
+   		 <% end %>

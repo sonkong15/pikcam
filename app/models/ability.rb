@@ -13,6 +13,9 @@ class Ability
         can :manage, User do |us|
         us.id == user.id 
       end
+      can :manage, FunnyVideo do |video|
+        video.try(:user) == user
+        end
     end
 
        

@@ -40,13 +40,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     <%# link_to image_tag( "donloren.png"), "http://www.donloren.com", :target => "_blank" %>
   </div>-->
   <div class="mainbox2">
-    <h1>Funny & Cool Pics</h1>
+    <h1>Funny & Cool Pics/videos  </h1>
 	  <div class="home-category">
-  
-			<!--<p class="top-5">
-        <b>Random 5 categories</b>
-      </p>-->
-
+    <div class="home-video">
+			<h2><%= link_to "New videos", funny_videos_url %></h2>
+      <% @videos_home.each do |video| %>
+      <table class="table-video"> 
+        <tr>
+        <td><%= link_to image_tag(video.youtubeid, :class => "dailymotion_thumb"), funny_video_url(video) %><td>
+        <td><%= link_to video.title, funny_video_url(video) %></td>
+        </tr>
+        </table >
+        <% end %> 
+      </div>
 			
       <div class="top-photos">
         <h3>Recent add Pictures</h3>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121106233440) do
+ActiveRecord::Schema.define(:version => 20121121074838) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -54,6 +54,22 @@ ActiveRecord::Schema.define(:version => 20121106233440) do
   add_index "flaggings", ["flag", "flagger_type", "flagger_id", "flaggable_type", "flaggable_id"], :name => "access_flag_flaggings"
   add_index "flaggings", ["flaggable_type", "flaggable_id"], :name => "index_flaggings_on_flaggable_type_and_flaggable_id"
   add_index "flaggings", ["flagger_type", "flagger_id", "flaggable_type", "flaggable_id"], :name => "access_flaggings"
+
+  create_table "funny_videos", :force => true do |t|
+    t.string   "title"
+    t.string   "youtube"
+    t.text     "youtube_html"
+    t.text     "dailymotion"
+    t.text     "dailymotion_html"
+    t.integer  "user_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.text     "dailymotionid"
+    t.text     "youtubeid"
+    t.string   "slug"
+  end
+
+  add_index "funny_videos", ["slug"], :name => "index_funny_videos_on_slug", :unique => true
 
   create_table "uploads", :force => true do |t|
     t.string   "title"

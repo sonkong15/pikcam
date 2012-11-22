@@ -26,6 +26,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 <h2 class="category-explore"> Categories </h2>
 <div class="list-cateories">
+  <h1><%= link_to "New videos", funny_videos_url %> </h1>
   <%  @categories.each do |category| %>
       <H2 class="cat-list "><%= link_to category.name, category,  :class => "ex3 cat" %>  </H2>
       <% end %>

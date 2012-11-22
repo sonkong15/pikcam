@@ -1,6 +1,6 @@
 class UploadsController < ApplicationController
 	def index
-		@uploads = Upload.order("created_at DESC").where("private = ?", false).page(params[:page]).per(50)
+		@uploads = Upload.order("created_at DESC").where("private = ?", false).page(params[:page]).per(20)
      respond_to do |format|
     format.html     # index.html.erb
     format.atom     # index.atom.builder
