@@ -37,7 +37,6 @@ group :assets do
   gem 'omniauth-facebook'
   gem "auto_html", "~> 1.6.0"
   gem "koala"
-
   gem 'uglifier', '>= 1.0.3'
 end
 
