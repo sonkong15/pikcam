@@ -376,7 +376,7 @@ a:hover{
 	width: 290px;
 	background-color: black;
 	padding: 9px 10px 10px 10px;
-	margin: 30px 0px 0px 0px;
+	margin: 30px 0px 16px 0px;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 10px;
 	border-bottom-right-radius: 10px;
@@ -1589,4 +1589,8 @@ background-color: red;
 	margin-bottom: 7px;
 	width: 1050px;
 	min-width: 150px;
+}
+.side-upload{
+	border: 3px solid rgba(50, 67, 189, 0.73);
+	width: 160px;
 }
