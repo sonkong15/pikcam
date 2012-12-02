@@ -102,7 +102,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	 <input value="<a href='<%= upload_url %>'target='_blank'><img src='<%=@upload.picture.url %>'  alt='Uploaded on pikcam' /></a>" />
 	 
 </div>
-<% if @upload.id.odd? %>
+<% if @upload.id.even? %>
 <div class="leep">
 <script type="text/javascript" src="http://2leep.com/ticker2/11024267/custom/2/2/140/overlay/transparent|white|Arial,Arial,Helvetica,sans-serif|1.4em|0.04em|12px|400px|6235|0|1px|%23c0c0c0|center|middle|square|0|black"></script>
 </div>
@@ -191,12 +191,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 	<div class="black-sq"><h2>From site around the web</h2></div>
 <script src="http://knowd.com/w/776.js?swid=457"></script>
-<% if @upload.id.even? %>
+
 <!-- Classic, created 11/24/12 -->
 <div id="wahohare6Dm8"></div>
 <script type="text/javascript">(function(){function a(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="http://wahoha.com/widget/re6Dm8";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(s,x);}a();})();</script>
 <!-- end -->
-<% end %>
 </div>
 
 </div>
