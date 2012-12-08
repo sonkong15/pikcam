@@ -1,4 +1,4 @@
-
+<div class="video-form">
 <%= form_for @video do |v| %>
  <% @video.errors.full_messages.each do |msg| %>
       <p class="upload-errors"><%= msg %></p>
@@ -13,5 +13,10 @@
    		 <%= v.label :Dailymotion_url, :class => "inlinefrom" %>
    		 <%= v.text_field :dailymotion  %>
           </div>
+          <div class="youtube-url">
+       <%= v.label :facebook_url, :class => "inlinefrom" %>
+       <%= v.text_field :facebook  %>
+          </div>
    		 <%= v.submit "Add Video" %>
    		 <% end %>
+      </div>

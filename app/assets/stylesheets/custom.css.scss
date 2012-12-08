@@ -367,7 +367,6 @@ a:hover{
 	padding-top: 10px;
 	margin: 0px 0px 0px 0%;
 	background-color: #161817;
-	height: 627px;
 
 	
 }
@@ -410,19 +409,19 @@ a:hover{
 }
 .mainbox{
 	width: 1040px;
-	height: 660px;
-	margin: 0px auto ;
+	height: 663px;
+	margin: 0px auto;
+	margin-top: 60px;
 }
 .mainbox2{
 	background-color: black;
 	clear: both;
-	-moz-box-shadow: -5px -10px 20px rgba(50, 67, 189, 0.73);
-    -webkit-box-shadow: -5px -10px 20px rgba(50, 67, 189, 0.73);
-    box-shadow: -5px -10px 20px rgba(50, 67, 189, 0.73);
+	-moz-box-shadow: -5px -10px 20px rgb(36, 57, 206);
+    -webkit-box-shadow: -5px -10px 20px rgb(36, 57, 206);
+    box-shadow: -5px -10px 20px rgb(36, 57, 206);
 }
 .ad-home{
-	margin: 0px 0px 0px 0px;
-	border: 2px solid #181818;
+	margin: 50px 0px 0px 0px;
 	height: 250px;
 	width: 300px;
 	float: left;
@@ -535,10 +534,9 @@ background-repeat: repeat-x;
 }
 .top-share{
 	position: absolute;
-	margin: 10px 0px 0px 356px;
-	height: 450px;
-	width: 650px;
-	background-color: #39B8A9;
+	margin: 37px 0px 0px 315px;
+	height: 240px;
+	width: 268px;
 	-moz-border-radius-topleft: 10px;
 	border-top-left-radius: 10px;
 	-moz-border-radius-bottomleft: 10px;
@@ -610,6 +608,16 @@ a.cat:hover {color: #DDD;}
 	-webkit-box-shadow: -3px 0px 24px rgba(23, 50, 243, 0.93);
 	box-shadow: -3px 0px 24px rgba(23, 50, 243, 0.93);
 }
+.list-more2 {
+	position: absolute;
+	height: 40px;
+	width: 100%;
+	margin: -1px auto;
+	background-color: rgba(0, 0, 0, 0.98);
+	-moz-box-shadow: 0px 7px 16px rgba(23, 50, 243, 0.93);
+	-webkit-box-shadow: 0px 7px 16px rgba(23, 50, 243, 0.93);
+	box-shadow: 0px 7px 16px rgba(23, 50, 243, 0.93);
+	}
 .browse-more{
 	
 }
@@ -914,9 +922,9 @@ a.pagin{
 	clear: both;
 }
 .uploads-border{
-	margin: 0px 25px 10px 0px;
-	width: 130px;
-	float: left;
+	margin: 43px 25px 10px 0px;
+	width: 200px;
+	float: right;
 
 }
 .about-div{
@@ -1268,7 +1276,6 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 .ad-bottom-home5{
 	margin: 10px 0px 0px 22%;
-	border: 2px solid #999;
 	height: 90px;
 	width: 728px;
 	float: left;
@@ -1586,9 +1593,9 @@ background-color: red;
 }
 .home-video{
 	margin: 0px auto;
-	margin-bottom: 7px;
+	margin-bottom: 25px;
 	width: 1050px;
-	min-width: 150px;
+	
 }
 .side-upload{
 	border: 3px solid rgba(50, 67, 189, 0.73);
@@ -1597,4 +1604,23 @@ background-color: red;
 
 .leep{
 	margin: 0px 0px 0px -24px;
+}
+.rest-of-pic {
+	clear: both;
+	width: 1026px;
+	height: 250px;
+
+}
+.uploads-border2 {
+float: left;
+margin: 5px 25px 10px 0px;
+width: 170px;
+
+}
+.black-t{
+	background-color: black;
+	width: 100%;
+}
+.video-form{
+	margin: 20px 0px 0px 200px;
 }

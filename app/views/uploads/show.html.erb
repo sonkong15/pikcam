@@ -1,18 +1,18 @@
 <% @title = @upload.title %>
 <div class="upload-bacgraound">
 	<div class="up-ad">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-3387068696014466";
-/* pik-cam */
-google_ad_slot = "9765718544";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-3387068696014466";
+		/* pik-cam */
+		google_ad_slot = "9765718544";
+		google_ad_width = 728;
+		google_ad_height = 90;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
 	<div class="list-more">
 		<div class="navme2">
 			<ul class="clirle-nav ">
@@ -24,189 +24,182 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				<li><%= link_to "WTF", "http://www.pikcam.com/categories/WTF", :class => "clirlink" %></li>
 				<li><%= link_to "HOTTIES", "http://www.pikcam.com/categories/Hotties", :class => "clirlink" %></li>
 				<li><%= link_to "AMIMALS", "http://www.pikcam.com/categories/My_Pets", :class => "clirlink" %></li>
+				<li><%= link_to "VIDEOS", funny_videos_url, :class => "clirlink" %></li>
 			</ul>
 		</div>
-</div>
-
-<div class="show-container">
-	<div class="browse">
-	<% @uploads.each do |upload| %>
-	<table class="browse-show">
-		<tr>
-<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
-</tr>
-<tr>
-	<td class="for-font"><%= truncate( upload.title, :length => 35)%></td>
-</tr>
-</table>
-<% end %>
-</div>
-
-
-<p class="p-title"><%=  @upload.title %></p>
-<div class="upload-show">
-
-<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>
-</div>
-<div class="side-bar">
-<div class="">
-	<div class="black-sqft"><h2>Like OR Follow </h2></div>
-	<div class="g-plus" data-height="69" data-href="//plus.google.com/103812452465040044420?rel=publisher"></div>
-
-        <!-- Place this tag after the last badge tag. -->
-        <script type="text/javascript">
-          (function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-            po.src = 'https://apis.google.com/js/plusone.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-          })();
-        </script>
-        <h1><%= link_to "New videos", funny_videos_url %> </h1>
-
-</div>
-
-<div class="ad-upload">
-	<script type="text/javascript"><!--
-google_ad_client = "ca-pub-3387068696014466";
-/* pik-cam 300x250 */
-google_ad_slot = "6391302218";
-google_ad_width = 300;
-google_ad_height = 250;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
-
-
-
-<div class="ad-upload">
-	<script type="text/javascript"><!--
-google_ad_client = "ca-pub-3387068696014466";
-/* pikcam-upload-bottom */
-google_ad_slot = "5450127381";
-google_ad_width = 300;
-google_ad_height = 250;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
-<div class="upload-side">
-	<h2>Share a Pic</h2>
-	<p>Direct Link for Layouts</p>
-	<input value="<%=@upload.picture.url %>" />
-	 <p>HTML for Websites</p> 
-	 <input value="<a href='<%= upload_url %>'target='_blank'><img src='<%=@upload.picture.url %>'  alt='Uploaded on pikcam' /></a>" />
-	 
-</div>
-<% if @upload.id.even? %>
-<div class="leep">
-<script type="text/javascript" src="http://2leep.com/ticker2/11024267/custom/2/2/140/overlay/transparent|white|Arial,Arial,Helvetica,sans-serif|1.4em|0.04em|12px|400px|6235|0|1px|%23c0c0c0|center|middle|square|0|black"></script>
-</div>
-<% end %>
-</div>
-
-<div class="share-box">
-
-	<!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-<a class="addthis_button_preferred_1"></a>
-<a class="addthis_button_preferred_2"></a>
-<a class="addthis_button_preferred_3"></a>
-<a class="addthis_button_preferred_4"></a>
-<a class="addthis_button_reddit"></a>
-<a class="addthis_button_compact"></a>
-<a class="addthis_counter addthis_bubble_style"></a>
-</div>
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-502d791f3a21278e"></script>
-<!-- AddThis Button END -->
-<div class="next-pev">
-	<ul>
-		<li class="next-box"><%= link_to("Previous Pic", @upload.next_upload, :class => "")  if @upload.next_upload %></li>
-		<li class="next-box"><%= link_to("Next Pic", @upload.previous_upload,:class => "") if @upload.previous_upload %></li>
-
-	</ul>
-
-</div>
-<% if @upload.user.blank? %>
-<p class="user-name"> Upload By: ANONYMOUS </p>
-	<% else %>
- <p class="user-name"> Upload By: <%=  link_to @upload.user.name.capitalize,  @upload.user %></p>
- <% end %>
- <p class="strftime"> <b>Upload at:</b> <%= @upload.created_at.strftime("%b %d %y") %></p>
-	
-<p class= "category-nam"> 
-	  <b>Categories:</b>
-	</p>
-
-	 <% @upload.categories.map do |map|  %>
-
-	<p class= "category-namd"> 
- <%= link_to map.name, map %> 
-</p>
-<% end %>
-
-<div class="edit_link">
-		<% if can? :destroy, @upload %>
-  			<%= link_to "Edit", edit_upload_path(@upload) %>   
-		<% end %>
-		<% if can? :destroy, @upload %>
-    		<%= link_to "Destroy", @upload, :method => :delete, :confirm => "Are you sure you want to delete?" %> 
-    		<span><strong>Only you can see this</strong></span>
-  		<% end %>
-  		
 	</div>
-	<div class="likehate">
-		<h2 class="like"><%= @upload.flaggings.where("flag = ?", "like").count %></h2>
-		<ul>
-		<li class="coolli2"><div class="fb-like" data-href="<%= upload_url %>" data-send="true" data-layout="button_count" data-width="50" data-show-faces="false"></div></li>
-		</ul>
-		<% if current_user %>
-		<ul>
- 		<li class= "coolli"><%= toggle_like(@upload, current_user ) %></li>
- 		</ul>
- 		<% else %>
- 		<p> <b> add cool pics to fav <%= link_to "sigin up", "/signup" %></b></p>
-		<% end %>
+
+	<div class="show-container">
+		<div class="browse">
+			<% @uploads.each do |upload| %>
+			<table class="browse-show">
+				<tr>
+				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
+				</tr>
+			<tr>
+				<td class="for-font"><%= truncate( upload.title, :length => 35)%></td>
+			</tr>
+			</table>
+			<% end %>
+		</div>
+
+
+		<p class="p-title"><%=  @upload.title %></p>
+		<div class="upload-show">
+
+			<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>
+		</div>
+		<div class="side-bar">
+			<div class="">
+				<div class="black-sqft"><h2>Like OR Follow </h2>
+				</div>
+				<div class="g-plus" data-height="69" data-href="//plus.google.com/103812452465040044420?rel=publisher">
+				</div>
+
+			 <!-- Place this tag after the last badge tag. -->
+				    <script type="text/javascript">
+				        (function() {
+				         var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				          po.src = 'https://apis.google.com/js/plusone.js';
+				           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				          })();
+				        </script>
+				        <h1><%= link_to "New videos", funny_videos_url %> </h1>
+
+			</div>
+
+			<div class="ad-upload">
+				<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-3387068696014466";
+			/* pik-cam 300x250 */
+			google_ad_slot = "6391302218";
+			google_ad_width = 300;
+			google_ad_height = 250;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+			</div>
+
+
+
+			<div class="ad-upload">
+				<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-3387068696014466";
+			/* pikcam-upload-bottom */
+			google_ad_slot = "5450127381";
+			google_ad_width = 300;
+			google_ad_height = 250;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+			</div>
+			<div class="upload-side">
+				<h2>Share a Pic</h2>
+				<p>Direct Link for Layouts</p>
+				<input value="<%=@upload.picture.url %>" />
+				 <p>HTML for Websites</p> 
+				 <input value="<a href='<%= upload_url %>'target='_blank'><img src='<%=@upload.picture.url %>'  alt='Uploaded on pikcam' /></a>" />
+				 
+			</div>
+		</div>
+
+			<div class="share-box">
+
+				<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+			<a class="addthis_button_preferred_1"></a>
+			<a class="addthis_button_preferred_2"></a>
+			<a class="addthis_button_preferred_3"></a>
+			<a class="addthis_button_preferred_4"></a>
+			<a class="addthis_button_reddit"></a>
+			<a class="addthis_button_compact"></a>
+			<a class="addthis_counter addthis_bubble_style"></a>
+			</div>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-502d791f3a21278e"></script>
+			<!-- AddThis Button END -->
+			<div class="next-pev">
+				<ul>
+					<li class="next-box"><%= link_to("Previous Pic", @upload.next_upload, :class => "")  if @upload.next_upload %></li>
+					<li class="next-box"><%= link_to("Next Pic", @upload.previous_upload,:class => "") if @upload.previous_upload %></li>
+
+				</ul>
+
+			</div>
+			<% if @upload.user.blank? %>
+			<p class="user-name"> Upload By: ANONYMOUS </p>
+				<% else %>
+			 <p class="user-name"> Upload By: <%=  link_to @upload.user.name.capitalize,  @upload.user %></p>
+			 <% end %>
+			 <p class="strftime"> <b>Upload at:</b> <%= @upload.created_at.strftime("%b %d %y") %></p>
+				
+			<p class= "category-nam"> 
+				  <b>Categories:</b>
+				</p>
+
+				 <% @upload.categories.map do |map|  %>
+
+				<p class= "category-namd"> 
+			 <%= link_to map.name, map %> 
+			</p>
+			<% end %>
+
+			<div class="edit_link">
+					<% if can? :destroy, @upload %>
+			  			<%= link_to "Edit", edit_upload_path(@upload) %>   
+					<% end %>
+					<% if can? :destroy, @upload %>
+			    		<%= link_to "Destroy", @upload, :method => :delete, :confirm => "Are you sure you want to delete?" %> 
+			    		<span><strong>Only you can see this</strong></span>
+			  		<% end %>
+			  		
+			</div>
+			<div class="likehate">
+				<h2 class="like"><%= @upload.flaggings.where("flag = ?", "like").count %></h2>
+				<ul>
+				<li class="coolli2"><div class="fb-like" data-href="<%= upload_url %>" data-send="true" data-layout="button_count" data-width="50" data-show-faces="false"></div></li>
+				</ul>
+				<% if current_user %>
+				<ul>
+		 		<li class= "coolli"><%= toggle_like(@upload, current_user ) %></li>
+		 		</ul>
+		 		<% else %>
+		 		<p> <b> add cool pics to fav <%= link_to "sigin up", "/signup" %></b></p>
+				<% end %>
+
+			</div>
+		</div>
+
+
+		<div class="for-comment">
+
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=357983834258531";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="fb-comments" data-href="<%= upload_url %>" data-num-posts="8" data-width="550"></div>
+		</div>
+		<div class="around-web">
+
+				<div class="black-sq"><h2>From site around the web</h2></div>
+			<script src="http://knowd.com/w/776.js?swid=457"></script>
+
+			<!-- Classic, created 11/24/12 -->
+			<div id="wahohare6Dm8"></div>
+			<script type="text/javascript">(function(){function a(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="http://wahoha.com/widget/re6Dm8";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(s,x);}a();})();</script>
+			<!-- end -->
+		</div>
 
 	</div>
 </div>
 
 
-<div class="for-comment">
-
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=357983834258531";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-comments" data-href="<%= upload_url %>" data-num-posts="8" data-width="550"></div>
-</div>
-<div class="around-web">
-
-	<div class="black-sq"><h2>From site around the web</h2></div>
-<script src="http://knowd.com/w/776.js?swid=457"></script>
-
-<!-- Classic, created 11/24/12 -->
-<div id="wahohare6Dm8"></div>
-<script type="text/javascript">(function(){function a(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="http://wahoha.com/widget/re6Dm8";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(s,x);}a();})();</script>
-<!-- end -->
-</div>
-
-</div>
-
-
-
-<div>
-
-</div>
-	
-</div>
 
 
 

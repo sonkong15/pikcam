@@ -1,6 +1,22 @@
 <% @title = 'lol Photos ' %>
 <div class= "graybox" >
+<div class="list-more2">
+    <div class="navme2">
+      <ul class="clirle-nav ">
+        <!--<h2 class="browse-more " >Browse more Pics</h2>-->
+
+        <li><%= link_to "POLITICS", "http://www.pikcam.com/categories/Politics", :class => "clirlink" %></li>
+        <li><%= link_to "SPORTS", "http://www.pikcam.com/categories/Sports", :class => "clirlink" %></li>
+        <li><%= link_to "HUMOROUS", "http://www.pikcam.com/categories/Humorous", :class => "clirlink" %></li>
+        <li><%= link_to "WTF", "http://www.pikcam.com/categories/WTF", :class => "clirlink" %></li>
+        <li><%= link_to "HOTTIES", "http://www.pikcam.com/categories/Hotties", :class => "clirlink" %></li>
+        <li><%= link_to "AMIMALS", "http://www.pikcam.com/categories/My_Pets", :class => "clirlink" %></li>
+        <li><%= link_to "VIDEOS", funny_videos_url, :class => "clirlink" %></li>
+      </ul>
+    </div>
+</div>
   <div class="mainbox">
+
     <div class="ad-home">
       <script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
@@ -15,26 +31,48 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
     </div>
   
-
-   <%= render "uploads/form" %>
-   <div class="home-list">
-   <%  Category.home_random.each do |user| %>
-      
-          <ul class="home-box">
-            <li><H3 class="cat-name"><%= link_to user.name , user %></H3></li>
-          </ul>
-        <% end %>
-      </div>
+    <% if current_user %>
+    <h3>wasssup <%= current_user.name %> you can <%= link_to "Upload pics", new_upload_url %></h3>
+    <% else %>
+    <h3> Hello sign in or made a account to share lol photos</h3>
+    <% end %>
+   
+   
   <div class="top-share">
     <div class="slider-wrapper theme-default">
       <div id="slider" class="nivoSlider">
         <% @uploads_slideshow.each do |ups| %>
-        <%= link_to image_tag(ups.picture.url(:large), :alt => ups.title, :title => ups.title ), upload_url(ups)   %>
+        <%= link_to image_tag(ups.picture.url(:small), :alt => ups.title, :title => ups.title ), upload_url(ups)   %>
         <% end %>
       </div>
     </div>
+     
+  </div>
+  <% @uploads.each do |uploads| %>
+          <div class="uploads-border" >
+            <table>
+              <caption class="for-font"><%= truncate( uploads.title, :length => 20)%></caption>
+              <tr>
+           <td class="td-home"> <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 150px; width: 200px;" ), upload_url(uploads) %></td>
+              </tr>
+            </table>
+          </div>
+        <% end %>
+  <!-- list of pictures -->
+  <div class="rest-of-pic ">
+    <% @uploads_rest.each do |uploads| %>
+      <div class="uploads-border2" >
+         <table>
+              <caption class="for-font"><%= truncate( uploads.title, :length => 20)%></caption>
+              <tr>
+           <td class="td-home"> <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 130px; width: 170px;" ), upload_url(uploads) %></td>
+              </tr>
+            </table>
+      </div>
+    <% end %>
   </div>
   </div>
+
   
   <!--<div class= "top-photo">
     <%# link_to image_tag( "donloren.png"), "http://www.donloren.com", :target => "_blank" %>
@@ -53,20 +91,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         </table >
         <% end %> 
       </div>
-			
-      <div class="top-photos">
-        <h3>Recent add Photos </h3>
-        <% @uploads.each do |uploads| %>
-          <div class="uploads-border" >
-            <table>
-              <caption class="for-font"><%= truncate( uploads.title, :length => 20)%></caption>
-              <tr>
-           <td class="td-home"> <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 110px; width: 149px;" ), upload_url(uploads) %></td>
-              </tr>
-            </table>
-          </div>
-        <% end %>
+
+      <div class="black-t">
+			<h1> Like us on Facebook  </h1>
       </div>
+      <!--<div class="top-photos">
+        
+        
+      </div>-->
       <div class="bottom_pfg">
         <!-- Place this tag where you want the badge to render. -->
         <div class="g-plus" data-height="69" data-href="//plus.google.com/103812452465040044420?rel=publisher"></div>
@@ -82,7 +114,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         <div class="fb-like" data-href="http://www.facebook.com/pikcam" data-send="true" data-width="300" data-show-faces="true">
         
 	     </div>
-        <p class="homep"> Pic cam is A <b>funny and cool pictures</b> website, we would love for you to share your <b>lol photos and humorous pics</b>. welcome to our <b>fun land</b> where we will have you laughing at <b>lol photos</b>. don't forget to tell your friends about our cool pics, <b>humorous pics</b>, strange pictures, pictures of women and more. ... hope you enjoy the <b>fun land</b> of pikcam we have more links for <b>funny and cool pictures</b> you will not find a more <b>humorous</b>/<b>lol photo</b> site... i g<%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "gif", "http://www.pikcam.com/categories/Gif_animation" %> 
+        <p class="homep"> Pic cam is A <b>funny and cool pictures</b> website, we would love for you to share your <b>lol photos and humorous pics</b>. welcome to our <b>fun land</b> where we will have you laughing at <b>lol photos</b>. don't forget to tell your friends about our cool pics, <b>humorous pics</b>, strange pictures, pictures of women and more. ... hope you enjoy the <b>fun land</b> of pikcam we have more links for <b>funny and cool pictures</b> you will not find a more <b>humorous</b>/<b>lol photo</b> site... <%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "gif", "http://www.pikcam.com/categories/Gif_animation" %> 
         </p>
         
       </div>

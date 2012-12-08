@@ -1,7 +1,7 @@
 class FunnyVideo < ActiveRecord::Base
-  attr_accessible :dailymotion, :title, :youtube
+  attr_accessible :dailymotion, :title, :youtube, :facebook
   belongs_to :user
-  before_save :dailymotion_thumb, :youtube_thumb
+  before_save :dailymotion_thumb, :youtube_thumb, :facebook_thumb
   extend FriendlyId
   friendly_id :title, use: :slugged
 
@@ -23,6 +23,13 @@ class FunnyVideo < ActiveRecord::Base
 
     	end
   	end
+    def facebook_thumb
+      self.facebook.gsub(/^http(?:s?):\/\/www\.facebook\.com\/photo.php\?v=(\d+)/) do
+      video_id = $1
+      self.youtubeid = %{https://graph.facebook.com/#{video_id}/picture}
+
+      end
+    end
 
 
 
@@ -37,6 +44,14 @@ class FunnyVideo < ActiveRecord::Base
     html_escape
     image
     dailymotion(:width => 640, :height => 360)
+    link :target => "_blank", :rel => "nofollow"
+    simple_format
+  end
+
+  auto_html_for :facebook do
+    html_escape
+    image
+    facebook(:width => 540, :height => 260)
     link :target => "_blank", :rel => "nofollow"
     simple_format
   end
@@ -62,6 +77,14 @@ class FunnyVideo < ActiveRecord::Base
 	    
 	  end
 	end
+
+  AutoHtml.add_filter(:facebook).with(:width => 580, :height => 460) do | text, options|
+    text.gsub(/^http(?:s?):\/\/www\.facebook\.com\/photo.php\?v=(\d+)/) do
+      facebook_id = $1
+      %{<object width="640" height="360"><param name="allowfullscreen" value="true"></param><param name="movie" value="https://www.facebook.com/v/#{facebook_id}"></param><embed src="https://www.facebook.com/v/#{facebook_id}" type="application/x-shockwave-flash" allowfullscreen="true" width="640" height="360"></embed></object>}
+    end
+  end
+
 	def previous_video
   		self.class.first(:conditions => ["created_at  < ? ", created_at ], :order => "created_at desc")
 	end

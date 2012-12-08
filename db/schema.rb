@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121121074838) do
+ActiveRecord::Schema.define(:version => 20121207221035) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -67,6 +67,9 @@ ActiveRecord::Schema.define(:version => 20121121074838) do
     t.text     "dailymotionid"
     t.text     "youtubeid"
     t.string   "slug"
+    t.text     "facebook"
+    t.text     "facebook_html"
+    t.string   "facebook_id"
   end
 
   add_index "funny_videos", ["slug"], :name => "index_funny_videos_on_slug", :unique => true
