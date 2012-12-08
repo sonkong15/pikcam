@@ -617,6 +617,7 @@ a.cat:hover {color: #DDD;}
 	-moz-box-shadow: 0px 7px 16px rgba(23, 50, 243, 0.93);
 	-webkit-box-shadow: 0px 7px 16px rgba(23, 50, 243, 0.93);
 	box-shadow: 0px 7px 16px rgba(23, 50, 243, 0.93);
+	min-width: 1050px;
 	}
 .browse-more{
 	
@@ -828,7 +829,6 @@ box-shadow: 0px 0px 15px rgba(50, 67, 189, 0.73);
 
 }
 .up-ad{
-	border: 2px solid black;
 	margin: 2px auto;
 	margin-bottom: 10px;
 	width: 728px;

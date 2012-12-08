@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  force_ssl :only => :new
+
   def show
     @user = User.find(params[:id])
     @user_uploads = @user.uploads.order("created_at DESC").page(params[:page]).per(15)
