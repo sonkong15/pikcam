@@ -50,7 +50,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   </div>
   <% @uploads.each do |uploads| %>
           <div class="uploads-border" >
-            <table>
+            <table class="table-ie8">
               <caption class="for-font"><%= truncate( uploads.title, :length => 20)%></caption>
               <tr>
            <td class="td-home"> <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 150px; width: 200px;" ), upload_url(uploads) %></td>
@@ -62,7 +62,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <div class="rest-of-pic ">
     <% @uploads_rest.each do |uploads| %>
       <div class="uploads-border2" >
-         <table>
+         <table class="ttable-ie8">
               <caption class="for-font"><%= truncate( uploads.title, :length => 20)%></caption>
               <tr>
            <td class="td-home"> <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 130px; width: 170px;" ), upload_url(uploads) %></td>

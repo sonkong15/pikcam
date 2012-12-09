@@ -44,7 +44,7 @@ class FunnyVideosController < ApplicationController
 	end
 
 	def index
-		@videos = FunnyVideo.page(params[:page]).per(15)
+		@videos = FunnyVideo.order("created_at DESC").page(params[:page]).per(15)
 	end
 
 	def destroy
