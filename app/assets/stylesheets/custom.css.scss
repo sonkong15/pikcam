@@ -342,7 +342,7 @@ a:hover{
 	width: 600px;
 	background-color: black;
 	padding: 0px 10px 10px 10px;
-	margin: 238px 0px 0px 0px;
+	margin: 245px 0px 0px 0px;
 	border: 10px solid black;
 	-moz-border-radius-bottomright: 0px;
 	-moz-border-radius-bottomleft: 0px;
@@ -548,7 +548,7 @@ background-repeat: repeat-x;
 	margin: 5px 0px 0px -10px;
 	background-color: black;
 	width: 639px;
-	height: 160px;
+	height: 124px;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 27px;
 	border-bottom-right-radius: 10px;
@@ -626,7 +626,7 @@ a.cat:hover {color: #DDD;}
 	
 	padding: 10px;
 	position: absolute;
-	margin: 185px 0px 0px 0px;
+	margin: 208px 0px 0px 0px;
 	width: 620px;
 	color: #DDD; 
 	background-color: rgba(0, 0, 0, 0.97); 
@@ -654,7 +654,7 @@ a.cat:hover {color: #DDD;}
 	float: right;
     margin-top: 0px;
     width: 315px;
-    margin: 0px 45px 15px 0px
+    margin: 0px 10px 15px 0px
 
 }
 .photo-count{
@@ -1629,4 +1629,14 @@ width: 170px;
 }
 .ttable-ie8{
 	width: 170px;
+}
+.spencer{
+	position: absolute;
+	margin: 140px 0px 0px 0px;
+	clear: both;
+}
+.spencer h4{
+	color: rgb(214, 47, 61);
+	margin: 19px 10px 0px 0px;
+	float: left;
 }
