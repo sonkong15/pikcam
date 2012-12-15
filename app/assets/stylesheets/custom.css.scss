@@ -9,7 +9,7 @@
 }
 .nave li{display: inline; padding-left: 25px; font-family: Arial; 
 font-size: 20px;}
-.nave { margin-right: 60px; margin-top: 15px; width: 688px;}
+.nave { margin-right: 60px; margin-top: 15px; width: 692px;}
 
 @mixin box_sizing{
 	-moz-box-sizing: border-box;
@@ -307,12 +307,12 @@ a:hover{
 	width: 630px;
 	background-color: #161817;
 	padding: 10px 10px 5px 10px;
-	
-	margin: 40px 0px 0px 350px;
+	margin: 0px auto;
+	margin-top: 40px;
 	border: 5px solid #161817;
-	-moz-box-shadow: 10px 10px 10px #BEC1C2;
-    -webkit-box-shadow: 10px 10px 10px #BEC1C2;
-    box-shadow: 10px 10px 10px #BEC1C2;
+	-moz-box-shadow: -1px 2px 28px #434FDA;
+    -webkit-box-shadow: -1px 2px 28px #434FDA;
+    box-shadow: -1px 2px 28px #434FDA;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 10px;
     border-bottom-right-radius: 10px;
@@ -408,12 +408,13 @@ a:hover{
 	margin: 0px 0px 0px 0px;
 }
 .mainbox{
-	width: 1040px;
+	width: 1060px;
 	height: 663px;
 	margin: 0px auto;
 	margin-top: 60px;
 }
 .mainbox2{
+	margin-top: 30px;
 	background-color: black;
 	clear: both;
 	-moz-box-shadow: -5px -10px 20px rgb(36, 57, 206);
@@ -921,8 +922,14 @@ a.pagin{
 	width: 728px;
 	clear: both;
 }
+.cat-showad3 {
+	margin: 15px auto;
+	height: 520px;
+	width: 728px;
+	clear: both;
+}
 .uploads-border{
-	margin: 43px 25px 10px 0px;
+	margin: 43px 15px 10px 0px;
 	width: 200px;
 	float: right;
 
@@ -1639,4 +1646,21 @@ width: 170px;
 	color: rgb(214, 47, 61);
 	margin: 19px 10px 0px 0px;
 	float: left;
+}
+.user-count{
+	line-height: 25px;
+	font-size: 19px;
+	text-align: center;
+	background-color: rgba(219, 54, 54, 0.91);
+	min-width: 1060px;
+	clear: both;
+	padding: 2px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px; 
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
