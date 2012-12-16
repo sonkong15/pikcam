@@ -36,7 +36,7 @@
 				<tr>
 				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
 				</tr>
-			
+				<caption class="for-font"><%= truncate( upload.title, :length => 30)%></caption>
 			</table>
 			<% end %>
 		</div>
@@ -47,11 +47,12 @@
 
 			<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>
 		</div>
+
 		<div class="side-bar">
 			<div class="">
 				<div class="black-sqft"><h2>Like OR Follow </h2>
 				</div>
-				<div class="g-plus" data-height="69" data-href="//plus.google.com/103812452465040044420?rel=publisher">
+				<div class="fb-like" data-href="http://www.facebook.com/donlloren" data-send="true" data-width="300" data-show-faces="true">
 				</div>
 
 			 <!-- Place this tag after the last badge tag. -->
@@ -80,6 +81,14 @@
 			</script>
 			</div>
 
+			<div class="next-pev">
+				<ul>
+					<li class="next-box"><%= link_to("Previous Pic", @upload.next_upload, :class => "")  if @upload.next_upload %></li>
+					<li class="next-box"><%= link_to("Next Pic", @upload.previous_upload,:class => "") if @upload.previous_upload %></li>
+
+				</ul>
+
+			</div>
 
 
 			<div class="ad-upload">
@@ -108,25 +117,17 @@
 			<div class="share-box">
 
 				<!-- AddThis Button BEGIN -->
-			<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-			<a class="addthis_button_preferred_1"></a>
-			<a class="addthis_button_preferred_2"></a>
-			<a class="addthis_button_preferred_3"></a>
-			<a class="addthis_button_preferred_4"></a>
-			<a class="addthis_button_reddit"></a>
-			<a class="addthis_button_compact"></a>
-			<a class="addthis_counter addthis_bubble_style"></a>
+			<div class="addthis_toolbox ">
+			<span class='st_facebook_vcount' st_title="pikcam cures boredom lol" st_image= <%= @upload.picture.url %> st_summary=" See what your friend lookin at, "<%= @upload.title %> ></span>
+			<span class='st_reddit_vcount' displayText='Reddit'></span>
+			<span class='st_stumbleupon_vcount' displayText='StumbleUpon'></span>
+			<span class='st_twitter_vcount' displayText='Tweet'></span>
+			<span class='st_pinterest_vcount' displayText='Pinterest'></span>
+			<span class='st_tumblr_vcount' displayText='Tumblr'></span>
 			</div>
 			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-502d791f3a21278e"></script>
 			<!-- AddThis Button END -->
-			<div class="next-pev">
-				<ul>
-					<li class="next-box"><%= link_to("Previous Pic", @upload.next_upload, :class => "")  if @upload.next_upload %></li>
-					<li class="next-box"><%= link_to("Next Pic", @upload.previous_upload,:class => "") if @upload.previous_upload %></li>
-
-				</ul>
-
-			</div>
+			
 			<% if @upload.user.blank? %>
 			<p class="user-name"> Upload By: ANONYMOUS </p>
 				<% else %>

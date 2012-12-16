@@ -76,7 +76,7 @@ width: 305px;"), upload_url(ups)   %>
   <div class="user-count">
   <% if current_user %> 
     Pikcam community has <b><%= User.count %></b> members <b>help us reach 1000 members</b><br>With your help, I know we can pull it off
-    <span class='st_facebook_hcount' displayText='Facebook' st-summary="Join Pikcam cure boredom community lol" ></span>
+    <span class="st_facebook_hcount" st_url="http://www.pikcam.com" st_title="pikcam cures boredom lol" st_image= <%= Upload.first.picture.url %> st_summary=" See what your friend lookin at, pikcam A toooo funny site. so what you wait join our community  "></span>
     <span class='st_googleplus_hcount' displayText='Google +'></span>
     <span class='st_twitter_hcount' displayText='Tweet'></span>
     <% else %>
@@ -125,7 +125,7 @@ width: 305px;"), upload_url(ups)   %>
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
           })();
         </script>
-        <div class="fb-like" data-href="http://www.facebook.com/pikcam" data-send="true" data-width="300" data-show-faces="true">
+        <div class="fb-like" data-href="http://www.facebook.com/donlloren" data-send="true" data-width="300" data-show-faces="true">
         
 	     </div>
         <p class="homep"> Pic cam is A <b>funny and cool pictures</b> website, we would love for you to share your <b>lol photos and humorous pics</b>. welcome to our <b>fun land</b> where we will have you laughing at <b>lol photos</b>. don't forget to tell your friends about our cool pics, <b>humorous pics</b>, strange pictures, pictures of women and more. ... hope you enjoy the <b>fun land</b> of pikcam we have more links for <b>funny and cool pictures</b> you will not find a more <b>humorous</b>/<b>lol photo</b> site... <%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "gif", "http://www.pikcam.com/categories/Gif_animation" %> 
