@@ -36,7 +36,9 @@
 				<tr>
 				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
 				</tr>
-				<caption class="for-font"><%= truncate( upload.title, :length => 30)%></caption>
+				<tr>
+				<td class="for-font"><%= truncate( upload.title, :length => 30)%></td>
+			</tr>
 			</table>
 			<% end %>
 		</div>
@@ -63,7 +65,7 @@
 				           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 				          })();
 				        </script>
-				        <h1><%= link_to "New videos", funny_videos_url %> </h1>
+				        <h1><%= link_to "Watch videos", funny_videos_url %> </h1>
 
 			</div>
 
