@@ -375,7 +375,7 @@ a:hover{
 	width: 290px;
 	background-color: black;
 	padding: 9px 10px 10px 10px;
-	margin: 69px 0px 16px 0px;
+	margin: 85px 0px 16px 0px;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 10px;
 	border-bottom-right-radius: 10px;
@@ -393,18 +393,18 @@ a:hover{
 	min-width: 1060px;
 	height: 100%;
 	padding: 0px 0px 0px 0px;
-	background-image: linear-gradient(bottom, rgb(0,0,0) 50%, rgb(255,255,255) 50%);
-background-image: -o-linear-gradient(bottom, rgb(0,0,0) 50%, rgb(255,255,255) 50%);
-background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 50%, rgb(255,255,255) 50%);
-background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 50%, rgb(255,255,255) 50%);
-background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 50%, rgb(255,255,255) 50%);
+	background-image: linear-gradient(bottom, rgb(0,0,0) 47%, rgb(255,255,255) 47%);
+background-image: -o-linear-gradient(bottom, rgb(0,0,0) 47%, rgb(255,255,255) 47%);
+background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 47%, rgb(255,255,255) 47%);
+background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 47%, rgb(255,255,255) 47%);
+background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 47%, rgb(255,255,255) 47%);
 
 background-image: -webkit-gradient(
 	linear,
 	left bottom,
 	left top,
-	color-stop(0.5, rgb(0,0,0)),
-	color-stop(0.5, rgb(255,255,255))
+	color-stop(0.47, rgb(0,0,0)),
+	color-stop(0.47, rgb(255,255,255))
 );
 }
 .category{
@@ -561,7 +561,7 @@ background-repeat: repeat-x;
 	margin: -9px 0px 0px 0px;
 	background-color: black;
 	width: 639px;
-	height: 157px;
+	height: 162px;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 27px;
 	border-bottom-right-radius: 10px;
