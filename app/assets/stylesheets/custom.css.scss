@@ -393,19 +393,7 @@ a:hover{
 	min-width: 1060px;
 	height: 100%;
 	padding: 0px 0px 0px 0px;
-	background-image: linear-gradient(bottom, rgb(0,0,0) 47%, rgb(255,255,255) 47%);
-background-image: -o-linear-gradient(bottom, rgb(0,0,0) 47%, rgb(255,255,255) 47%);
-background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 47%, rgb(255,255,255) 47%);
-background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 47%, rgb(255,255,255) 47%);
-background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 47%, rgb(255,255,255) 47%);
-
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.47, rgb(0,0,0)),
-	color-stop(0.47, rgb(255,255,255))
-);
+	background-color: black;
 }
 .category{
 	width: 420px;
@@ -1056,12 +1044,12 @@ background-image: -webkit-gradient(
 	float: right;
 }
 .next-box{
-font-size: 16px;
+font-size: 20px;
 	display: inline;
 	line-height: 30px;
 	margin: 0px 15px 0px 0px;
-	height: 30px;
-	width: 100px;
+	height: 37px;
+	width: 125px;
 padding: 0px 0px 0px 0px;
 -moz-border-radius: 5px 5px 5px;
 border-radius: 5px 5px 5px;
