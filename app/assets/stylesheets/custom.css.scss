@@ -756,7 +756,6 @@ background-image: -webkit-gradient(
 .most-recent{
 	width: 480px;
 	margin: 30px;
-	background-color: #161817;
 	padding: 10px 0px 15px 20px;
 	margin: 0px 0px 0px 500px;
 
@@ -1670,4 +1669,13 @@ width: 170px;
 	margin: 12px 0px 0px 0px;
 	padding: 5px 0px 7px 10px;
 	background: black;
+}
+.exmore{
+	background-color: black;
+	width: 30px;
+	height: 70px;
+}
+.exmore h4{
+	font-size: 20px;
+	color: white;
 }
