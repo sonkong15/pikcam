@@ -375,7 +375,7 @@ a:hover{
 	width: 290px;
 	background-color: black;
 	padding: 9px 10px 10px 10px;
-	margin: 85px 0px 16px 0px;
+	margin: 28px 0px 16px 0px;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 10px;
 	border-bottom-right-radius: 10px;
@@ -447,7 +447,7 @@ a:hover{
 }
 .for-comment{
 	width: 620px;
-	height: 130px;
+	min-height: 130px;
 	background-color: rgba(0, 0, 0, 0.99);
 	padding: 9px 10px 10px 10px;
 	margin: 192px 0px 0px 0px;
@@ -508,8 +508,8 @@ background-repeat: repeat-x;
 	
 }
 .ad-upload{
-	
-	margin: 16px 0px 10px 0px;
+	clear: both;
+	margin: 12px 0px 10px 0px;
 	
 	height: 250px;
 	width: 300px;
