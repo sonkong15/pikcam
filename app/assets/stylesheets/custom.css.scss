@@ -9,7 +9,7 @@
 }
 .nave li{display: inline; padding-left: 25px; font-family: Arial; 
 font-size: 20px;}
-.nave { margin-right: 60px; margin-top: 15px; width: 700px;}
+.nave { margin-right: 60px; margin-top: 15px; width: 735px;}
 
 @mixin box_sizing{
 	-moz-box-sizing: border-box;
@@ -369,6 +369,9 @@ a:hover{
 	background-color: #161817;
 
 	
+}
+.big-e{
+	font-size: 28px;
 }
 .upload-side{
 	clear: right;
