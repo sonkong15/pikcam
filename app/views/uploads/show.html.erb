@@ -31,11 +31,16 @@
 
 	<div class="show-container" >
 		<div class="browse">
-			<script>
-var linkwithin_site_id = 1580113;
-</script>
-<script src="http://www.linkwithin.com/widget.js"></script>
-<a href="http://www.linkwithin.com/"><img src="http://www.linkwithin.com/pixel.png" alt="Related Posts Plugin for WordPress, Blogger..." style="border: 0" /></a>
+			<% @uploads.map do |upload| %>
+			<table class="browse-show">
+				<tr>
+				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
+				</tr>
+				<tr>
+				<td class="for-font"><%= truncate( upload.title, :length => 30)%></td>
+			</tr>
+			</table>
+			<% end %>
 		</div>
 			<div class="spencer"><h4>Pikcam humourous pics Spencer humorous gifts</h4><a href="http://gan.doubleclick.net/gan_click?lid=41000613802396401&pubid=21000000000605156&lsrc=17"><img src="http://gan.doubleclick.net/gan_impression?lid=41000613802396401&pubid=21000000000605156&lsrc=17" border=0 alt="209733_Just a click away from Cool.  Shop Now!"></a> </div>
 
@@ -49,8 +54,7 @@ var linkwithin_site_id = 1580113;
 			<div class="">
 				<div class="black-sqft"><h2>Like OR Follow </h2>
 				</div>
-				<div class="fb-like fb" data-href="http://www.facebook.com/donlloren" data-send="true" data-width="300" data-show-faces="true">
-				</div>
+				<div class="fb-like-box fb" data-href="https://www.facebook.com/pikcam" data-width="252" data-show-faces="false" data-stream="false" data-header="false"></div>
 
 			 <!-- Place this tag after the last badge tag. -->
 				    <script type="text/javascript">
@@ -206,10 +210,8 @@ document.write('<scr'+'ipt type="text/javascript" '
 		</div>
 
 	</div>
-	<input type="hidden" name="IL_IN_TAG" value="1"/>
 </div>
 
-  
 
 
 
