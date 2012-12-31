@@ -31,16 +31,13 @@
 
 	<div class="show-container" >
 		<div class="browse">
-			<% @uploads.each do |upload| %>
-			<table class="browse-show">
-				<tr>
-				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
-				</tr>
-				<tr>
-				<td class="for-font"><%= truncate( upload.title, :length => 30)%></td>
-			</tr>
-			</table>
-			<% end %>
+			<script language='JavaScript'>
+var OB_langJS = 'http://widgets.outbrain.com/lang_en.js'; var OBITm = '1356929593037';var OB_raterMode = 'none';var OB_recMode = 'strip'; 
+
+var OutbrainPermaLink='<%= @upload_url %>'; 
+
+ if ( typeof(OB_Script)!='undefined' )OutbrainStart(); else { var OB_Script = true; var str = unescape("%3Cscript src=\'http://widgets.outbrain.com/OutbrainRater.js\' type=\'text/javascript\'%3E%3C/script%3E"); document.write(str); }
+ </script>
 		</div>
 			<div class="spencer"><h4>Pikcam humourous pics Spencer humorous gifts</h4><a href="http://gan.doubleclick.net/gan_click?lid=41000613802396401&pubid=21000000000605156&lsrc=17"><img src="http://gan.doubleclick.net/gan_impression?lid=41000613802396401&pubid=21000000000605156&lsrc=17" border=0 alt="209733_Just a click away from Cool.  Shop Now!"></a> </div>
 
@@ -211,6 +208,7 @@ document.write('<scr'+'ipt type="text/javascript" '
 		</div>
 
 	</div>
+	<input type="hidden" name="IL_IN_TAG" value="1"/>
 </div>
 
 
