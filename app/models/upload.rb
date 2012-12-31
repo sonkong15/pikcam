@@ -32,9 +32,6 @@ class Upload < ActiveRecord::Base
 	def next_upload
   self.class.first(:conditions => ["created_at  > ? AND private = ?", created_at, false  ], :order => "created_at asc")
 	end
-
- 
-  
 	
 
 end
