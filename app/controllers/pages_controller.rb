@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 	@uploads_rest = Upload.order("created_at DESC").where("private = ?", false).limit(10).offset(2)
 	@upload = Upload.new
 	@videos_home = FunnyVideo.order("created_at DESC").limit(9)
+	@videos_home2 = FunnyVideo.order("created_at DESC").limit(2)
 	end
 
 	def about

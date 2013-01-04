@@ -49,18 +49,20 @@ width: 305px;"), upload_url(ups)   %>
     </div>
      
   </div>
-  <% @uploads.each do |uploads| %>
+  <% @videos_home2.each do |video| %>
           <div class="uploads-border" >
-            <table class="table-ie8">
-              <caption class="for-font"><%= truncate( uploads.title, :length => 20)%></caption>
-              <tr>
-           <td class="td-home"> <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 150px; width: 200px;" ), upload_url(uploads) %></td>
-              </tr>
-            </table>
-          </div>
-        <% end %>
+            
+      <table class="table-video2">
+        <caption class="for-font2"><%= truncate( "(video) #{video.title} ", :length => 30)%></caption>
+        <tr>
+        <td><%= link_to image_tag(video.youtubeid, :class => "dailymotion_thumb2"), funny_video_url(video) %><td>
+        </tr>
+        </table >
+      </div>
+        <% end %> 
   <!-- list of pictures -->
   <div class="rest-of-pic ">
+    <H3 class="just-add">Just add photos</H3>
     <% @uploads_rest.each do |uploads| %>
       <div class="uploads-border2" >
          <table class="ttable-ie8">
@@ -101,7 +103,7 @@ width: 305px;"), upload_url(ups)   %>
       <table class="table-video"> 
         <tr>
         <td><%= link_to image_tag(video.youtubeid, :class => "dailymotion_thumb"), funny_video_url(video) %><td>
-        <td><%= link_to video.title, funny_video_url(video) %></td>
+        <td><%= link_to " (video) #{video.title}", funny_video_url(video) %></td>
         </tr>
         </table >
         <% end %> 

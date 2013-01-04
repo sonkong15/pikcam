@@ -26,7 +26,7 @@ font-size: 20px;}
 }
 .graybox{
 	padding: 1px 0px 0px 0px;
-	background-image: image_url("polaroy.png");
+	background-color: white;
 	background-repeat: no-repeat;
 	height: 900px;
 	min-width: 1060px;
@@ -412,7 +412,7 @@ a:hover{
 }
 .mainbox{
 	width: 1060px;
-	height: 663px;
+	height: 688px;
 	margin: 0px auto;
 	margin-top: 60px;
 }
@@ -1426,7 +1426,10 @@ background-repeat: repeat-x;
 
 }
 .for-font{
-	color: rgb(56, 68, 151);
+	width: 169px;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.82);
+	color: #6678F1;
 }
 .around-web{
 	margin-top: 30px;
@@ -1564,6 +1567,16 @@ background-image: -webkit-gradient(
 	width: 125px;
 	height: 90px;
 }
+.dailymotion_thumb2{
+	width: 170px;
+	height: 140px;
+}
+.table-video2{
+	display: inline-table;
+	width: 169px;
+	margin: 5px 0px 0px 0px;
+	
+}
 .table-video{
 	display: inline-table;
 	width: 294px;
@@ -1616,9 +1629,11 @@ background-color: red;
 	margin: 0px 0px 0px -24px;
 }
 .rest-of-pic {
+	background-color: #DDD;
+	padding: 0px 0px 0px 0px;
 	clear: both;
-	width: 1026px;
-	height: 250px;
+	width: 1010px;
+	height: 337px;
 
 }
 .uploads-border2 {
@@ -1656,7 +1671,7 @@ width: 170px;
 	font-size: 19px;
 	text-align: center;
 	background-color: rgba(219, 54, 54, 0.91);
-	min-width: 1060px;
+	min-width: 1009px;
 	clear: both;
 	padding: 2px;
 	-moz-border-radius-bottomright: 10px;
@@ -1685,4 +1700,17 @@ width: 170px;
 .exmore h4{
 	font-size: 20px;
 	color: white;
+}
+.just-add{
+	text-align: center;
+	height: 20px;
+	padding: 8px 0px 0px 0px;
+	background-color: black;
+	margin: 0px 0px 0px 0px;
+}
+.for-font2{
+	width: 169px;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.82);
+	color: #6678F1;
 }
