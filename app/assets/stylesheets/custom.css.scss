@@ -342,7 +342,7 @@ a:hover{
 	width: 600px;
 	background-color: black;
 	padding: 0px 10px 10px 10px;
-	margin: 288px 0px 0px 0px;
+	margin: 183px 0px 0px 0px;
 	border: 10px solid black;
 	-moz-border-radius-bottomright: 0px;
 	-moz-border-radius-bottomleft: 0px;
@@ -553,12 +553,12 @@ background-repeat: repeat-x;
 .browse{
 	position: absolute;
 	display: inline-block;
-	margin: -9px 0px 0px 0px;
-	width: 639px;
-	height: 162px;
+	margin: 135px 0px 0px 0px;
+	width: 473px;
+	height: 50px;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 27px;
-	border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 0px;
 	-moz-border-radius-topleft: 0px;
 	-moz-border-radius-topright: 0px;
 	border-bottom-left-radius: 27px;
@@ -567,9 +567,6 @@ background-repeat: repeat-x;
 	padding: 5px 0px 0px 5px;
 	border-top: 0px;
 	border-left: 0px;
-	-webkit-box-shadow: 2px 3px 0px rgba(17, 26, 243, 0.66);
-	-moz-box-shadow: 2px 3px 0px rgba(17, 26, 243, 0.66);
-	box-shadow: 2px 3px 0px rgba(17, 26, 243, 0.66);
    
 }
 .addthis_toolbox {
@@ -631,7 +628,7 @@ a.cat:hover {color: #DDD;}
 	
 	padding: 10px;
 	position: absolute;
-	margin: 248px 0px 0px 0px;
+	margin: 67px 0px 0px 0px;
 	width: 620px;
 	color: #DDD; 
 	background-color: rgba(0, 0, 0, 0.97); 
@@ -658,7 +655,7 @@ a.cat:hover {color: #DDD;}
 .side-bar{
 	float: right;
     margin-top: 0px;
-    width: 315px;
+    width: 347px;
     margin: 0px 10px 15px 0px
 
 }
@@ -1043,7 +1040,7 @@ background-image: -webkit-gradient(
 }
 .next-pev{
 	border-bottom: 2px solid black;
-	background: #3243BD;
+	background: #BD3232;
 	width: 313px;
 	margin: 0px 0px 6px 0px;
 	padding: 5px 0px 7px 0px;
@@ -1129,7 +1126,7 @@ border-radius: 5px 5px 5px;
 }
 .likehate{
 	float: right;
-	margin: -33px -30px 0px 0px;
+	margin: -33px 0px 0px 0px;
 }
 .my_nav{
 	float: right;
@@ -1658,7 +1655,7 @@ width: 170px;
 .spencer{
 	width: 572px;
 	position: absolute;
-	margin: 175px 0px 0px 0px;
+	margin: 5px 0px 0px 0px;
 	clear: both;
 }
 .spencer h4{

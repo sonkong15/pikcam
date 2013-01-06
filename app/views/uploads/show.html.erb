@@ -30,8 +30,30 @@
 	</div>
 
 	<div class="show-container" >
+
+			<div class="spencer"><h4>Pikcam humourous pics Spencer humorous gifts</h4><a href="http://gan.doubleclick.net/gan_click?lid=41000613802396401&pubid=21000000000605156&lsrc=17"><img src="http://gan.doubleclick.net/gan_impression?lid=41000613802396401&pubid=21000000000605156&lsrc=17" border=0 alt="209733_Just a click away from Cool.  Shop Now!"></a> </div>
+
+		<p class="p-title"><%= "#{@upload.title}" %></p>
 		<div class="browse">
-			<% @uploads.map do |upload| %>
+			<div class="next-pev">
+				<ul>
+					<li class="next-box"><%= link_to("Previous Pic", @upload.next_upload, :class => "")  if @upload.next_upload %></li>
+					<li class="next-box"><%= link_to("Next Pic", @upload.previous_upload,:class => "") if @upload.previous_upload %></li>
+
+				</ul>
+
+			</div>
+		</div>
+		<div class="upload-show">
+
+			<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>
+		</div>
+
+		<div class="side-bar">
+			<div class="">
+				<div class="black-sqft"><h2> pikcam photos </h2>
+				</div>
+				<% @uploads.map do |upload| %>
 			<table class="browse-show">
 				<tr>
 				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
@@ -41,20 +63,6 @@
 			</tr>
 			</table>
 			<% end %>
-		</div>
-			<div class="spencer"><h4>Pikcam humourous pics Spencer humorous gifts</h4><a href="http://gan.doubleclick.net/gan_click?lid=41000613802396401&pubid=21000000000605156&lsrc=17"><img src="http://gan.doubleclick.net/gan_impression?lid=41000613802396401&pubid=21000000000605156&lsrc=17" border=0 alt="209733_Just a click away from Cool.  Shop Now!"></a> </div>
-
-		<p class="p-title"><%=  @upload.title %></p>
-		<div class="upload-show">
-
-			<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>
-		</div>
-
-		<div class="side-bar">
-			<div class="">
-				<div class="black-sqft"><h2>Like OR Follow </h2>
-				</div>
-				<div class="fb-like-box fb" data-href="https://www.facebook.com/pikcam" data-width="252" data-show-faces="false" data-stream="false" data-header="false"></div>
 
 			 <!-- Place this tag after the last badge tag. -->
 				    <script type="text/javascript">
@@ -82,14 +90,7 @@
 			</script>
 			</div>
 
-			<div class="next-pev">
-				<ul>
-					<li class="next-box"><%= link_to("Previous Pic", @upload.next_upload, :class => "")  if @upload.next_upload %></li>
-					<li class="next-box"><%= link_to("Next Pic", @upload.previous_upload,:class => "") if @upload.previous_upload %></li>
-
-				</ul>
-
-			</div>
+			
 
 
 			<div class="ad-upload">
