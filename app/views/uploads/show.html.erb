@@ -33,7 +33,7 @@
 
 			<div class="spencer"><h4>Pikcam humourous pics Spencer humorous gifts</h4><a href="http://gan.doubleclick.net/gan_click?lid=41000613802396401&pubid=21000000000605156&lsrc=17"><img src="http://gan.doubleclick.net/gan_impression?lid=41000613802396401&pubid=21000000000605156&lsrc=17" border=0 alt="209733_Just a click away from Cool.  Shop Now!"></a> </div>
 
-		<p class="p-title"><%= "#{@upload.title}" %></p>
+		
 		<div class="browse">
 			<div class="next-pev">
 				<ul>
@@ -44,6 +44,7 @@
 
 			</div>
 		</div>
+		<p class="p-title"><%= "#{@upload.title}" %></p>
 		<div class="upload-show">
 
 			<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>
