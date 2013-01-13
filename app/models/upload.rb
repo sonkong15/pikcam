@@ -1,7 +1,7 @@
 
 
 class Upload < ActiveRecord::Base
-	attr_accessible :picture, :title, :category_ids, :private
+	attr_accessible :picture, :title, :category_ids, :private, :description 
 	has_many :Comment, :as => :commentable
 	belongs_to :user
 	has_many :categorizations

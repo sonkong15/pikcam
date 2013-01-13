@@ -7,6 +7,8 @@
     <%= f.label :caption %>
     <%= f.text_field :title  %>
     <%= f.file_field :picture, :html => {:class => "ups"} %>
+    <%= f.label :Description  %>
+    <%= f.text_area :description, :rows => "3" %>
     <div class="home-private">
     <%= f.check_box :private, :default => false %>
     <%= f.label :For_private, :class =>"label-private" %>

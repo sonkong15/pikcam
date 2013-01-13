@@ -44,15 +44,15 @@
 
 			</div>
 		</div>
-		<p class="p-title"><%= "#{@upload.title}" %></p>
+		<h1 class="p-title"><%= "#{@upload.title}" %></h1>
 		<div class="upload-show">
 
 			<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>
 		</div>
 
 		<div class="side-bar">
-			<div class="">
-				<div class="black-sqft"><h2> pikcam photos </h2>
+			<div class="twopics">
+				<div class="black-sqft"><h2> humorous & cool photos </h2>
 				</div>
 				<% @uploads.map do |upload| %>
 			<table class="browse-show">
@@ -73,7 +73,7 @@
 				           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 				          })();
 				        </script>
-				        <h1><%= link_to "Watch videos", funny_videos_url %> </h1>
+				        <h3><%= link_to "Funny videos", funny_videos_url %> </h3>
 
 			</div>
 
@@ -163,16 +163,6 @@ document.write('<scr'+'ipt type="text/javascript" '
 			</p>
 			<% end %>
 
-			<div class="edit_link">
-					<% if can? :destroy, @upload %>
-			  			<%= link_to "Edit", edit_upload_path(@upload) %>   
-					<% end %>
-					<% if can? :destroy, @upload %>
-			    		<%= link_to "Destroy", @upload, :method => :delete, :confirm => "Are you sure you want to delete?" %> 
-			    		<span><strong>Only you can see this</strong></span>
-			  		<% end %>
-			  		
-			</div>
 			<div class="likehate">
 				<h2 class="like"><%= @upload.flaggings.where("flag = ?", "like").count %></h2>
 				<ul>
@@ -191,11 +181,23 @@ document.write('<scr'+'ipt type="text/javascript" '
 
 
 		<div class="for-comment">
+			<p class="description">Description: </p>
+			<p></p>
 			<input type="hidden" name="IL_IN_TAG" value="1"/>
 		</div>
+		<div class="edit_link">
+					<% if can? :destroy, @upload %>
+			  			<%= link_to "Edit", edit_upload_path(@upload) %>   
+					<% end %>
+					<% if can? :destroy, @upload %>
+			    		<%= link_to "Destroy", @upload, :method => :delete, :confirm => "Are you sure you want to delete?" %> 
+			    		<span><strong>Only you can see this</strong></span>
+			  		<% end %>
+			  		
+			</div>
 		<div class="around-web">
 
-				<div class="black-sq"><h2>From site around the web</h2></div>
+				<div class="black-sq"><h2>Humorous and cool pics from other sites</h2></div>
 			<script src="http://knowd.com/w/776.js?swid=457"></script>
 
 			<!-- Classic, created 11/24/12 -->
