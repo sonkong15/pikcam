@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -20,7 +20,7 @@ group :assets do
   # gem 'therubyracer'
   gem 'thin'
   #gem 'bcrypt-ruby', '~> 3.0.0'
-  gem "friendly_id", "~> 4.0.1"
+  gem "friendly_id", "~> 4.0.9"
   gem "cancan"
   gem 'bootstrap-sass'
   gem 'simple_form'
@@ -60,7 +60,7 @@ gem 'jquery-rails'
   group :production do
   gem 'thin'
   #gem 'bcrypt-ruby', '~> 3.0.0'
-  gem "friendly_id", "~> 4.0.1"
+  gem "friendly_id", "~> 4.0.9"
   gem "cancan"
   gem 'bootstrap-sass'
   gem 'simple_form'
