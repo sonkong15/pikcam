@@ -12,6 +12,8 @@
     <%= f.label :Categories, :class => "inlinefrom" %>
     <%= f.collection_select :category_ids, Category.order(:name), :id, :name, {}, {multiple: true} %>
     <%= f.file_field :picture, :class => "ups" %>
+    <%= f.label :Description  %>
+    <%= f.text_area :description, :rows => "3" %>
     <div class="home-private">
     <%= f.check_box :private, :default => false %>
     <%= f.label :to_privatize_pic, :class =>"label-private" %>
