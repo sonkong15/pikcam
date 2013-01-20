@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-	attr_accessible :name
+	attr_accessible :name, :gtitle
 	 has_many :categorizations
 	 has_many :uploads, :through => :categorizations
    scope :home_random, order("RANDOM()").limit(11)
