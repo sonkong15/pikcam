@@ -39,6 +39,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
    
    
   <div class="top-share">
+
     <div class="slider-wrapper theme-default">
       <div id="slider" class="nivoSlider">
         <% @uploads_slideshow.each do |ups| %>
@@ -49,18 +50,22 @@ width: 305px;"), upload_url(ups)   %>
     </div>
      
   </div>
-  <% @videos_home2.each do |video| %>
-          <div class="uploads-border" >
-            
-      <table class="table-video2">
-        <caption class="for-font2"><%= truncate( "(video) #{video.title} ", :length => 30)%></caption>
-        <tr>
-        <td><%= link_to image_tag(video.youtubeid, :class => "dailymotion_thumb2"), funny_video_url(video) %><td>
-        </tr>
-        </table >
-      </div>
-        <% end %> 
+  <div class="user-count">
+  <% if current_user %> 
+    Pikcam community has <b><%= User.count %></b> members <b>help us reach 1500 members so we ca start giving away prizes</b><br>With your help, I know we can pull it off
+    <span class="st_facebook_hcount" st_url="http://www.pikcam.com" st_title="pikcam cures boredom lol" st_image= <%= Upload.first.picture.url %> st_summary=" See what your friend lookin at, pikcam A toooo funny site. so what you wait join our community  "></span>
+    <span class='st_googleplus_hcount' displayText='Google +'></span>
+    <span class='st_twitter_hcount' displayText='Tweet'></span>
+    <% else %>
+    Pikcam community has <b><%= User.count %></b> members <b>help us reach 1000 members</b> join today<br>
+    <p> we will give away prizes once we reach 1500 members we are always adding new features </p>
+    <span class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook"%></span>
+    
+    <% end %>
+  </div>
+  
   <!-- list of pictures -->
+  <div class="order-pics">
   <div class="rest-of-pic ">
     <H3 class="just-add">Just add photos</H3>
     <% @uploads_rest.each do |uploads| %>
@@ -71,24 +76,31 @@ width: 305px;"), upload_url(ups)   %>
            <td class="td-home"> <%= link_to image_tag(uploads.picture.url(:thumb), :alt => uploads.title, :title => uploads.title, :style =>"height: 130px; width: 170px;" ), upload_url(uploads) %></td>
               </tr>
             </table>
-            
+
       </div>
     <% end %>
     <div> <h3><%= link_to "more photos"," http://www.pikcam.com/categories?page=2", :class => "moree-photos" %></h3></div>
   </div>
-
-  <div class="user-count">
-  <% if current_user %> 
-    Pikcam community has <b><%= User.count %></b> members <b>help us reach 1000 members</b><br>With your help, I know we can pull it off
-    <span class="st_facebook_hcount" st_url="http://www.pikcam.com" st_title="pikcam cures boredom lol" st_image= <%= Upload.first.picture.url %> st_summary=" See what your friend lookin at, pikcam A toooo funny site. so what you wait join our community  "></span>
-    <span class='st_googleplus_hcount' displayText='Google +'></span>
-    <span class='st_twitter_hcount' displayText='Tweet'></span>
-    <% else %>
-    Pikcam community has <b><%= User.count %></b> members <b>help us reach 1000 members</b> join today<br>
-    <span class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook"%></span>
-    
-    <% end %>
+  <div class="toper-pics">
+    <H3 class="just-add">Top pictures</H3>
+   </div>
+  <div class="toper-pics2">
+    <H3 class="just-add">top videos</H3>
+   <% @videos_home2.each do |video| %>
+          <div class="uploads-border" >
+            
+      <table class="table-video2">
+        <caption class="for-font2"><%= truncate( "(video) #{video.title} ", :length => 30)%></caption>
+        <tr>
+        <td><%= link_to image_tag(video.youtubeid, :class => "dailymotion_thumb2"), funny_video_url(video) %><td>
+        </tr>
+        </table >
+      </div>
+        <% end %> 
+      </div>
   </div>
+
+  
   </div>
 
   

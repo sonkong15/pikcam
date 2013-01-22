@@ -28,7 +28,7 @@ font-size: 20px;}
 	padding: 1px 0px 0px 0px;
 	background-color: white;
 	background-repeat: no-repeat;
-	height: 900px;
+	height: 1000px;
 	min-width: 1060px;
 	width:100%;
 
@@ -413,7 +413,7 @@ a:hover{
 }
 .mainbox{
 	width: 1060px;
-	height: 717px;
+	height: 910px;
 	margin: 0px auto;
 	margin-top: 60px;
 }
@@ -545,7 +545,7 @@ background-repeat: repeat-x;
 	position: absolute;
 	margin: 37px 0px 0px 315px;
 	height: 240px;
-	width: 268px;
+	width: 310px;
 	-moz-border-radius-topleft: 10px;
 	border-top-left-radius: 10px;
 	-moz-border-radius-bottomleft: 10px;
@@ -930,7 +930,7 @@ a.pagin{
 	clear: both;
 }
 .uploads-border{
-	margin: 43px 15px 10px 0px;
+	margin: 10px -15px 0px 0px;
 	width: 200px;
 	float: right;
 
@@ -1628,11 +1628,11 @@ background-color: red;
 	margin: 0px 0px 0px -24px;
 }
 .rest-of-pic {
+	float: left;
 	background-color: #DDD;
 	padding: 0px 0px 0px 0px;
-	clear: both;
-	width: 1010px;
-	height: 360px;
+	width: 620px;
+	height: 614px;
 
 }
 .uploads-border2 {
@@ -1666,11 +1666,13 @@ width: 170px;
 	float: left;
 }
 .user-count{
+	position: absolute;
+	margin: 38px 0px 0px 624px;
 	line-height: 25px;
 	font-size: 19px;
 	text-align: center;
 	background-color: rgba(219, 54, 54, 0.91);
-	width: 1008px;
+	width: 368px;
 	clear: both;
 	padding: 2px;
 	-moz-border-radius-bottomright: 10px;
@@ -1708,7 +1710,7 @@ width: 170px;
 	margin: 0px 0px 0px 0px;
 }
 .for-font2{
-	width: 169px;
+	width: 166px;
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.82);
 	color: #6678F1;
@@ -1726,4 +1728,23 @@ width: 170px;
 	color: black;
 	text-align: center;
 	margin: 0px 0px 0px 400px;
+}
+.toper-pics{
+	float: left;
+	margin-left: 10px;
+	width: 200px;
+	height: 614px;
+	background-color: #DDD;
+}
+.toper-pics2{
+	float: left;
+	margin-left: 10px;
+	width: 200px;
+	height: 614px;
+	background-color: #DDD;
+}
+.order-pics{
+	clear: both;
+	width: 1060px;
+	height: 620px;
 }

@@ -2,10 +2,10 @@ class PagesController < ApplicationController
 	
 	def home
 	@uploads_slideshow = Upload.order("RANDOM()").where("private = ?", false).limit(4)
-	@uploads_rest = Upload.order("created_at DESC").where("private = ?", false).limit(10)
+	@uploads_rest = Upload.order("created_at DESC").where("private = ?", false).limit(12)
 	@upload = Upload.new
-	@videos_home = FunnyVideo.order("created_at DESC").limit(9)
-	@videos_home2 = FunnyVideo.order("created_at DESC").limit(2)
+	@videos_home = FunnyVideo.order("created_at DESC").offset(3).limit(9)
+	@videos_home2 = FunnyVideo.order("created_at DESC").limit(3)
 	end
 
 	def about
