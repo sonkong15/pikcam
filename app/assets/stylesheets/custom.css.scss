@@ -397,7 +397,7 @@ a:hover{
 	min-width: 1060px;
 	height: 100%;
 	padding: 0px 0px 0px 0px;
-	background-color: black;
+	background-color: white;
 }
 .category{
 	width: 420px;
@@ -479,10 +479,10 @@ a:hover{
 	background-color: rgb(3, 4, 19);
 	height: 204px;
 	margin: -12px 0px 0px 0px;
-    -moz-border-radius-topleft: 20px;
-    -moz-border-radius-topright: 20px; 
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px; 
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
 }
 .cateoriesh2{
 
@@ -554,7 +554,7 @@ background-repeat: repeat-x;
 .browse{
 	position: absolute;
 	display: inline-block;
-	margin: 135px 0px 0px 0px;
+	margin: 69px 0px 0px 0px;
 	width: 473px;
 	height: 50px;
 	-moz-border-radius-bottomright: 10px;
@@ -605,6 +605,7 @@ a.cat:hover {color: #DDD;}
 	position: absolute;
 	height: 40px;
 	width: 100%;
+	min-width: 1060px;
 	margin: 0px auto;
 	background-color: black;
 	-moz-box-shadow: -3px 0px 24px rgba(23, 50, 243, 0.93);
@@ -629,10 +630,10 @@ a.cat:hover {color: #DDD;}
 	
 	padding: 10px;
 	position: absolute;
-	margin: 67px 0px 0px 0px;
+	margin: 123px 0px 0px 0px;
 	width: 620px;
 	color: #DDD; 
-	background-color: rgba(0, 0, 0, 0.97); 
+	background-color: black; 
 	font-size: 27px;
 	-moz-border-radius-bottomright: 0px;
 	-moz-border-radius-bottomleft: 0px;
@@ -1722,7 +1723,7 @@ width: 170px;
 	color: white;
 }
 .twopics{
-	background-color: #030413;
+	background-color: black;
 	padding: 0px 0px 0px 23px;
 	height: 202px;
 }
