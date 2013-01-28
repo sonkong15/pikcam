@@ -118,12 +118,7 @@
             <li><a href="http://www.savemefromboredom.com/" title="save me from boredom" target="_black">save me from boredom</a> | </li>
             <li><a href="http://www.signpictures.net/" target="_blank">Sign Pictures</a> | </li>
             <li><a href="http://www.meltedbrain.com">melted brain</a> | </li>
-            <% links.each do |l| %>
-            <li><a href= <%= l.site %>  target="_blank"><%= l.title %></a> | </li>
-            <% if can? :destroy, l %>
-			    		<%= link_to "<=Destroy", l, :method => :delete, :confirm => "Are you sure" %> 
-			    	<% end %>
-            <% end %>
+           
 
           </ul>
           <a href="/link-up">add your site to our friends list</a>
