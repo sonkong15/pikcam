@@ -3,10 +3,14 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied, :with => :not_allow
 
 
-  helper_method :current_user_session, :current_user, :facebook_token
+  helper_method :current_user_session, :current_user, :facebook_token, :links
   
 
   private
+  def links
+    @links = Link.all
+    
+  end
 
   def not_allow
     redirect_to r_u_lost_path, :notice => "sorry wrong URL"

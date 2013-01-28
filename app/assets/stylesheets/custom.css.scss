@@ -128,7 +128,6 @@ border-radius: 0px;
 -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	padding: 10px 0px 0px 0px;
-	height: 92px;
 	width: 100%;
 	min-width: 1060px;
   	
@@ -1333,7 +1332,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 .our-link{
 	margin-left: 10px;
 	display: inline-table;
-	width: 600px;
+	width: 650px;
 	height: 88px;
 	
 }
@@ -1750,4 +1749,21 @@ width: 170px;
 	clear: both;
 	width: 1060px;
 	height: 620px;
+}
+.getusers{
+	line-height: 25px;
+font-size: 19px;
+text-align: center;
+background-color: rgba(219,54,54,0.91);
+width: 368px;
+clear: both;
+padding: 2px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-bottom-left-radius: 10px;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
 }

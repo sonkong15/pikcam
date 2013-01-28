@@ -28,8 +28,9 @@ class PagesController < ApplicationController
 	def lost_page
 		
 	end
+	
 	def link_up
-		
+		@link = Link.new
 	end
 
 

@@ -1,4 +1,18 @@
 <% @title = "link up" %>
+	<% if current_user.present? %>
+	<% if current_user.admin? %>
+          	<div>
+          		<%= form_for @link do |f| %>
+          		<span>site title</span>
+          		<%= f.text_field :title %>
+          		<span>site url</span>
+          		<%= f.text_field :site %>
+          		<%= f.submit "Add link" %>
+          		<% end %>
+          	</div>
+	<% end %>
+	<% end %>
+
 <div class="link-up-main">
 	<h2>Link Exchange</h2>
 <p>You can add your site to our friend's list. Link back to us and send traffic to this URL - http://www.pikcam.com. All traffic sent from your site to any content page will be also counted. The top 35 sites are listed on the each pages of our site, other partners will be listed</p>

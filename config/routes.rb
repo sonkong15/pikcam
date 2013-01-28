@@ -20,7 +20,7 @@ TheBrands::Application.routes.draw do
   match '/auth/twitter' => 'user_oauth#create', :as => :tw_login
 
   
-  
+  resources :links
   resources :user_sessions, only: [:new, :create, :destroy]
   match '/feed' => 'uploads#feed', :as => :feed, :defaults => { :format => 'atom' }
   match "/link-up", to: "Pages#link_up"
