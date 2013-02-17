@@ -1,7 +1,25 @@
-<% @title = @category.name %>
+<% @title = @category.title %>
 <div class="category-title">
-<h1><%= @category.name %></h1>
+	<h1><%= @category.name %> (<%= @category.title %>)</h1>
+	<div class="list-more">
+		<div class="navme2">
+			<ul class="clirle-nav ">
+				<!--<h2 class="browse-more " >Browse more Pics</h2>-->
+
+				<li><%= link_to "COOL_PICS", "http://www.pikcam.com/categories/cool", :class => "clirlink" %></li>
+				<li><%= link_to "SPORTS", "http://www.pikcam.com/categories/Sports", :class => "clirlink" %></li>
+				<li><%= link_to "HUMOROUS", "http://www.pikcam.com/categories/Humorous", :class => "clirlink" %></li>
+				<li><%= link_to "WTF", "http://www.pikcam.com/categories/WTF", :class => "clirlink" %></li>
+				<li><%= link_to "HOTTIES", "http://www.pikcam.com/categories/Hotties", :class => "clirlink" %></li>
+				<li><%= link_to "AMIMALS", "http://www.pikcam.com/categories/My_Pets", :class => "clirlink" %></li>
+				<li><%= link_to "VIDEOS", funny_videos_url, :class => "clirlink" %></li>
+			</ul>
+		</div>
+	</div>
+
+
 </div>
+<div class="category-div">
 <div class="hold_ad">
 <div class="side_ad">
 	<script type="text/javascript"><!--
@@ -17,12 +35,23 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 	</div>
 	</div>
-<div class="category-div">
 
 
+<table>
 <% @upload.each do |hope| %>
-<%= link_to image_tag(hope.picture.url(:thumb), :alt => hope.title, :title => hope.title), hope, {:class => "href-cate", :title => " #{hope.title}"} %>
+
+	<tr>
+		<td>
+<%= link_to image_tag(hope.picture.url(:large), :alt => hope.title, :title => hope.title,  :class =>"largesmall"), hope, {:class => "href-cate", :title => " #{hope.title}"} %>
+	</td>
+		<td>
+			<h3><%= link_to hope.title, upload_url(hope) %></h3> 
+			<p>click to view more details</p>
+		</td>
+	
+	</tr>
 <% end %>
+</table>
 <%= paginate @upload %>
 </div>
 

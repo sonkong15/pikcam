@@ -1,12 +1,12 @@
 class Category < ActiveRecord::Base
-	attr_accessible :name
+	attr_accessible :name, :title
 	 has_many :categorizations
 	 has_many :uploads, :through => :categorizations
    scope :home_random, order("RANDOM()").limit(11)
    scope :category_show, order("created_at DESC")
    Category.joins(:Uploads)
    extend FriendlyId
-    friendly_id :name
+    friendly_id :title, use: :slugged
 
 	def self.tokens(query)
     	categories = where("name like ?", "%#{query}%")

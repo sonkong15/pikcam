@@ -1,15 +1,13 @@
 
 
 class Upload < ActiveRecord::Base
-	attr_accessible :picture, :title, :category_ids, :private, :description 
+	attr_accessible :picture, :title, :category_ids, :private, :description, :name
 	has_many :Comment, :as => :commentable
 	belongs_to :user
 	has_many :categorizations
 	has_many :categories, :through => :categorizations
 	make_flaggable :like, :hate
-	 #def to_param
-	 	#"#{id} #{title}".parameterize	
-	 #end
+	
 
 
 	has_attached_file :picture, :styles =>{ :thumb => "149x116#", :small => "200x160#", :large => "600x500>"},
