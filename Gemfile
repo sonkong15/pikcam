@@ -77,7 +77,7 @@ gem 'jquery-rails', "~> 2.1.3"
   gem 'omniauth-facebook'
   gem "auto_html", "~> 1.6.0"
   gem "koala"
- 
+  
   end
 
 
