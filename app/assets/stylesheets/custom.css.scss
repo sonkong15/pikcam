@@ -518,7 +518,7 @@ background-repeat: repeat-x;
 	clear: both;
 	margin: 12px 0px 10px 0px;
 	
-	height: 280px;
+	height: 250px;
 	width: 300px;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 10px;
@@ -1776,3 +1776,19 @@ border-top-left-radius: 10px;
 table h3{
 	line-height: 1;
 }
+.more-links{
+	width: 370px;
+	height: 320px;
+	
+}
+div.more-links > ul > li {
+	font-size: 22px;
+	line-height: 43px;
+	color: black;
+}
+div.more-links > ul > li > a {
+	color: black;
+	&:hover {
+		color: purple;
+	}
+	}
