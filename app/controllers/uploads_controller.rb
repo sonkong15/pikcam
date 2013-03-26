@@ -29,7 +29,7 @@ class UploadsController < ApplicationController
 
 	def show
 		@upload = Upload.find(params[:id])
-		@uploads = Upload.order("RANDOM ()").where("private = ?", false).limit(10)
+		@uploads = Upload.order("RANDOM ()").where("private = ? AND picture_content_type = ? ", false, "image/jpeg" ).limit(5)
 		@category = Category.joins(:uploads) 
 	end
 
