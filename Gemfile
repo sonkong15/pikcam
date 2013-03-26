@@ -39,6 +39,7 @@ group :assets do
   gem "koala"
   gem 'turbolinks'
   gem 'uglifier', '>= 1.0.3'
+  gem 'thumbs_up'
 end
 
 gem 'jquery-rails', "~> 2.1.3"
@@ -77,7 +78,7 @@ gem 'jquery-rails', "~> 2.1.3"
   gem 'omniauth-facebook'
   gem "auto_html", "~> 1.6.0"
   gem "koala"
-  
+  gem 'thumbs_up'
   end
 
 

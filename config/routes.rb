@@ -9,6 +9,7 @@ TheBrands::Application.routes.draw do
   member do
     get "like"
     get "hate"
+    get "likeit"
     end
   end 
   match "/top_pics", to: "uploads#top"

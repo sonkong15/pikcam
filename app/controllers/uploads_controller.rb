@@ -29,7 +29,7 @@ class UploadsController < ApplicationController
 
 	def show
 		@upload = Upload.find(params[:id])
-		@uploads = Upload.order("RANDOM ()").where("private = ?", false).limit(2)
+		@uploads = Upload.order("RANDOM ()").where("private = ?", false).limit(10)
 		@category = Category.joins(:uploads) 
 	end
 
@@ -66,16 +66,34 @@ class UploadsController < ApplicationController
   		end
   		
   	end
+    def likeit
+      @upload = Upload.find(params[:id])
+      flash[:notice] = "you are only allow to like once " unless current_user.voted_on?(@upload)
+      respond_to do |format|
+      if current_user.voted_for?(@upload)
+         format.html { redirect_to proc { upload_url(@upload) }, :notice => " you are only allow to like once "}
+         format.js { redirect_to proc { upload_url(@upload) }, :notice => " you are only allow to like once "}
+        else
+        current_user.vote_exclusively_for(@upload)
+         format.html { redirect_to proc { upload_url(@upload) }, :notice => " you like the picture "}
+         format.js { redirect_to proc { upload_url(@upload) }, :notice => " you like the picture "}
+      end
+        end
+    end
 	def hate
   		@upload = Upload.find(params[:id])
-  		if current_user.flagged?(@upload, :hate)
-  			current_user.unflag(@upload, :hate)
-  			redirect_to upload_url(@upload)	
-  			else
-  			current_user.flag(@upload, :hate) 
-  			redirect_to upload_url(@upload), :notice => " you hate the picture :( "
-
-  		end
+       
+       respond_to do |format|
+        if current_user.voted_against?(@upload)
+         format.html { redirect_to proc { upload_url(@upload) }, :notice => " you are only allow to dis like once "}
+         format.js { redirect_to proc { upload_url(@upload) }, :notice => " you are only allow dis like once "}
+        else
+         current_user.vote_exclusively_against(@upload)
+         format.html { redirect_to proc { upload_url(@upload) }, :notice => " you dis like the picture!! "}
+         format.js { redirect_to proc { upload_url(@upload) }, :notice => " you dis like the picture!! "}
+        end
+       
+        end
   	end
 
   	def top

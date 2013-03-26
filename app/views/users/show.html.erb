@@ -1,5 +1,61 @@
 <% @title = @user.name.capitalize %>
+<div class="user-pro">
+<h3 style="margin-top: 48px;">
+			<%= @user.name.capitalize %>'s Photos
+		</h3> 
+		<p>
+
+		</p>
+		<%= user_profile_pics %>
+		<h5>
+			Joined <%= l @user.created_at, :format => :long %>
+		</h5>
+		<div class="profile-font"> 
+		 <b>facebook link: <a href="<%=@user.facebook_link %>" target="_blank"><%=@user.facebook_link%></a></b><br><br>
+		 <b>website link: <a href="<%= @user.website_link %>" target="_blank"><%=@user.website_link %></a></b>
+
+		</div>
+		<div class= "bio-box">
+		 <h3>Bio:</h3>
+		 	<p>
+			 <%= @user.bio %>
+			</p>
+		</div>
+			<div class="user-showad">
+    			<script type="text/javascript"><!--
+				google_ad_client = "ca-pub-3387068696014466";
+				/* pik-cam 300x250 */
+				google_ad_slot = "6391302218";
+				google_ad_width = 300;
+				google_ad_height = 250;
+				//-->
+				</script>
+				<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+ 		 </div>
+</div>
 <div class="profile">
+	<div class="list-more" style="z-index: -1;">
+		<div class="navme2">
+			<ul class="clirle-nav ">
+				<!--<h2 class="browse-more " >Browse more Pics</h2>-->
+
+				<li><%= link_to "COOL_PICS", "http://www.pikcam.com/categories/the-coolest-pics", :class => "clirlink" %></li>
+				<li><%= link_to "SPORTS", "http://www.pikcam.com/categories/what-happen-to-you", :class => "clirlink" %></li>
+				<li><%= link_to "HUMOROUS", "http://www.pikcam.com/categories/this-is-crazy-funny", :class => "clirlink" %></li>
+				<li><%= link_to "WTF", "http://www.pikcam.com/categories/what-the-hell-man", :class => "clirlink" %></li>
+				<li><%= link_to "HOTTIES", "http://www.pikcam.com/categories/hot-ass-girls", :class => "clirlink" %></li>
+				<li><%= link_to "ANIMALS", "http://www.pikcam.com/categories/crazy-animals", :class => "clirlink" %></li>
+				<li><%= link_to "VIDEOS", funny_videos_url, :class => "clirlink" %></li>
+
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+<div class="user-contents">
+
+
 	<div class="cat-showad2">
     <script type="text/javascript"><!--
 google_ad_client = "ca-pub-3387068696014466";
@@ -13,6 +69,7 @@ google_ad_height = 90;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
   </div>
+  
 	<div class= "profile-box">
 		<div class="photo-count">
 			<div class="ph">
@@ -21,64 +78,31 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 			</div>
 			<div class="l_h">
 		<p class="photo_counter"><%= @user.flaggings.count %></p>
-		<p class ="photo_name">Like/Hate</p>
+		<p class ="photo_name">Saved Pics</p>
 		</div>
 		</div>
 		
 		<div class="my_nav">
 			<ul>
 				<li class="link_change"><%= link_to "MY Pics", "" %></li>
-				<li class="link_change"><%= link_to "MY Fav", "" %></li>
+				<li class="link_change"><%= link_to "MY Fav", ""  %></li>
 
 			</ul>
 
 		</div>
 
 		<div class="ajax_pics">
-		<%= render "user_pics" %>
+		<%= render("user_pics") %>
+		</div>
 		</div>
 
-		<h1>
-			<%= @user.name.capitalize %>'s Photos 
-		</h1> 
-		<p>
-
-		</p>
-		<%= user_profile_pics %>
-		<h5>
-			Joined <%= l @user.created_at, :format => :long %>
-		</h5>
-	
-	
-		<div class="profile-font"> 
-		 <b>facebook link: <a href="<%=@user.facebook_link %>" target="_blank"><%=@user.facebook_link%></a></b><br><br>
-		 <b>website link: <a href="<%= @user.website_link %>" target="_blank"><%=@user.website_link %></a></b>
-
-		</div>
 		
-		<div class= "bio-box">
-		 <h3>Bio:</h3>
-		 	<p>
-			 <%= @user.bio %>
-			</p>
-		</div>
-			<div class="user-showad">
-    			<script type="text/javascript"><!--
-google_ad_client = "ca-pub-3387068696014466";
-/* pik-cam 300x250 */
-google_ad_slot = "6391302218";
-google_ad_width = 300;
-google_ad_height = 250;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
- 		 </div>
+		
 	</div>
 	
 </div>
-<diV>
+</div>
+</div>
 <div class="idk">
 
 	

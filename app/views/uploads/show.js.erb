@@ -1,0 +1,4 @@
+ $(".plusminus > h3 ").html("<%=  @upload.plusminus %>");
+ <% flash.each do |key, value| %>
+ $(".p-title").prepend("<div class='alert alert-<%= key %>'><%= value %></div>").end().find(".alert").delay(1800).fadeOut(400);
+ <% end %>

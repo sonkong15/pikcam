@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
 	has_many :uploads
 	has_many :comments
   has_many :funny_videos
+  acts_as_voter
 	make_flagger 
   extend FriendlyId
     friendly_id :name

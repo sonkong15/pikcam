@@ -1,12 +1,12 @@
-
-
 class Upload < ActiveRecord::Base
 	attr_accessible :picture, :title, :category_ids, :private, :description, :name
 	has_many :Comment, :as => :commentable
 	belongs_to :user
 	has_many :categorizations
 	has_many :categories, :through => :categorizations
+	acts_as_voteable
 	make_flaggable :like, :hate
+
 	
 
 

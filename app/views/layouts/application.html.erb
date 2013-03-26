@@ -9,15 +9,9 @@
 	<meta name="msvalidate.01" content="311FB0E2CA9902199189C9D56366BE11" />
 	<meta name="wot-verification" content="b0dc897ccb7ab98a0816"/>
 	<meta property="og:url" content= <%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> />
-	<script type="text/javascript">
-    var infolinks_pid = 1331313;
-    var infolinks_wsid = 0;
-	</script>
-	<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
                 
 
-	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript">stLight.options({publisher: "a429d636-4b52-49c8-96e6-95f2ba2479b9"});</script>
+	
   <title><%=  full_title (yield (@title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -35,7 +29,7 @@
   })();
 
 </script>
-<%= render "layouts/facebooklike" %>
+
 </head>
 <body>
 	
@@ -127,8 +121,10 @@
 
         </div>
 </footer>
-
+<%= render "layouts/facebooklike" %>
 <%# debug(params) if Rails.env.development? %>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "a429d636-4b52-49c8-96e6-95f2ba2479b9"});</script>
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -142,6 +138,11 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
+    <script type="text/javascript">
+    var infolinks_pid = 1331313;
+    var infolinks_wsid = 0;
+	</script>
+	<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
 </body>
 </html>
 

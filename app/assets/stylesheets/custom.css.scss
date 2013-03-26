@@ -56,13 +56,7 @@ font-size: 20px;}
 	width:980px;
 	padding: 0px 0px 0px 0px;	
 }
-.debug_dump {
-	clear: both;
-	float: left;
-	width: 100%;
-	margin: 0px 0px 0px 0px;
-	@include box_sizing;
-}
+
 
 .signup{
 	margin: 20px 0px 0px 5%;
@@ -133,10 +127,12 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   	
 
 }
+.bio-box > h3 {
+	margin-top: 17px;
+	padding-top: 10px; 
+}
 .bio-box{
--moz-box-shadow: 5px 5px 5px #C0B5B5;
--webkit-box-shadow: 5px 5px 5px #C0B5B5;
-box-shadow: 5px 5px 15px #C0B5B5;
+
 background-image: linear-gradient(bottom, #EE8F8F 0%, rgb(152,141,204) 37%, rgb(152,240,197) 100%);
 background-image: -o-linear-gradient(bottom, #EE8F8F 0%, rgb(152,141,204) 37%, rgb(152,240,197) 100%);
 background-image: -moz-linear-gradient(bottom, #EE8F8F 0%, rgb(152,141,204) 37%, rgb(152,240,197) 100%);
@@ -152,23 +148,23 @@ background-image: -webkit-gradient(
 	color-stop(1, rgb(152,240,197))
 );
 height: 150px;
-width:300px;
+width: 310px;
 -moz-border-radius-bottomright: 60px 55px;
 border-bottom-right-radius: 60px 55px;
 -moz-border-radius-bottomleft: 20px 15px;
 border-bottom-left-radius: 20px 15px;
-margin: 0px 0px 0px 0px;
+margin: 10px 0px 0px 0px;
 }
 .profile{
 	min-width: 1120px;
 	width: 100%;
-	height: 965px;
-	background-color: #DDD;
+	height: 820px;
+	
 }
 .profile-box{
 
-	margin: 0px 0px 0px 20px;
-	padding: 110px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
 }
 .black-line{
 	background-color: #333333;
@@ -177,17 +173,11 @@ margin: 0px 0px 0px 0px;
 	margin: 15px 0px 0px 0px;
 }
 .profile-font{
-	background-color: #EE6F6F;
-	width: 350px;
-	margin: 10px 0px 0px 0px;
+	background-color: rgb(126, 111, 238);
+	width: 310px;
+	margin: 10px 0px 10px 0px;
 	font-size: 14px;
-	-moz-box-shadow: 1px 10px 12px #BEC1C2;
--webkit-box-shadow: 1px 10px 12px #BEC1C2;
-box-shadow: 1px 10px 12px #BEC1C2;
--moz-border-radius-bottomright: 20px 18px;
-border-bottom-right-radius: 20px 18px;
--moz-border-radius-topright: 20px 15px;
-border-top-right-radius: 20px 15px;
+	
 
 }
 .navme2{
@@ -287,9 +277,6 @@ a:hover{
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    -moz-box-shadow: 5px 6px 10px rgba(128, 123, 123, 0.77);
-    -webkit-box-shadow: 5px 6px 10px rgba(128, 123, 123, 0.77);
-    box-shadow: 5px 6px 10px rgba(128, 123, 123, 0.77);
     margin: 0px 0px 10px 0px;
      
 }
@@ -421,7 +408,7 @@ a:hover{
 	margin: 0px auto;
 }
 .mainbox2{
-	margin-top: 30px;
+	margin-top: 48px;
 	background-color: black;
 	clear: both;
 	-moz-box-shadow: -5px -10px 20px rgb(36, 57, 206);
@@ -515,8 +502,9 @@ background-repeat: repeat-x;
 	
 }
 .ad-upload{
+	border: 1px solid;
 	clear: both;
-	margin: 12px 0px 10px 0px;
+	margin: 12px 0px 10px 43px;
 	
 	height: 250px;
 	width: 300px;
@@ -662,7 +650,7 @@ a.cat:hover {color: #DDD;}
 }
 .photo-count{
 	background-color: #7A7777;
-	margin: 0px 0px 0px 900px;
+	margin: 0px 0px 0px 225px;
 	position: absolute;
 	width: 200px;
 	height: 60px;
@@ -734,13 +722,10 @@ a:hover{
 	text-decoration: none;
 }
 .user_pic{
-	position: absolute;
-	padding: 0px 20px 0px 0px;
+	padding: 5px;
 	display: inline-block;
-	margin: 120px 0px 0px 450px;
-	width: 45%;
-	min-width: 624px;
-	
+	width: 60%;
+	min-width: 720px;
 	-moz-border-radius: 5px 5px 5px;
     border-radius: 5px 5px 5px;
 	background-image: linear-gradient(bottom, rgb(148,146,148) 0%, rgb(221,221,221) 79%);
@@ -990,11 +975,10 @@ a.pagin{
     border-top-left-radius: 10px;
 }
 .cat-showad2 {
-margin: 10px 0px 0px 30%;
+margin: 10px auto;
 border: 2px solid #999;
 height: 90px;
 width: 728px;
-float: left;
 }
 .coolli2{
 	font-size: 16px;
@@ -1423,13 +1407,14 @@ background-repeat: repeat-x;
 	margin-left: 40px;
 }
 .td-home{
-
+	width: 190px;
+	height: 140px;
 }
 .for-font{
-	width: 140px;
-	position: absolute;
+	width: 185px;
 	background-color: rgba(0, 0, 0, 0.82);
 	color: #6678F1;
+	font-size: 16px;
 }
 .around-web{
 	margin-top: 30px;
@@ -1639,8 +1624,8 @@ background-color: red;
 }
 .uploads-border2 {
 float: left;
-margin: 5px 25px 10px 0px;
-width: 170px;
+margin: 5px 19px 6px 0px;
+width: 186px;
 
 }
 .black-t{
@@ -1724,7 +1709,7 @@ width: 170px;
 .twopics{
 	background-color: black;
 	padding: 0px 0px 0px 23px;
-	height: 202px;
+	height: 164px;
 }
 .moree-photos{
 	color: black;
@@ -1792,3 +1777,78 @@ div.more-links > ul > li > a {
 		color: purple;
 	}
 	}
+.user-pro{
+	padding: 5px;
+	width: 305px;
+	height: 820px;
+	float: left;
+	background-color: black;
+	-moz-box-shadow:  15px 12px 33px -17px  rgba(23, 50, 243, 0.93);
+	-webkit-box-shadow:  15px 12px 33px -17px  rgba(23, 50, 243, 0.93);
+	box-shadow:  15px 12px 33px -17px  rgba(23, 50, 243, 0.93);
+}
+.user-contents{
+	margin: 52px 0px 0px 15px;
+	float: left;
+	width: 55%;
+	min-width: 732px;
+	min-height: 778px;
+	background-color: rgba(221, 221, 221, 0.1);
+}
+ .ajax_pics{
+ 	margin: 120px auto;
+ 	width: 60%;
+	min-width: 720px;
+ }
+ .likeornotholder{
+ 	margin: 252px 0px 0px 638px;
+	position: absolute;
+	width: 53px;
+	height: 150px;
+	background-color: black;
+	overflow: hidden;
+ }
+ .tolike{
+ 	width: 110px;
+ 	height: 92px;
+ 	overflow: hidden;
+ }
+ .likeit{
+ 	position: relative;
+ 	width: 110px;
+	height: 44px;
+	overflow: hidden;
+ }
+ .tolike > img{
+ 	width: auto;
+ }
+ .hateit{
+ 	right: 56px;
+ 	position: relative;
+ 	width: 110px;
+	height: 44px;
+	overflow: hidden;
+ }
+ .hatedit{
+ 	bottom: 56px;
+ 	right: 56px;
+
+ }
+ .showmore{
+ 	margin-top: 20px 
+ }
+ .signupwithup{
+ 	margin: 0px auto;
+	padding-top: 13px;
+ 	display: none; 
+ 	width: 853px;
+ 	height: 380px;
+ }
+ .jointous{
+ 	display: none;
+ 	position: absolute;
+ 	background-color: black;
+ 	width: 200px;
+    margin: 21% 34%;
+ 	height: 150px;
+ }
