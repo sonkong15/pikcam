@@ -12,6 +12,7 @@
 			<div class="jointous"><h5> join to like and dis like pictures and save pictures to your Favs !!</h5> <li class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook"%></li></div>
 
 <div class="upload-bacgraound">
+
 	<div class="up-ad">
 		<script type="text/javascript"><!--
 		google_ad_client = "ca-pub-3387068696014466";
@@ -214,7 +215,6 @@
 		<div class="for-comment">
 			<p class="description">Description: </p>
 			<p><%= @upload.description %></p>
-			<input type="hidden" name="IL_IN_TAG" value="1"/>
 		</div>
 		<div class="edit_link">
 					<% if can? :destroy, @upload %>
@@ -241,8 +241,8 @@
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
  
-
 	</div>
+
 </div>
 
 

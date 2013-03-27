@@ -26,7 +26,7 @@ font-size: 20px;}
 }
 .graybox{
 	padding: 1px 0px 0px 0px;
-	background-color: white;
+	background-color: black;
 	background-repeat: no-repeat;
 	height: 1060px;
 	min-width: 1060px;
@@ -341,6 +341,9 @@ a:hover{
     -webkit-box-shadow: 0px 5px 27px black;
 	-moz-box-shadow: 1px 5px 27px black;
 	box-shadow: 1px 5px 27px black;
+	-webkit-box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
+	-moz-box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
+	box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
 
 }
 .home-list{
@@ -383,7 +386,7 @@ a:hover{
 	min-width: 1060px;
 	height: 100%;
 	padding: 0px 0px 0px 0px;
-	background-color: white;
+	background-color: black;
 }
 .category{
 	width: 420px;
@@ -408,7 +411,7 @@ a:hover{
 	margin: 0px auto;
 }
 .mainbox2{
-	margin-top: 48px;
+	margin-top: 15px;
 	background-color: black;
 	clear: both;
 	-moz-box-shadow: -5px -10px 20px rgb(36, 57, 206);
@@ -462,13 +465,16 @@ a:hover{
 .share-box{
 	position: absolute;
 	width: 640px;
-	background-color: rgb(3, 4, 19);
+	background-color: black;
 	height: 204px;
 	margin: -12px 0px 0px 0px;
     -moz-border-radius-topleft: 0px;
     -moz-border-radius-topright: 0px; 
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
+    -webkit-box-shadow: -2px 0px 2px rgba(17, 26, 243, 0.66);
+	-moz-box-shadow: -2px 0px 2px rgba(17, 26, 243, 0.66);
+	box-shadow: -2px 0px 2px rgba(17, 26, 243, 0.66);
 }
 .cateoriesh2{
 
@@ -630,6 +636,9 @@ a.cat:hover {color: #DDD;}
     border-bottom-left-radius: 0px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    -webkit-box-shadow: -11px -8px 13px -8px rgba(17, 26, 243, 0.66);
+	-moz-box-shadow: -11px -8px 13px -8px rgba(17, 26, 243, 0.66);
+	box-shadow: -11px -8px 13px -8px rgba(17, 26, 243, 0.66);
 
 }
 .fb-like{
@@ -1025,11 +1034,14 @@ background-image: -webkit-gradient(
 }
 .next-pev{
 	border-bottom: 2px solid black;
-	background: #BD3232;
+	/*background: #BD3232;*/ 
 	width: 313px;
 	margin: 0px 0px 6px 0px;
 	padding: 5px 0px 7px 0px;
 	float: right;
+	-webkit-box-shadow: -1px -2px 19px 5px rgba(17, 26, 243, 0.66);
+	-moz-box-shadow: -1px -2px 19px 5px rgba(17, 26, 243, 0.66);
+	box-shadow: -1px -2px 19px 5px rgba(17, 26, 243, 0.66);
 }
 .next-box{
 font-size: 20px;
@@ -1616,7 +1628,7 @@ background-color: red;
 }
 .rest-of-pic {
 	float: left;
-	background-color: #DDD;
+	background-color: rgb(27, 27, 27);
 	padding: 0px 0px 0px 0px;
 	width: 620px;
 	height: 614px;
@@ -1642,6 +1654,7 @@ width: 186px;
 	width: 170px;
 }
 .spencer{
+	display: none;
 	width: 572px;
 	position: absolute;
 	margin: 5px 0px 0px 0px;
@@ -1721,14 +1734,14 @@ width: 186px;
 	margin-left: 10px;
 	width: 200px;
 	height: 614px;
-	background-color: #DDD;
+	background-color: rgb(27, 27, 27);
 }
 .toper-pics2{
 	float: left;
 	margin-left: 10px;
 	width: 200px;
 	height: 614px;
-	background-color: #DDD;
+	background-color: rgb(27, 27, 27);
 }
 .order-pics{
 	clear: both;
@@ -1852,3 +1865,4 @@ div.more-links > ul > li > a {
     margin: 21% 34%;
  	height: 150px;
  }
+ 
