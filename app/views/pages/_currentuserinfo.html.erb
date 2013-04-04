@@ -1,0 +1,10 @@
+<h3 style="margin-top: 5px;">
+	<% if current_user %>
+      <%= current_user.name.capitalize  %>
+      <% else %>
+      join today!!
+      <% end %>
+    </h3> 
+    <p></p>
+    <%= user_home_pics %>
+    

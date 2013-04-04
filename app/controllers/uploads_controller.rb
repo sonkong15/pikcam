@@ -1,6 +1,6 @@
 class UploadsController < ApplicationController
 	def index
-		@uploads = Upload.order("created_at DESC").where("private = ?", false).page(params[:page]).per(20)
+		@uploads = Upload.order("created_at DESC").where("private = ?", false).page(params[:page]).per(8)
      respond_to do |format|
     format.html     # index.html.erb
     format.atom     # index.atom.builder
@@ -66,39 +66,12 @@ class UploadsController < ApplicationController
   		end
   		
   	end
-    def likeit
-      @upload = Upload.find(params[:id])
-      flash[:notice] = "you are only allow to like once " unless current_user.voted_on?(@upload)
-      respond_to do |format|
-      if current_user.voted_for?(@upload)
-         format.html { redirect_to proc { upload_url(@upload) }, :notice => " you are only allow to like once "}
-         format.js { redirect_to proc { upload_url(@upload) }, :notice => " you are only allow to like once "}
-        else
-        current_user.vote_exclusively_for(@upload)
-         format.html { redirect_to proc { upload_url(@upload) }, :notice => " you like the picture "}
-         format.js { redirect_to proc { upload_url(@upload) }, :notice => " you like the picture "}
-      end
-        end
-    end
-	def hate
-  		@upload = Upload.find(params[:id])
-       
-       respond_to do |format|
-        if current_user.voted_against?(@upload)
-         format.html { redirect_to proc { upload_url(@upload) }, :notice => " you are only allow to dis like once "}
-         format.js { redirect_to proc { upload_url(@upload) }, :notice => " you are only allow dis like once "}
-        else
-         current_user.vote_exclusively_against(@upload)
-         format.html { redirect_to proc { upload_url(@upload) }, :notice => " you dis like the picture!! "}
-         format.js { redirect_to proc { upload_url(@upload) }, :notice => " you dis like the picture!! "}
-        end
-       
-        end
-  	end
+    
 
   	def top
-  		@upload_top = Upload.order("RANDOM()").page(params[:page]).per(50)
-  		
+      @upload = Upload.new
+  		@upload_top = Upload.plusminus_tally.page(params[:page]).per(8)
+  		@videos_home = FunnyVideo.order("created_at DESC").limit(6)
   	end
     def feed
       @uploades = Upload.order(" created_at DESC")
@@ -107,7 +80,33 @@ class UploadsController < ApplicationController
       format.atom
       end
     end
-
+    def likeit
+      @upload = Upload.find(params[:id])
+        respond_to do |format|
+        if current_user.voted_for?(@upload)
+         format.html { redirect_to upload_url, :notice => " you are only allow to dis like once "}
+         format.js { redirect_to upload_url, :notice => " you are only allow to dis like once "}
+         else
+          current_user.vote_exclusively_for(@upload)
+          format.html { redirect_to upload_url, :notice => " you like the picture!! "}
+         format.js { redirect_to upload_url, :notice => " you like the picture!! "}
+        end
+        end
+    end
+  def hate
+      @upload = Upload.find(params[:id])
+       respond_to do |format|
+        if current_user.voted_against?(@upload)
+         format.html { redirect_to upload_url, :notice => " you are only allow to dis like once "}
+         format.js { redirect_to upload_url, :notice => " you are only allow to dis like once "}
+        else
+         current_user.vote_exclusively_against(@upload)
+         format.html { redirect_to upload_url, :notice => " you dislike the picture!! "}
+         format.js { redirect_to upload_url, :notice => " you dislike the picture!! "}
+        end
+       
+        end
+  end
     private
 
     

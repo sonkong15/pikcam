@@ -21,7 +21,7 @@ class Upload < ActiveRecord::Base
 	
 	validates_attachment_content_type :picture, :content_type => ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
 
-	validates_attachment_size :picture, :less_than => 4.megabyte
+	validates_attachment_size :picture, :less_than => 2.megabyte
 	
 	def previous_upload
   self.class.first(:conditions => ["created_at  < ? AND private = ?", created_at, false ], :order => "created_at desc")

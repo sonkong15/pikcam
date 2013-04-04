@@ -1,7 +1,8 @@
 class CategoriesController < ApplicationController
 	def index
-	@uploads = Upload.order("created_at DESC").where("private = ?", false).offset(1).page(params[:page]).per(8)
-	@upload_top = Upload.order("RANDOM()").where("private = ?", false).limit(3)
+	@upload = Upload.new
+	@uploads_rest = Upload.order("created_at DESC").where("private = ?", false).page(params[:page]).per(8)
+	@videos_home = FunnyVideo.order("created_at DESC").limit(6)
 	@categories = Category.order(:name)
 	respond_to do |format|
 		format.html
@@ -11,8 +12,10 @@ class CategoriesController < ApplicationController
 	end
 
 	def show 
+		@upload = Upload.new
+		@videos_home = FunnyVideo.order("created_at DESC").limit(6)
 		@category = Category.find(params[:id])
-		@upload = @category.uploads.page(params[:page]).per(5).order("created_at DESC").where("private = ?", false )
+		@uploads_rest = @category.uploads.page(params[:page]).per(8).order("created_at DESC").where("private = ?", false )
 	end
 
 	def new

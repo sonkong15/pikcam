@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_session, :current_user, :facebook_token, :links
   
-
+  
   private
   def links
     @links = Link.all
@@ -34,5 +34,6 @@ class ApplicationController < ActionController::Base
       end
       
     end
+    
 end
 

@@ -1,11 +1,11 @@
 <% @title = ' cool pictures ' %>
-<div class= "graybox" >
+
 <div class="list-more2">
     <div class="navme2">
       <ul class="clirle-nav ">
         <!--<h2 class="browse-more " >Browse more Pics</h2>-->
 
-        <li><%= link_to "COOL_PICS", "http://www.pikcam.com/categories/the-coolest-pics", :class => "clirlink" %></li>
+        <li><%= link_to "COOL PICS", "http://www.pikcam.com/categories/the-coolest-pics", :class => "clirlink" %></li>
         <li><%= link_to "SPORTS", "http://www.pikcam.com/categories/what-happen-to-you", :class => "clirlink" %></li>
         <li><%= link_to "HUMOROUS", "http://www.pikcam.com/categories/this-is-crazy-funny", :class => "clirlink" %></li>
         <li><%= link_to "WTF", "http://www.pikcam.com/categories/what-the-hell-man", :class => "clirlink" %></li>
@@ -15,114 +15,110 @@
       </ul>
     </div>
 </div>
-  <div class="mainbox">
+<div class="try-white">
 
-    <div class="ad-home">
-      <script type="text/javascript"><!--
-google_ad_client = "ca-pub-3387068696014466";
-/* pikcam_home 300x250 */
-google_ad_slot = "8543194587";
-google_ad_width = 300;
-google_ad_height = 250;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+  <div class="row-fluid" style="margin-top: 112px; min-width: 1070px;">
+    <div class="span2 userhome-pro" style="position: fixed; margin-top: 1px; z-index: 2; ">
+      <div>
+        <%= render("currentuserinfo") %>
+      </div>
+      <a href="#myModal" role="button" class="btn btn-large btn-block btn-primary" data-toggle="modal">ADD Photo</a>
+      <hr style="margin: 3px 0;">
+      <%= link_to "Hot pictures ", "/top_pics" , :class => "btn btn-large btn-block btn-danger" %>
+      <hr>
+      <div class="black-t">
+       <h4> Like humorous pics on Facebook  </h4>
+      </div>
+      <div class="fb-like" data-href="http://www.facebook.com/donlloren" data-send="true" data-layout="button_count" data-width="170" data-show-faces="true"></div>
+        <hr>
+      <div id="" class="more-links" style=" width: 100%;">
+        <ul class="clirle-nav ">
+        <li><%= link_to "picture-jokes", "http://www.pikcam.com/categories/picture-jokes" %></li>
+        <li><%= link_to "lol Booty", "http://www.pikcam.com/categories/funny-or-nice-booty" %></li>
+        <li><%= link_to "i can stop laughing", "http://www.pikcam.com/categories/i-can-stop-laughing" %></li>
+        <li><%= link_to "funny cartoons pics", "http://www.pikcam.com/categories/funny-cartoons-pics" %></li>
+        <li><%= link_to "i hate politics", "http://www.pikcam.com/categories/i-hate-politics" %></li>
+        <li><%= link_to "who are celebrities", "http://www.pikcam.com/categories/who-are-celebrities" %></li>
+        <li><%= link_to "that was strange", "http://www.pikcam.com/categories/that-was-strange" %></li>
+
+      </ul></div>
     </div>
-  
-    <% if current_user %>
-    <h3>wasssup <%= current_user.name %> you can <%= link_to "Upload pics", new_upload_url %></h3>
-    <% end %>
-   
-   
-  <div class="top-share">
 
-    <div class="slider-wrapper theme-default">
-      <div id="slider" class="nivoSlider">
-        <% @uploads_slideshow.each do |ups| %>
-        <%= link_to image_tag(ups.picture.url(:small), :alt => ups.title, :title => ups.title,  :style =>"height: 234px;
-width: 305px;"), upload_url(ups)   %>
-        <% end %>
-      </div>
+    <div class="span2 userhome-pro2">
     </div>
-     
-  </div>
-  <div class="user-count">
-  <% if current_user %> 
-    Pikcam community has <b><%= User.count %></b> members <b>help us reach 1500 members so we can start giving away prizes </b><br>With your help, I know we can pull it off
-    <span class="st_facebook_hcount" st_url="http://www.pikcam.com" st_title="pikcam cures boredom lol" st_image= <%= Upload.first.picture.url %> st_summary=" See what your friend lookin at, pikcam A toooo funny site. so what you wait join our community  "></span>
-    <span class='st_googleplus_hcount' displayText='Google +'></span>
-    <span class='st_twitter_hcount' displayText='Tweet'></span>
-    <% else %>
-    Pikcam community has <b><%= User.count %></b> members <b>help us reach 1000 members</b> join today<br>
-    <p> we will give away prizes once we reach 1500 members AND sign up to like pictures we are always adding new features </p>
-    <span class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook"%></span>
-    
-    <% end %>
-  </div>
-  
-  <!-- list of pictures -->
-  <div class="order-pics">
-  <div class="rest-of-pic ">
-    <H3 class="just-add">Just add photos</H3>
-    <% @uploads_rest.each do |uploads| %>
-      <div class="uploads-border2" >
-         <table class="ttable-ie8">
-              <caption class="for-font"><%= truncate( uploads.title, :length => 20)%></caption>
-              <tr>
-           <td class="td-home"> <%= link_to image_tag(uploads.picture.url(:small), :alt => uploads.title, :title => uploads.title, :style =>"height: 140px; width: 200px;" ), upload_url(uploads) %></td>
-              </tr>
-            </table>
-
+    <div class="span9 mainbox">
+      <!-- list of pictures -->
+      <div class="order-pics">
+        <div class="rest-of-pic ">
+          <% @uploads_rest.each_with_index do |uploads, index| %>
+          <H3 class="just-add"><%= truncate( uploads.title, :length => 40)%></H3>
+          <div class="home-picturebox" >
+            <%= link_to image_tag(uploads.picture.url(:large), :alt => uploads.title, :title => uploads.title, :class =>"home-pics" ), upload_url(uploads) %>
+            <div class="picside">
+              <div class="home-sidelike">
+                <div class="home-likeit">
+                  <%= toggle_currentuserhate(uploads)%>
+                  </div>
+                    <div class="home-plusmius"><h3 style="margin: 17px; text-align: center;"><%= uploads.plusminus %></h3></div>
+                    <div class="home-hateit">
+                    <%= toggle_currentuser(uploads) %>
+                    </div>
+                    <span style= "color: green; float: left; margin-left: 35px;"><%= uploads.votes_for %> Likes </span>
+                    <span style= "color: red; float: right; margin-right: 10px;"><%= uploads.votes_against %> Dislikes </span>
+                </div>
+                <% unless current_user %>
+                    <p> <b> make acount to like photos</b> </p>
+                    <% end %>
+              <div style="margin: 8px 0px 0px 0px; height: 37px;">
+                <span class='st_sharethis_large' displayText='ShareThis' st_url=<%="#{upload_url(uploads)}"%>></span>
+                <span class='st_facebook_large' displayText='Facebook'st_url=<%="#{upload_url(uploads)}"%>></span>
+                <span class='st_twitter_large' displayText='Tweet'st_url=<%="#{upload_url(uploads)}"%>></span>
+                <span class='st_reddit_large' displayText='Reddit'st_url=<%="#{upload_url(uploads)}"%>></span>
+                <span class='st_pinterest_large' displayText='Pinterest'st_url=<%="#{upload_url(uploads)}"%>></span>
+                  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-502d791f3a21278e"></script>
+                </div>
+                <div class="picinfobox">
+                  <span>Add By: <%= uploads.user.present? ? link_to(uploads.user.name.capitalize,  uploads.user) : "ANONYMOUS" %></span>
+                  <hr style="margin: 3px 0;">
+                  <span>Created at: <%= uploads.created_at.strftime("%b/%d/%y") %> </span>
+                </div>
+                <%= link_to "view conments", upload_url(uploads), :class => "btn btn-large btn-block btn-danger" %>
+              </div>
+            </div>
+            <%  if index == 3 %>
+            <%= render("ad") %>
+            <% end %>
+          <% end %>
+          <div> <h2><%= link_to "more pictures"," http://www.pikcam.com/categories?page=2", :class => "btn btn-large btn-block btn-danger", :style =>"font-size: 25px;" %></h2>
+                    <div class="ad-bottom">
+              <div class="ad-bottom-home5">
+                <script type="text/javascript"><!--
+            google_ad_client = "ca-pub-3387068696014466";
+            /* pik-cam */
+            google_ad_slot = "9765718544";
+            google_ad_width = 728;
+            google_ad_height = 90;
+            //-->
+            </script>
+            <script type="text/javascript"
+            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+              </div>  
+          </div>
+          </div>
+        </div>
       </div>
-    <% end %>
-    <div> <h3><%= link_to "more pictures"," http://www.pikcam.com/categories?page=2", :class => "moree-photos" %></h3></div>
-  </div>
-  <div class="toper-pics">
-    <H3 class="just-add">Top pictures</H3>
-    <% @uploads_likes.each do |uplike| %>
-    <div class="uploads-border2" >
-         <table class="ttable-ie8">
-              <caption class="for-font"><%= truncate( uplike.title, :length => 20)%></caption>
-              <tr>
-           <td class="td-home"> <%= link_to image_tag(uplike.picture.url(:thumb), :alt => uplike.title, :title => uplike.title, :style =>"height: 130px; width: 170px;" ), upload_url(uplike) %></td>
-              </tr>
-            </table>
-
-      </div>
-    <% end %>
-   </div>
-  <div class="toper-pics2">
-    <H3 class="just-add">top videos</H3>
-   <% @videos_home2.each do |video| %>
-          <div class="uploads-border" >
-            
-      <table class="table-video2">
-        <caption class="for-font2"><%= truncate( "(video) #{video.title} ", :length => 30)%></caption>
-        <tr>
-        <td><%= link_to image_tag(video.youtubeid, :class => "dailymotion_thumb2"), funny_video_url(video) %><td>
-        </tr>
-        </table >
-      </div>
-        <% end %> 
-      </div>
-  </div>
-
-  
-  </div>
-
-  
+   
   <!--<div class= "top-photo">
     <%# link_to image_tag( "donloren.png"), "http://www.donloren.com", :target => "_blank" %>
   </div>-->
   <div class="mainbox2">
     <h1>humorous & cool pictures / Videos</h1>
 	  <div class="home-category">
-    <div class="home-video">
-			<h2><%= link_to "New videos", funny_videos_url %></h2>
-      <% @videos_home.each do |video| %>
-      <table class="table-video"> 
+      <div class="home-video">
+			 <h2><%= link_to "New videos", funny_videos_url %></h2>
+        <% @videos_home.each do |video| %>
+        <table class="table-video"> 
         <tr>
         <td><%= link_to image_tag(video.youtubeid, :class => "dailymotion_thumb"), funny_video_url(video) %><td>
         <td><%= link_to " (video) #{video.title}", funny_video_url(video) %></td>
@@ -132,16 +128,12 @@ width: 305px;"), upload_url(ups)   %>
       </div>
 
       <div class="black-t">
-			<h4> Like humorous pics on Facebook  </h4>
+			 <h4> Like humorous pics on Facebook  </h4>
       </div>
-      <!--<div class="top-photos">
-        
-        
-      </div>-->
+      
       <div class="bottom_pfg">
-        <!-- Place this tag where you want the badge to render. -->
+          <!-- Place this tag where you want the badge to render. -->
         <div class="g-plus" data-height="69" data-href="//plus.google.com/103812452465040044420?rel=publisher"></div>
-
         <!-- Place this tag after the last badge tag. -->
         <script type="text/javascript">
           (function() {
@@ -150,36 +142,37 @@ width: 305px;"), upload_url(ups)   %>
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
           })();
         </script>
-        <div class="fb-like" data-href="http://www.facebook.com/donlloren" data-send="true" data-width="300" data-show-faces="true">
         
-	     </div>
-        <p class="homep"> Pic cam is A <b>funny and cool pictures</b> website, we would love for you to share your <b>lol photos and humorous pics</b>. welcome to our <b>fun land</b> where we will have you laughing at <b>lol photos</b>. don't forget to tell your friends about our cool pics, <b>humorous pics</b>, strange pictures, pictures of women and more. ... hope you enjoy the <b>fun land</b> of pikcam we have more links for <b>funny and cool pictures</b> you will not find a more <b>humorous</b>/<b>lol photo</b> site... <%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "gif", "http://www.pikcam.com/categories/Gif_animation" %> 
-        </p>
-        
+          <p class="homep"> Pic cam is A <b>funny and cool pictures</b> website, we would love for you to share your <b>lol photos and humorous pics</b>. welcome to our <b>fun land</b> where we will have you laughing at <b>lol photos</b>. don't forget to tell your friends about our cool pics, <b>humorous pics</b>, strange pictures, pictures of women and more. ... hope you enjoy the <b>fun land</b> of pikcam we have more links for <b>funny and cool pictures</b> you will not find a more <b>humorous</b>/<b>lol photo</b> site... <%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "gif", "http://www.pikcam.com/categories/Gif_animation" %> 
+          </p>
+        </div>
       </div>
-     </div>
     </div>
-  <div class="ad-bottom">
-  <div class="ad-bottom-home5">
-    <script type="text/javascript"><!--
-google_ad_client = "ca-pub-3387068696014466";
-/* pik-cam */
-google_ad_slot = "9765718544";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-  </div>
-
-  
-  </div>
+      
 </div>
-
+ </div>
+  </div>
 <div class=" addthis_default_style">
   <a class="addthis_button_google_plusone"></a> 
   <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-</div> 
+
+</div>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 679px; background-color: rgb(12, 12, 12)">
+  <div class="modal-header" style="background-color: white;">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Add Photo</h3>
+  </div>
+  <div class="modal-body">
+   <div class="files2"> 
+    <%= render("uploads/form") %>
+    </div>
+  </div>
+  <!--<div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>-->
+</div>
+
+</div>
+
  

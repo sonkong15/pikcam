@@ -60,22 +60,12 @@
 		</div>
 		<h1 class="p-title"><%= "#{@upload.title}" %></h1>
 		<div class="likeornotholder">
-			<% if current_user %>
 			<div class="likeit">
-		<%= link_to image_tag("spritethumbs.png", :class => "tolike"), likeit_upload_path, :remote => true, :id => "to_like" %></div>
+				<%= toggle_currentuser(@upload) %></div>
 			<div class="plusminus"><h3><%= @upload.plusminus %></h3></div>
 			<div class="hateit ">
-		<%= link_to image_tag("spritethumbs.png", :class => "tolike"),  hate_upload_path, :remote => true, :id => "ajax_trigger"  %></div>
+				<%= toggle_currentuserhate(@upload)%></div>
 			</div>
-			<% else %>
-			<div class="likeit">
-		<%= link_to image_tag("spritethumbs.png", :class => "tolike"), "#", :id => "joinus" %></div>
-			<div class="plusminus"><h3><%= @upload.plusminus %></h3></div>
-			<div class="hateit ">
-		<%= link_to image_tag("spritethumbs.png", :class => "tolike"), "#", :id => "joinus"  %></div>
-			</div>
-
-			<% end %>
 		<div class="upload-show">
 			
 			<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>

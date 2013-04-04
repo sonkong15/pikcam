@@ -1,4 +1,5 @@
 TheBrands::Application.routes.draw do
+  resources :pages
   resources :funny_videos
   resources :users do
      get ':id/page/:page', "user#show", :action => :show, :on => :collection
