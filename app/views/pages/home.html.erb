@@ -27,9 +27,11 @@
       <%= link_to "Hot pictures ", "/top_pics" , :class => "btn btn-large btn-block btn-danger" %>
       <hr>
       <div class="black-t">
-       <h4> Like humorous pics on Facebook  </h4>
+       <h4> Like humorous pictures </h4>
       </div>
       <div class="fb-like" data-href="http://www.facebook.com/donlloren" data-send="true" data-layout="button_count" data-width="170" data-show-faces="true"></div>
+        <hr>
+        <h5 style="background-color: blue"><a href="http://www.cruisinbro.com/" target="_blank">view cool cars</a>  </h5>
         <hr>
       <div id="" class="more-links" style=" width: 100%;">
         <ul class="clirle-nav ">
@@ -55,7 +57,7 @@
           <div class="home-picturebox" >
             <%= link_to image_tag(uploads.picture.url(:large), :alt => uploads.title, :title => uploads.title, :class =>"home-pics" ), upload_url(uploads) %>
             <div class="picside">
-              <div class="home-sidelike">
+              <div class="home-sidelike upload<%= uploads.id %>">
                 <div class="home-likeit">
                   <%= toggle_currentuserhate(uploads)%>
                   </div>
@@ -143,7 +145,7 @@
           })();
         </script>
         
-          <p class="homep"> Pic cam is A <b>funny and cool pictures</b> website, we would love for you to share your <b>lol photos and humorous pics</b>. welcome to our <b>fun land</b> where we will have you laughing at <b>lol photos</b>. don't forget to tell your friends about our cool pics, <b>humorous pics</b>, strange pictures, pictures of women and more. ... hope you enjoy the <b>fun land</b> of pikcam we have more links for <b>funny and cool pictures</b> you will not find a more <b>humorous</b>/<b>lol photo</b> site... <%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "gif", "http://www.pikcam.com/categories/Gif_animation" %> 
+          <p class="homep"> Pic cam is A <b>funny and cool pictures</b> website, we would love for you to share your <b>sick photos and humor pics</b>. so i would like to welcome to our fun land where we will have you dying laughing  at these pictues. don't forget to tell your friends about our cool pics, funny pics and strange pictures. ... hope you enjoy the your stay at fun land of pikcam we have more links to funny and cool pictures you will not find a more cooler photo site any where... <%= link_to "strange", "http://www.pikcam.com/categories/Strange" %> <%= link_to "gif", "http://www.pikcam.com/categories/Gif_animation" %> 
           </p>
         </div>
       </div>
@@ -152,11 +154,7 @@
 </div>
  </div>
   </div>
-<div class=" addthis_default_style">
-  <a class="addthis_button_google_plusone"></a> 
-  <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
 
-</div>
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 679px; background-color: rgb(12, 12, 12)">
   <div class="modal-header" style="background-color: white;">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>

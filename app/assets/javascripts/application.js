@@ -18,7 +18,6 @@
 //= require chosen.jquery.min.js
 //= require rails.validations
 //= require rails.validations.simple_form
-//= require jquery_nivo_slider_pack
 //= jquery.tokeninput
 //= require_tree .
 

@@ -4,7 +4,6 @@ class PagesController < ApplicationController
 	@upload = Upload.new
 	@uploads_rest = Upload.order("created_at DESC").where("private = ?", false).limit(8)
 	@videos_home = FunnyVideo.order("created_at DESC").limit(6)
-	
 	end
 
 	def about
@@ -31,6 +30,9 @@ class PagesController < ApplicationController
 	def link_up
 		@link = Link.new
 	end
-
+	def clear_return_to
+		sleep 2
+    	session[:return_to] = nil
+	end
 
 end

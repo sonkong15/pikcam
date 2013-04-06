@@ -80,33 +80,36 @@ class UploadsController < ApplicationController
       format.atom
       end
     end
-    def likeit
+    def likeit 
       @upload = Upload.find(params[:id])
+      session[:return_to] =  @upload
         respond_to do |format|
         if current_user.voted_for?(@upload)
-         format.html { redirect_to upload_url, :notice => " you are only allow to dis like once "}
-         format.js { redirect_to upload_url, :notice => " you are only allow to dis like once "}
+         format.html { redirect_to :back, :notice => " you are only allow to dis like once "}
+         format.js { redirect_to :back, :notice => " you are only allow to dis like once "}
          else
           current_user.vote_exclusively_for(@upload)
-          format.html { redirect_to upload_url, :notice => " you like the picture!! "}
-         format.js { redirect_to upload_url, :notice => " you like the picture!! "}
+          format.html { redirect_to :back, :notice => " you like the picture!! "}
+         format.js { redirect_to :back, :notice => " you like the picture!! "}
         end
         end
     end
   def hate
       @upload = Upload.find(params[:id])
+      session[:return_to] =  @upload
        respond_to do |format|
         if current_user.voted_against?(@upload)
-         format.html { redirect_to upload_url, :notice => " you are only allow to dis like once "}
-         format.js { redirect_to upload_url, :notice => " you are only allow to dis like once "}
+         format.html { redirect_to :back, :notice => " you are only allow to dis like once "}
+         format.js { redirect_to :back, :notice => " you are only allow to dis like once "}
         else
          current_user.vote_exclusively_against(@upload)
-         format.html { redirect_to upload_url, :notice => " you dislike the picture!! "}
-         format.js { redirect_to upload_url, :notice => " you dislike the picture!! "}
+         format.html { redirect_to :back, :notice => " you dislike the picture!! "}
+         format.js { redirect_to :back, :notice => " you dislike the picture!! "}
         end
-       
         end
+
   end
+  
     private
 
     

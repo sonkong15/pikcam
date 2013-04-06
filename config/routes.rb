@@ -9,8 +9,8 @@ TheBrands::Application.routes.draw do
     get 'page/:page', :action => :index, :on => :collection
   member do
     get "like"
-    get "hate"
-    get "likeit"
+    post "hate"
+    post "likeit"
     end
   end 
   match "/top_pics", to: "uploads#top"
