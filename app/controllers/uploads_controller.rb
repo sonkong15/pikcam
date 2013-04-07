@@ -82,7 +82,7 @@ class UploadsController < ApplicationController
     end
     def likeit 
       @upload = Upload.find(params[:id])
-      session["return_to"] =  @upload
+        session["return_to"] =  @upload
         respond_to do |format|
         if current_user.voted_for?(@upload)
          format.html { redirect_to :back, :notice => " you are only allow to dis like once "}

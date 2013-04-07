@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 	
 	def home
+		@uploads = @upload
 	@upload = Upload.new
 	@uploads_rest = Upload.order("created_at DESC").where("private = ?", false).limit(8)
 	@videos_home = FunnyVideo.order("created_at DESC").limit(6)
