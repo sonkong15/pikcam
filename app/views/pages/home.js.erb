@@ -1,7 +1,8 @@
-$(".upload<%= session[:return_to].id %> >  span:first ").html("<%=  session[:return_to].votes_for %> Likes");
-$(".upload<%= session[:return_to].id %> > .home-plusmius > h3 ").html("<%=  session[:return_to].plusminus %>");
-$(".upload<%= session[:return_to].id %> >  span:last ").html("<%=  session[:return_to].votes_against %> Dislikes");
-
+<% @uploads_rest.each do |up| %>
+$(".upload<%= up.id %> >  span:first ").html("<%=  up.votes_for %> Likes");
+$(".upload<%= up.id %> > .home-plusmius > h3 ").html("<%=  up.plusminus %>");
+$(".upload<%= up.id %> >  span:last ").html("<%=  up.votes_against %> Dislikes");
+<% end %>
 <% flash.each do |key, value| %>
  $(".userhome-pro").prepend("<div class='alert alert-<%= key %>'><%= value %></div>").end().find(".alert").delay(1800).fadeOut(400);
  <% end %>
