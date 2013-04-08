@@ -55,7 +55,7 @@
           <div class="home-picturebox" >
             <%= link_to image_tag(uploads.picture.url(:large), :alt => uploads.title, :title => uploads.title, :class =>"home-pics" ), upload_url(uploads) %>
             <div class="picside">
-              <div class="home-sidelike">
+              <div class="home-sidelike upload<%= uploads.id %>">
                 <div class="home-likeit">
                   <%= toggle_currentuserhate(uploads)%>
                   </div>

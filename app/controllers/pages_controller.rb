@@ -31,9 +31,6 @@ class PagesController < ApplicationController
 	def link_up
 		@link = Link.new
 	end
-	def clear_return_to
-		sleep 2
-    	session[:return_to] = nil
-	end
+	
 
 end

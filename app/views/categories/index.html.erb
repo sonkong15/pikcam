@@ -49,12 +49,12 @@
       <!-- list of pictures -->
       <div class="order-pics">
         <div class="rest-of-pic ">
-          <% @uploads_rest.each_with_index do |uploads, index| %>
+          <% @uploads_resta.each_with_index do |uploads, index| %>
           <H3 class="just-add"><%= truncate( uploads.title, :length => 40)%></H3>
           <div class="home-picturebox" >
             <%= link_to image_tag(uploads.picture.url(:large), :alt => uploads.title, :title => uploads.title, :class =>"home-pics" ), upload_url(uploads) %>
             <div class="picside">
-              <div class="home-sidelike">
+              <div class="home-sidelike upload<%= uploads.id %>">
                 <div class="home-likeit">
                   <%= toggle_currentuserhate(uploads)%>
                   </div>
@@ -88,7 +88,7 @@
             <%= render("pages/ad") %>
             <% end %>
           <% end %>
-          <div> <%= paginate @uploads_rest, :outer_window => 3 %><div class="ad-bottom">
+          <div> <%= paginate @uploads_resta, :outer_window => 3 %><div class="ad-bottom">
               <div class="ad-bottom-home5">
                 <script type="text/javascript"><!--
             google_ad_client = "ca-pub-3387068696014466";

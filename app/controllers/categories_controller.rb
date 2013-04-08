@@ -1,12 +1,13 @@
 class CategoriesController < ApplicationController
 	def index
 	@upload = Upload.new
-	@uploads_rest = Upload.order("created_at DESC").where("private = ?", false).page(params[:page]).per(8)
+	@uploads_resta = Upload.order("created_at DESC").where("private = ?", false).page(params[:page]).per(8)
 	@videos_home = FunnyVideo.order("created_at DESC").limit(6)
 	@categories = Category.order(:name)
 	respond_to do |format|
 		format.html
 		format.json { render json: @categories.tokens(params[:q]) }
+		format.js
 		
 	end
 	end
@@ -15,7 +16,8 @@ class CategoriesController < ApplicationController
 		@upload = Upload.new
 		@videos_home = FunnyVideo.order("created_at DESC").limit(6)
 		@category = Category.find(params[:id])
-		@uploads_rest = @category.uploads.page(params[:page]).per(8).order("created_at DESC").where("private = ?", false )
+		@uploads_reste = @category.uploads.page(params[:page]).per(8).order("created_at DESC").where("private = ?", false )
+
 	end
 
 	def new
