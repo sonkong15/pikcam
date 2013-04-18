@@ -306,22 +306,11 @@ a:hover{
 	width: 600px;
 	background-color: black;
 	padding: 0px 10px 10px 10px;
-	margin: 183px 0px 0px 0px;
+	margin: 154px 0px 0px 0px;
 	border: 10px solid black;
-	-moz-border-radius-bottomright: 0px;
-	-moz-border-radius-bottomleft: 0px;
-    border-bottom-right-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-topright: 0px; 
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-    -webkit-box-shadow: 0px 5px 27px black;
-	-moz-box-shadow: 1px 5px 27px black;
-	box-shadow: 1px 5px 27px black;
-	-webkit-box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
-	-moz-box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
-	box-shadow: -2px 3px 2px rgba(17, 26, 243, 0.66);
+	-webkit-box-shadow: 2px -14px 30px 12px rgba(16, 26, 255, 0.66);
+	-moz-box-shadow: 2px -14px 30px 12px rgba(16, 26, 255, 0.66);
+	box-shadow: 2px -14px 30px 12px rgba(16, 26, 255, 0.66);
 
 }
 .home-list{
@@ -365,7 +354,7 @@ a:hover{
 	min-width: 1060px;
 	height: 100%;
 	padding: 0px 0px 0px 0px;
-	background-color: black;
+	background-color: rgb(115, 255, 185);
 }
 .category{
 	width: 420px;
@@ -458,7 +447,6 @@ a:hover{
 	
 }
 .ad-upload{
-	border: 1px solid;
 	clear: both;
 	margin: 12px 0px 10px 43px;
 	
@@ -487,7 +475,7 @@ a:hover{
 .browse{
 	position: absolute;
 	display: inline-block;
-	margin: 69px 0px 0px 0px;
+	margin: 40px 0px 0px 0px;
 	width: 473px;
 	height: 50px;
 	-moz-border-radius-bottomright: 10px;
@@ -561,7 +549,7 @@ a.cat:hover {color: #DDD;}
 	
 	padding: 10px;
 	position: absolute;
-	margin: 123px 0px 0px 0px;
+	margin: 94px 0px 0px 0px;
 	width: 620px;
 	color: #DDD; 
 	background-color: black; 
@@ -914,15 +902,14 @@ background-image: -webkit-gradient(
 
 }
 .next-pev{
-	border-bottom: 2px solid black;
-	/*background: #BD3232;*/ 
+	background-color: rgba(219,54,54,0.91);
 	width: 313px;
 	margin: 0px 0px 6px 0px;
 	padding: 5px 0px 7px 0px;
 	float: right;
-	-webkit-box-shadow: -1px -2px 19px 5px rgba(17, 26, 243, 0.66);
-	-moz-box-shadow: -1px -2px 19px 5px rgba(17, 26, 243, 0.66);
-	box-shadow: -1px -2px 19px 5px rgba(17, 26, 243, 0.66);
+	-webkit-box-shadow: -1px 2px 13px 2px rgba(0, 0, 0, 0.66);
+	-moz-box-shadow: -1px 2px 13px 2px rgba(0, 0, 0, 0.66);
+	box-shadow: -1px 2px 13px 2px rgba(0, 0, 0, 0.66);
 }
 .next-box{
 font-size: 20px;
@@ -1272,7 +1259,6 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 .black-sq{
 	position: absolute;
-	background: black;
 	width: 406px;
 	height: 25px;
 	margin: 5px 0px 0px 0px;
@@ -1285,10 +1271,10 @@ width: 316px;
 margin: 1px auto;
 padding: 0px 0px 0px 0px;
 height: 24px;
-background-color: rgba(50, 67, 189, 0.73);
+background-color: rgb(50, 67, 189);
 }
 .black-sqft{
-	background: black;
+	border-bottom: 2px solid black;
 	width: 300px;
 	height: 25px;
 	margin: 0px 0px 13px 0px;;
@@ -1300,7 +1286,7 @@ background-color: rgba(50, 67, 189, 0.73);
 	width: 301px;
 	margin: 6px auto;
 	padding: 0px 0px 0px 0px;
-	height: 24px;
+	height: 25px;
 	background-color: rgba(50, 67, 189, 0.73);
 
 }
@@ -1544,9 +1530,8 @@ width: 186px;
 	color: white;
 }
 .twopics{
-	background-color: black;
-	padding: 0px 0px 0px 23px;
-	height: 164px;
+	padding: 0px 0px 0px 44px;
+	height: 146px;
 }
 .moree-photos{
 	color: black;
@@ -1636,7 +1621,7 @@ div.more-links > ul > li > a {
  	margin: 252px 0px 0px 638px;
 	position: absolute;
 	width: 53px;
-	height: 150px;
+	height: 120px;
 	background-color: black;
 	overflow: hidden;
  }
