@@ -53,7 +53,7 @@
       <div class="order-pics">
         <div class="rest-of-pic ">
           <% @uploads_rest.each_with_index do |uploads, index| %>
-          <H3 class="just-add"><%= truncate( uploads.title, :length => 40)%></H3>
+          <H3 class="just-add"><%= link_to truncate( uploads.title, :length => 40), upload_url(uploads) %></H3>
           <div class="home-picturebox" >
             <%= link_to image_tag(uploads.picture.url(:large), :alt => uploads.title, :title => uploads.title, :class =>"home-pics" ), upload_url(uploads) %>
             <div class="picside">
