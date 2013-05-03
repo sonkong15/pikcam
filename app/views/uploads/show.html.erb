@@ -1,14 +1,5 @@
 <% @title = @upload.title %>
-<div class="signupwithup"><% @uploads.map do |upload| %>
-			<table class="browse-show">
-				<tr>
-				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
-				</tr>
-				<tr>
-				<td class="for-font"><%= truncate( upload.title, :length => 30)%></td>
-			</tr>
-			</table>
-			<% end %> </div>
+
 			<div class="jointous"><h5> join to like and dis like pictures and save pictures to your Favs !!</h5> <li class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook"%></li></div>
 
 <div class="upload-bacgraound">
@@ -49,6 +40,7 @@
 
 		
 		<div class="browse">
+			
 			<div class="next-pev">
 				<ul>
 					<li class="next-box"><%= link_to("Previous Pic", @upload.next_upload, :class => "")  if @upload.next_upload %></li>
@@ -75,7 +67,16 @@
 		<div class="side-bar">
 			<div class="twopics">
 				<div class="black-sqft"><h2> humorous & cool photos </h2>
-					<button class="showmore btn btn-large btn-block btn-danger"> show more pictures </button>
+					<div style="width: 305px;"><% @uploads.map do |upload| %>
+			<table class="browse-show">
+				<tr>
+				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
+				</tr>
+				<tr class="showpageuploadrow">
+				<td class="for-font"><%= link_to truncate( upload.title, :length => 30), upload %></td>
+			</tr>
+			</table>
+			<% end %> </div>
 				</div>
 				
 

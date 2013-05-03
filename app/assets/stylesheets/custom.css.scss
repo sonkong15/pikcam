@@ -306,7 +306,7 @@ a:hover{
 	width: 600px;
 	background-color: black;
 	padding: 0px 10px 10px 10px;
-	margin: 154px 0px 0px 0px;
+	margin: 134px 0px 0px 0px;
 	border: 10px solid black;
 	-webkit-box-shadow: 2px -14px 30px 12px rgba(16, 26, 255, 0.66);
 	-moz-box-shadow: 2px -14px 30px 12px rgba(16, 26, 255, 0.66);
@@ -472,10 +472,16 @@ a:hover{
 	-moz-border-radius-bottomleft: 10px;
 	border-bottom-left-radius: 10px;
 }
+.showpageuploadrow{
+position: absolute;
+margin-top: -43px;
+margin-left: 2px;
+width: 143px;
+}
 .browse{
 	position: absolute;
 	display: inline-block;
-	margin: 40px 0px 0px 0px;
+	margin: -10px 0px 0px 0px;
 	width: 473px;
 	height: 50px;
 	-moz-border-radius-bottomright: 10px;
@@ -549,7 +555,7 @@ a.cat:hover {color: #DDD;}
 	
 	padding: 10px;
 	position: absolute;
-	margin: 94px 0px 0px 0px;
+	margin: 75px 0px 0px 0px;
 	width: 620px;
 	color: #DDD; 
 	background-color: black; 
@@ -904,7 +910,7 @@ background-image: -webkit-gradient(
 .next-pev{
 	background-color: rgba(219,54,54,0.91);
 	width: 313px;
-	margin: 0px 0px 6px 0px;
+	margin: 31px 0px 6px 0px;
 	padding: 5px 0px 7px 0px;
 	float: right;
 	-webkit-box-shadow: -1px 2px 13px 2px rgba(0, 0, 0, 0.66);
@@ -1254,8 +1260,7 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 .browse-show{
 	display: inline-block;
 	width: 150px;
-	height: 130px;
-	margin-bottom: 15px;
+	height: 112px;
 }
 .black-sq{
 	position: absolute;
@@ -1531,7 +1536,7 @@ width: 186px;
 }
 .twopics{
 	padding: 0px 0px 0px 44px;
-	height: 146px;
+	height: 260px;
 }
 .moree-photos{
 	color: black;
