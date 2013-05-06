@@ -18,6 +18,7 @@ class UserSessionsController < ApplicationController
   def destroy
   	@user_session = UserSession.find
     current_user_session.destroy
+    session["fb_access_token"] = nil
     flash[:notice] = "Logout successful, See you later :)! "
     redirect_to root_url
   end
