@@ -1585,7 +1585,7 @@ table h3{
 }
 .more-links{
 	width: 370px;
-	height: 176px;
+	height: 100%;
 	
 }
 div.more-links > ul > li {
@@ -1594,7 +1594,7 @@ div.more-links > ul > li {
 	color: black;
 }
 div.more-links > ul > li > a {
-	color: white;
+	color: rgb(24, 75, 238);
 	&:hover {
 		color: purple;
 	}
@@ -1677,11 +1677,11 @@ div.more-links > ul > li > a {
  .userhome-pro{
  	min-width: 210px;
  	padding: 5px;
-	height: 960px;
+	height: 100%;
 	background-color: black;
-	-moz-box-shadow:  21px 13px 38px -17px rgb(0, 31, 255);
-	-webkit-box-shadow:  21px 13px 38px -17px rgb(0, 31, 255);
-	box-shadow:  21px 13px 38px -17px rgb(0, 31, 255);
+	-moz-box-shadow:  14px 3px 13px -11px rgb(26, 26, 26);
+	-webkit-box-shadow:  14px 3px 13px -11px rgb(26, 26, 26);
+	box-shadow:  14px 3px 13px -11px rgb(26, 26, 26);
  }
  .userhome-pro2{
  	min-width: 210px;
