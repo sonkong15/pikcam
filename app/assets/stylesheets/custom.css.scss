@@ -306,7 +306,7 @@ a:hover{
 	width: 600px;
 	background-color: black;
 	padding: 0px 10px 10px 10px;
-	margin: 134px 0px 0px 0px;
+	margin: 252px 0px 0px 0px;
 	border: 10px solid black;
 	-webkit-box-shadow: 2px -14px 30px 12px rgba(16, 26, 255, 0.66);
 	-moz-box-shadow: 2px -14px 30px 12px rgba(16, 26, 255, 0.66);
@@ -446,20 +446,35 @@ a:hover{
 	height: 135px;
 	
 }
+.ad-upload2{
+	border: 13px solid rgb(0, 173, 255);
+clear: both;
+margin: 12px 0px 10px 33px;
+height: 250px;
+width: 300px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-bottom-left-radius: 10px;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+}
 .ad-upload{
-	clear: both;
-	margin: 12px 0px 10px 43px;
-	
-	height: 250px;
-	width: 300px;
-	-moz-border-radius-bottomright: 10px;
-	-moz-border-radius-bottomleft: 10px;
-    border-bottom-right-radius: 10px;
-    -moz-border-radius-topleft: 10px;
-    -moz-border-radius-topright: 10px; 
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+	border: 13px solid rgb(0, 173, 255);
+clear: both;
+margin: 12px 0px 10px 117px;
+height: 250px;
+width: 300px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-bottom-left-radius: 10px;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
 }
 
 .top-share{
@@ -481,9 +496,9 @@ width: 143px;
 .browse{
 	position: absolute;
 	display: inline-block;
-	margin: -10px 0px 0px 0px;
+	margin: 39px 0px 0px 0px;
 	width: 473px;
-	height: 50px;
+	height: 100%;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 27px;
 	border-bottom-right-radius: 0px;
@@ -555,7 +570,7 @@ a.cat:hover {color: #DDD;}
 	
 	padding: 10px;
 	position: absolute;
-	margin: 75px 0px 0px 0px;
+	margin: 192px 0px 0px 0px;
 	width: 620px;
 	color: #DDD; 
 	background-color: black; 
@@ -689,16 +704,18 @@ background-image: -webkit-gradient(
 
 
 .show-container{
-	padding: 10px 10px 1px 0px;
-	clear: both;
-    margin: 50px auto;
-    margin-bottom: 10px;
-    width: 1050px;
-    min-height: 1182px;
+	padding: 11px 5px 0px 15px;
+clear: both;
+margin: 50px auto;
+margin-bottom: 1px;
+width: 1050px;
+min-height: 1182px;
+background-color: white;
 
 }
 .up-ad{
-	margin: 4px auto;
+	margin-left: -6px;
+	margin: 0px auto;
 	margin-bottom: 10px;
 	width: 728px;
 	height: 90px;
@@ -910,7 +927,7 @@ background-image: -webkit-gradient(
 .next-pev{
 	background-color: rgba(219,54,54,0.91);
 	width: 313px;
-	margin: 31px 0px 6px 0px;
+	margin: 0px 0px 6px 0px;
 	padding: 5px 0px 7px 0px;
 	float: right;
 	-webkit-box-shadow: -1px 2px 13px 2px rgba(0, 0, 0, 0.66);
@@ -1535,7 +1552,7 @@ width: 186px;
 	color: white;
 }
 .twopics{
-	padding: 0px 0px 0px 44px;
+	padding: 38px 0px 9px 56px;
 	height: 260px;
 }
 .moree-photos{
@@ -1623,7 +1640,7 @@ div.more-links > ul > li > a {
 	min-width: 720px;
  }
  .likeornotholder{
- 	margin: 252px 0px 0px 638px;
+ 	margin: 363px 0px 0px 638px;
 	position: absolute;
 	width: 53px;
 	height: 120px;
