@@ -304,13 +304,13 @@ a:hover{
 .upload-show{
 	display: inline-block;
 	width: 600px;
-	background-color: black;
+	background-color: white;
 	padding: 0px 10px 10px 10px;
 	margin: 252px 0px 0px 0px;
 	border: 10px solid black;
-	-webkit-box-shadow: 2px -14px 30px 12px rgba(16, 26, 255, 0.66);
-	-moz-box-shadow: 2px -14px 30px 12px rgba(16, 26, 255, 0.66);
-	box-shadow: 2px -14px 30px 12px rgba(16, 26, 255, 0.66);
+	-webkit-box-shadow:  -4px 0px 10px 0px rgba(54, 54, 54, 0.66);
+	-moz-box-shadow:  -4px 0px 10px 0px rgba(54, 54, 54, 0.66);
+	box-shadow:  -4px 0px 10px 0px rgba(54, 54, 54, 0.66);
 
 }
 .home-list{
@@ -447,7 +447,7 @@ a:hover{
 	
 }
 .ad-upload2{
-	border: 13px solid rgb(0, 173, 255);
+	border: 13px solid #73ffb9;
 clear: both;
 margin: 12px 0px 10px 33px;
 height: 250px;
@@ -572,8 +572,8 @@ a.cat:hover {color: #DDD;}
 	position: absolute;
 	margin: 192px 0px 0px 0px;
 	width: 620px;
-	color: #DDD; 
-	background-color: black; 
+	color: black; 
+	background-color: white; 
 	font-size: 27px;
 	-moz-border-radius-bottomright: 0px;
 	-moz-border-radius-bottomleft: 0px;
@@ -583,9 +583,9 @@ a.cat:hover {color: #DDD;}
     border-bottom-left-radius: 0px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    -webkit-box-shadow: -11px -8px 13px -8px rgba(17, 26, 243, 0.66);
-	-moz-box-shadow: -11px -8px 13px -8px rgba(17, 26, 243, 0.66);
-	box-shadow: -11px -8px 13px -8px rgba(17, 26, 243, 0.66);
+    -webkit-box-shadow: -11px -8px 13px -8px rgba(197, 197, 197, 0.66);
+	-moz-box-shadow: -11px -8px 13px -8px rgba(197, 197, 197, 0.66);
+	box-shadow: -11px -8px 13px -8px rgba(197, 197, 197, 0.66);
 
 }
 .fb-like{
@@ -925,7 +925,7 @@ background-image: -webkit-gradient(
 
 }
 .next-pev{
-	background-color: rgba(219,54,54,0.91);
+	background-color: #73ffb9;
 	width: 313px;
 	margin: 0px 0px 6px 0px;
 	padding: 5px 0px 7px 0px;
@@ -1578,17 +1578,17 @@ width: 186px;
 	line-height: 25px;
 font-size: 19px;
 text-align: center;
-background-color: rgba(219,54,54,0.91);
+background-color: #73ffb9;
 width: 368px;
 clear: both;
 padding: 2px;
--moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomright: 0px;
 -moz-border-radius-bottomleft: 10px;
-border-bottom-right-radius: 10px;
+border-bottom-right-radius: 0px;
 -moz-border-radius-topleft: 10px;
--moz-border-radius-topright: 10px;
+-moz-border-radius-topright: 0px;
 border-bottom-left-radius: 10px;
-border-top-right-radius: 10px;
+border-top-right-radius: 0px;
 border-top-left-radius: 10px;
 }
 .largesmall{
