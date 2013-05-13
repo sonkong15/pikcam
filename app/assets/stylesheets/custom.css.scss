@@ -448,10 +448,11 @@ a:hover{
 }
 .ad-upload2{
 	/*border: 13px solid #73ffb9;*/
+	float: left;
 clear: both;
 margin: 12px 0px 10px 33px;
-height: 250px;
-width: 300px;
+height: 600px;
+width: 160px;
 -moz-border-radius-bottomright: 10px;
 -moz-border-radius-bottomleft: 10px;
 border-bottom-right-radius: 10px;
@@ -1605,12 +1606,28 @@ table h3{
 	height: 100%;
 	
 }
+.more-links2{ 
+float: right;
+width: 147px;
+height: 100%;
+}
 div.more-links > ul > li {
 	font-size: 22px;
 	line-height: 43px;
 	color: black;
 }
 div.more-links > ul > li > a {
+	color: rgb(24, 75, 238);
+	&:hover {
+		color: purple;
+	}
+	}
+	div.more-links2 > ul > li {
+	font-size: 19px;
+	line-height: 43px;
+	color: black;
+}
+div.more-links2 > ul > li > a {
 	color: rgb(24, 75, 238);
 	&:hover {
 		color: purple;
