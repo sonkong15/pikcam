@@ -15,8 +15,8 @@ class Upload < ActiveRecord::Base
     :s3_credentials => "#{Rails.root}/config/aws.yml",
     :path => ":id/:style.:extension",
     :hash_secret => ''
-
-	
+    validates :category_ids, presence: true
+	validates :title, presence: true
 	validates_attachment_presence :picture, presence: true
 	
 	validates_attachment_content_type :picture, :content_type => ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
