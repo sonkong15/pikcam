@@ -40,7 +40,7 @@
             </script>
           </div>
         </div>
-      
+
       <hr>
       <div class="black-t">
        <h4> Like humorous pictures </h4>
@@ -66,7 +66,22 @@
 
       </ul></div>
       
-  
+    <div class="our-link">
+          <h4> Blog Roll  </h4>
+          <ul class= "frinds-list">
+            <li><a href="http://www.savemefromboredom.com/" title="save me from boredom" target="_black">save me from boredom</a> | </li>
+            <li><a href="http://www.meltedbrain.com">melted brain</a> | </li>
+            <% links.each do |l| %>
+            <li><a href= <%= l.site %>  target="_blank"><%= l.title %></a> | </li>
+            <% if can? :destroy, l %>
+              <%= link_to "<=Destroy", l, :method => :delete, :confirm => "Are you sure" %> 
+            <% end %>
+            <% end %>
+
+          </ul>
+          
+
+        </div>
     </div>
     <div class="span9 mainbox">
       <!-- list of pictures -->

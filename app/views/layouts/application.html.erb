@@ -101,22 +101,7 @@
         Subscribe
     </a></li>
 	</ul>
-	<div class="our-link">
-          <h4> More site you will like (blog roll)  </h4>
-          <ul class= "frinds-list">
-            <li><a href="http://www.savemefromboredom.com/" title="save me from boredom" target="_black">save me from boredom</a> | </li>
-            <li><a href="http://www.meltedbrain.com">melted brain</a> | </li>
-            <% links.each do |l| %>
-            <li><a href= <%= l.site %>  target="_blank"><%= l.title %></a> | </li>
-            <% if can? :destroy, l %>
-			    		<%= link_to "<=Destroy", l, :method => :delete, :confirm => "Are you sure" %> 
-			    	<% end %>
-            <% end %>
-
-          </ul>
-          
-
-        </div>
+	
 </footer>
 <%= render "layouts/facebooklike" %>
 <%# debug(params) if Rails.env.development? %>
