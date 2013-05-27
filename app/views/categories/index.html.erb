@@ -61,14 +61,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
           <h4> Blog Roll  </h4>
           <ul class= "frinds-list">
             <li><a href="http://www.savemefromboredom.com/" title="save me from boredom" target="_black">save me from boredom</a>  </li>
+            <br>
             <li><a href="http://www.meltedbrain.com">melted brain</a>  </li>
+            <br>
+            <li>
             <% links.each do |l| %>
-            <li><a href= <%= l.site %>  target="_blank"><%= l.title %></a> 
+            <a href= <%= l.site %>  target="_blank"><%= l.title %></a>  
             <% if can? :destroy, l %>
               <%= link_to "<=Destroy", l, :method => :delete, :confirm => "Are you sure" %> 
             <% end %>
+            <br>
             <% end %>
-             </li>
+            
+            </li>
           </ul>
           
 
