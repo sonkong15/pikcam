@@ -121,16 +121,16 @@
 			</ul>
 			<div class="our-link">
           <h4> Blog Roll  </h4>
-          <ul class= "frinds-list">
-            <li><a href="http://www.savemefromboredom.com/" title="save me from boredom" target="_black">save me from boredom</a> | </li>
-            <li><a href="http://www.meltedbrain.com">melted brain</a> | </li>
+          <ul class= "frinds-list" style= "margin: 0px;">
+            <li><a href="http://www.savemefromboredom.com/" title="save me from boredom" target="_black">save me from boredom</a>  </li>
+            <li><a href="http://www.meltedbrain.com">melted brain</a>  </li>
             <% links.each do |l| %>
-            <li><a href= <%= l.site %>  target="_blank"><%= l.title %></a> | </li>
+            <li><a href= <%= l.site %>  target="_blank"><%= l.title %></a> 
             <% if can? :destroy, l %>
               <%= link_to "<=Destroy", l, :method => :delete, :confirm => "Are you sure" %> 
             <% end %>
             <% end %>
-
+            </li>
           </ul>
           
 
