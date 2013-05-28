@@ -4,7 +4,7 @@ def full_title(title)
 	if @title.empty?
 		@base_title
 	else
-		@base_title + " & " + @title
+		@title + " & " + @base_title
 	end
 end
 end
