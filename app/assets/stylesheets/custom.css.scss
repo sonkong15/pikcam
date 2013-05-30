@@ -300,17 +300,19 @@ a:hover{
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    border-right: 70px solid black;
 }
 .upload-show{
 	display: inline-block;
-	width: 600px;
+	width: 630px;
 	background-color: white;
 	padding: 0px 10px 10px 10px;
-	margin: 252px 0px 0px 0px;
+	margin: 252px 0px 0px -6px;
 	border: 10px solid black;
 	-webkit-box-shadow:  -4px 0px 10px 0px rgba(54, 54, 54, 0.66);
 	-moz-box-shadow:  -4px 0px 10px 0px rgba(54, 54, 54, 0.66);
 	box-shadow:  -4px 0px 10px 0px rgba(54, 54, 54, 0.66);
+	border-right: 70px solid black;
 
 }
 .home-list{
@@ -406,11 +408,11 @@ a:hover{
 	
 }
 .for-comment{
-	width: 620px;
+	width: 710px;
 	min-height: 51px;
 	background-color: rgba(0, 0, 0, 0.99);
 	padding: 9px 10px 10px 10px;
-	margin: 192px 0px 0px 0px;
+	margin: 192px 0px 0px -6px;
 	border: 0px solid #161817;
 	-moz-border-radius-bottomright: 50px;
 	-moz-border-radius-bottomleft: 10px;
@@ -427,17 +429,17 @@ a:hover{
 }
 .share-box{
 	position: absolute;
-	width: 640px;
-	background-color: black;
-	height: 204px;
-	margin: -12px 0px 0px 0px;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-topright: 0px; 
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-    -webkit-box-shadow: -2px 0px 2px rgba(17, 26, 243, 0.66);
-	-moz-box-shadow: -2px 0px 2px rgba(17, 26, 243, 0.66);
-	box-shadow: -2px 0px 2px rgba(17, 26, 243, 0.66);
+width: 730px;
+background-color: black;
+height: 204px;
+margin: -12px 0px 0px -6px;
+-moz-border-radius-topleft: 0px;
+-moz-border-radius-topright: 0px;
+border-top-right-radius: 0px;
+border-top-left-radius: 0px;
+-webkit-box-shadow: -2px 0px 2px rgba(17, 26, 243, 0.66);
+-moz-box-shadow: -2px 0px 2px rgba(17, 26, 243, 0.66);
+box-shadow: -2px 0px 2px rgba(17, 26, 243, 0.66);
 }
 
 
@@ -528,7 +530,7 @@ a.cat:hover {color: #DDD;}
 	padding: 10px 0px 5px 50px;
 	height: 27px;
 	background: black;
-	width: 480px;
+	width: 541px;
 	float: left;
 	font-size: 1.5em;
 	color: #303030;
@@ -571,8 +573,8 @@ a.cat:hover {color: #DDD;}
 	
 	padding: 10px;
 	position: absolute;
-	margin: 192px 0px 0px 0px;
-	width: 620px;
+	margin: 192px 0px 0px -6px;
+	width: 713px;
 	color: black; 
 	background-color: white; 
 	font-size: 27px;
@@ -601,8 +603,8 @@ a.cat:hover {color: #DDD;}
 .side-bar{
 	float: right;
     margin-top: 0px;
-    width: 347px;
-    margin: 0px 17px 15px 0px
+    width: 313px;
+    margin: 0px 0px 15px 0px
 
 }
 .photo-count{
@@ -716,7 +718,7 @@ background-color: white;
 }
 .up-ad{
 	margin-left: -6px;
-	margin: 0px auto;
+	border: 1px solid black;
 	margin-bottom: 10px;
 	width: 728px;
 	height: 90px;
@@ -1271,8 +1273,9 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 	font-size: 16px;
 }
 .around-web{
+	margin-left: -11px;
 	margin-top: 30px;
-	width: 406px;
+	width: 330px;
 }
 .browse-show{
 	display: inline-block;
@@ -1290,9 +1293,8 @@ line-height: 27px;
 color: black;
 text-align: center;
 width: 316px;
-margin: 1px auto;
+margin: 1px 0px 0px 9px;
 padding: 0px 0px 0px 0px;
-height: 24px;
 background-color: rgb(50, 67, 189);
 }
 .black-sqft{
@@ -1552,7 +1554,7 @@ width: 186px;
 	color: white;
 }
 .twopics{
-	padding: 38px 0px 9px 56px;
+	padding: 38px 0px 9px 0px;
 	height: 260px;
 }
 .moree-photos{
@@ -1575,11 +1577,11 @@ width: 186px;
 	width: 810px;
 }
 .getusers{
-	line-height: 25px;
+line-height: 25px;
 font-size: 19px;
 text-align: center;
 background-color: #73ffb9;
-width: 368px;
+width: 314px;
 clear: both;
 padding: 2px;
 -moz-border-radius-bottomright: 0px;
@@ -1655,7 +1657,7 @@ div.more-links2 > ul > li > a {
 	min-width: 720px;
  }
  .likeornotholder{
- 	margin: 363px 0px 0px 638px;
+ 	margin: 362px 0px 0px 663px;
 	position: absolute;
 	width: 53px;
 	height: 120px;
@@ -1792,4 +1794,18 @@ overflow: hidden;
 }
 .picinfobox > span > a{
 	color: blue;
+}
+.ad-upload6{
+float: left;
+clear: both;
+margin: 12px 0px 10px 11px;
+width: 140px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-bottom-left-radius: 10px;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
 }
