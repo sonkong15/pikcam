@@ -66,7 +66,7 @@
 		<div class="side-bar">
 			<div class="twopics">
 				<div class="black-sqft"><h2> humorous & cool photos </h2>
-					<div style="width: 305px;"><% @uploads.map do |upload| %>
+					<div style="width: 320px;"><% @uploads.map do |upload| %>
 			<table class="browse-show">
 				<tr>
 				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
