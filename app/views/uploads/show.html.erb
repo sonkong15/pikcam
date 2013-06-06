@@ -73,7 +73,7 @@
 				<td ><%= link_to image_tag(upload.picture.url(:thumb), :alt => upload.title, :title => upload.title), upload,{:class => "img_user"}  %></td>
 				</tr>
 				<tr class="showpageuploadrow">
-				<td class="for-font"><%= link_to truncate( upload.title, :length => 30), upload %></td>
+				<td class="for-font"><%= link_to truncate( upload.title, :length => 25), upload %></td>
 			</tr>
 			</table>
 			<% end %> </div>
@@ -137,7 +137,21 @@
 			<script src="http://knowd.com/w/804.js?swid=457"></script><br/>
 
 			</div>
-		<div id="wahohax0XPLJ"></div>
+			<!-- MarketGidNews Start -->
+			<div id="MarketGidScriptRootN2060" class="news-block-magick">
+			<div id="MarketGidPreloadN2060">
+			<a id="mg_add2060" href="http://usr.mgid.com/demo/goods/?utm_source=widget&utm_medium=text&utm_campaign=add" target="_blank">Place your ad here</a><br> <a href="http://mgid.com/" target="_blank">Loading...</a> 
+			</div>
+			<script> 
+			(function(){
+			var D=new Date(),d=document,b='body',ce='createElement',ac='appendChild',st='style',ds='display',n='none',gi='getElementById';
+			var i=d[ce]('iframe');i[st][ds]=n;d[gi]("MarketGidScriptRootN2060")[ac](i);try{var iw=i.contentWindow.document;iw.open();iw.writeln("<html><body></body></html>");iw.close();var c=iw[b];}
+			catch(e){var iw=d;var c=d[gi]("MarketGidScriptRootN2060");}var dv=iw[ce]('div');dv.id="MG_ID";dv[st][ds]=n;dv.innerHTML=2060;c[ac](dv);
+			var s=iw[ce]('script');s.async='async';s.defer='defer';s.charset='utf-8';s.src="http://jsn.dt07.net/p/i/pikcam.com.2060.js?t="+D.getYear()+D.getMonth()+D.getDate()+D.getHours();c[ac](s);})();
+			</script>
+			</div>
+			<!-- MarketGidNews End -->
+			<div id="wahohax0XPLJ"></div>
 		<!--<div class="black-sq"><h2> pics from other sites</h2></div>-->
 			<script type="text/javascript" src="http://wahoha.com/widget/x0XPLJ"></script>
 
@@ -150,7 +164,6 @@
     <span class='st_twitter_hcount' displayText='Tweet'></span>
     <% else %>
     Pikcam community has <b><%= User.count %></b> members <b>help us reach 1500 members</b> join today<br>
-    <p> we will give away prizes once we reach 1500 members AND sign up to like pictures we are always adding new features</p>
     <span class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook"%></span>
     <SPAN> Or <%= link_to "Sign Up", new_user_url %></SPAN>
     <% end %>
@@ -158,6 +171,7 @@
 			</div>
 
 			
+
 
 			<div class="upload-side">
 				<h2>Share a Pic</h2>
