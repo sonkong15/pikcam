@@ -132,7 +132,15 @@
 		<div class="more-links">
 				<div class="getusers">
 				<% if current_user %> 
-    Pikcam community has <b><%= User.count %></b> members <b>help us reach 1500 members so we can start giving away prizes </b><br>With your help, I know we can pull it off
+    Pikcam community has <b><%= User.count %></b> members <b>help us make pikcam better weekly prize give away to the highest donator  </b><br>With your help, I know we can pull it off
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HYJNBBHYEL92G">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
     <span class="st_facebook_hcount" st_url="http://www.pikcam.com" st_title="pikcam cures boredom lol" st_image= <%= Upload.first.picture.url %> st_summary=" See what your friend lookin at, pikcam A toooo funny site. so what you wait join our community  "></span>
     <span class='st_googleplus_hcount' displayText='Google +'></span>
     <span class='st_twitter_hcount' displayText='Tweet'></span>
@@ -188,12 +196,10 @@
 			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-502d791f3a21278e"></script>
 			<!-- AddThis Button END -->
 			
-			<% if @upload.user.blank? %>
-			<p class="user-name"> Upload By: ANONYMOUS </p>
-				<% else %>
-			 <p class="user-name"> Upload By: <%=  link_to @upload.user.name.capitalize,  @upload.user %></p>
-			 <% end %>
-			 <p class="strftime"><%# @upload.created_at.strftime("%b %d %y") %></p>
+			
+			 <p class="user-name"> Upload By: Admin_only | Date: <%= @upload.created_at.strftime("%b %d %y") %></p>
+			
+			 
 				
 			<p class= "category-nam"> 
 				  <b>Categories:</b>

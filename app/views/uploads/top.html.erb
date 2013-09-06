@@ -113,7 +113,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                   <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-502d791f3a21278e"></script>
                 </div>
                 <div class="picinfobox">
-                  <span>Add By: <%= uploads.user.present? ? link_to(uploads.user.name.capitalize,  uploads.user) : "ANONYMOUS" %></span>
+                  <span>Add By: <%= uploads.user.present? ? "Admin_only" : "Admin_only" %></span>
                   <hr style="margin: 3px 0;">
                   <span>Created at: <%= uploads.created_at.strftime("%b/%d/%y") %> </span>
                 </div>
@@ -193,7 +193,15 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   </div>
   <div class="modal-body">
    <div class="files2"> 
+    <% if current_user %>
+    <% if current_user.admin == true%>
     <%= render("uploads/form") %>
+    <% else %>
+     <h2> Do to improper image uploads by users we had to disable uploading to User Sorry </h2>
+    <% end %>
+    <% else %>
+     <h2> Do to improper image uploads by users we had to disable uploading to User Sorry </h2>
+    <% end %>
     </div>
   </div>
   <!--<div class="modal-footer">

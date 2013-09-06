@@ -1,8 +1,15 @@
 <% @title = 'upload new' %>
 
 <div class="files">
-  <%= render "uploads/form" %>
-  
+	<% if current_user %>
+    <% if current_user.admin == true%>
+    <%= render("uploads/form") %>
+    <% else %>
+     <h2> Do to improper image uploads by users we had to disable uploading to User Sorry </h2>
+    <% end %>
+    <% else %>
+     <h2> Do to improper image uploads by users we had to disable uploading to User Sorry </h2>
+    <% end %>
 </div>
  
 <div class="cat-showad">
