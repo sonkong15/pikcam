@@ -145,9 +145,13 @@
     <span class='st_googleplus_hcount' displayText='Google +'></span>
     <span class='st_twitter_hcount' displayText='Tweet'></span>
     <% else %>
-    Pikcam community has <b><%= User.count %></b> members <b>help us reach 1500 members</b> join today<br>
-    <span class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook"%></span>
-    <SPAN> Or <%= link_to "Sign Up", new_user_url %></SPAN>
+     Pikcam community has <b><%= User.count %></b> members <b>help us make pikcam better weekly prize give away to the highest donator  </b><br>With your help, I know we can pull it off
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HYJNBBHYEL92G">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
     <% end %>
     </div>
 			</div>
