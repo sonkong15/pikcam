@@ -3,7 +3,19 @@
 			<div class="jointous"><h5> join to like and dis like pictures and save pictures to your Favs !!</h5> <li class="facebook"><%= link_to image_tag("facebook-login.png", :alt => "facebook sign"), "http://www.pikcam.com/auth/facebook"%></li></div>
 
 <div class="upload-bacgraound">
-
+<div class="up-ad" style="margin: 0px auto;">
+				<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3135387599628042";
+/* lost world */
+google_ad_slot = "4400069018";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+				</div>
 	
 	<div class="list-more" >
 		<div class="navme2">
@@ -38,9 +50,7 @@
 
 		</div>
 		<h1 class="p-title"><%= "#{@upload.title}" %></h1>
-		<div class="up-ad2">
-			<!-- maybe later -->
-		</div>
+		
 		<div class="likeornotholder">
 			<div class="likeit">
 				<%= toggle_currentuser(@upload) %></div>
@@ -182,7 +192,19 @@
 			</div>
 			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-502d791f3a21278e"></script>
 			<!-- AddThis Button END -->
-			
+			<div class="up-ad">
+				<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3135387599628042";
+/* lost world */
+google_ad_slot = "4400069018";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+				</div>
 			
 			 <p class="user-name"> Upload By: Admin_only | Date: <%= @upload.created_at.strftime("%b %d %y") %></p>
 			
@@ -217,19 +239,7 @@
 
 
 		<div class="for-comment">
-			<div class="up-ad">
-				<script type="text/javascript"><!--
-google_ad_client = "ca-pub-3135387599628042";
-/* lost world */
-google_ad_slot = "4400069018";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-				</div>
+			
 			<p class="description">Description: </p>
 			<p><%= @upload.description %></p>
 		</div>
