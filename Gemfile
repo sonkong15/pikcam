@@ -22,6 +22,7 @@ group :assets do
   #gem 'bcrypt-ruby', '~> 3.0.0'
   gem "friendly_id", "~> 4.0.9"
   gem "cancan"
+  gem "httparty", "~> 0.11.0"
   gem 'bootstrap-sass'
   gem 'simple_form'
   gem 'authlogic'
@@ -79,6 +80,7 @@ gem 'jquery-rails', "~> 2.1.3"
   gem "auto_html", "~> 1.6.0"
   gem "koala"
   gem 'thumbs_up'
+  gem "httparty", "~> 0.11.0"
   end
 
 
