@@ -167,9 +167,11 @@
 			</div>
 		</div>
 		<div>
-			<p class="description">Description: </p>
+			<div class="for-comment" style="margin: 0px 0px 0px -7px;">
+				<p class="description">Description: </p>
 			<p><%= @upload.description %></p>
-			<div style="margin-top: 20px;margin-left: -6px;">
+			</div>
+			<div style="margin-top: 5px;margin-left: -6px;">
 			<script type="text/javascript"><!--
 google_ad_client = "ca-pub-4775541808664529";
 /* Help */
@@ -235,7 +237,6 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 			<div>
 				
 </div>
-			
 		</div>
 		<div class="edit_link">
 					<% if can? :destroy, @upload %>

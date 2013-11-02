@@ -245,7 +245,7 @@ DEPENDENCIES
   authlogic
   auto_html (~> 1.6.0)
   aws-sdk (~> 1.6.5)
-  bootstrap-sass
+  bootstrap-sass (~> 2.1.0.0)
   cancan
   capybara
   client_side_validations
