@@ -23,7 +23,7 @@ group :assets do
   gem "friendly_id", "~> 4.0.9"
   gem "cancan"
   gem "httparty", "~> 0.11.0"
-  gem 'bootstrap-sass'
+  gem 'bootstrap-sass', '~> 3.0.1.0.rc'
   gem 'simple_form'
   gem 'authlogic'
   gem 'client_side_validations'
@@ -64,7 +64,7 @@ gem 'jquery-rails', "~> 2.1.3"
   #gem 'bcrypt-ruby', '~> 3.0.0'
   gem "friendly_id", "~> 4.0.9"
   gem "cancan"
-  gem 'bootstrap-sass'
+  gem 'bootstrap-sass', '~> 3.0.1.0.rc'
   gem 'simple_form'
   gem 'authlogic'
   gem 'client_side_validations'
