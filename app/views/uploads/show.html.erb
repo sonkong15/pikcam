@@ -63,7 +63,7 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 			</div>
 		<div class="upload-show">
 			
-			<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed" %>
+			<%= link_to image_tag(@upload.picture.url(:large), :alt => @upload.title, :title => @upload.title ), @upload.picture.url, :class => "displayed", :style => "width: 467px;margin: 0px auto;" %>
 
 		</div>
 
@@ -178,10 +178,6 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 			</div>
 		</div>
 		<div>
-			<div class="for-comment" style="margin: 0px 0px 0px -7px;">
-				<p class="description">Description: </p>
-			<p><%= @upload.description %></p>
-			</div>
 			<div style="margin-top: 5px;margin-left: -6px;">
 			<script type="text/javascript"><!--
 google_ad_client = "ca-pub-4775541808664529";
@@ -195,6 +191,11 @@ google_ad_height = 90;
 src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div>
+			<div class="for-comment" style="margin: 0px 0px 0px -7px;">
+				<p class="description">Description: </p>
+			<p><%= @upload.description %></p>
+			</div>
+			
      </div>
 			<div class="share-box">
 
