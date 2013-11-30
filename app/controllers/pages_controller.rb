@@ -31,6 +31,11 @@ class PagesController < ApplicationController
 	def link_up
 		@link = Link.new
 	end
+
+	def knowd
+		
+		
+	end
 	
 
 end

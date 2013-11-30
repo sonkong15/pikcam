@@ -32,7 +32,7 @@ TheBrands::Application.routes.draw do
   match 'loginout', to: 'user_sessions#destroy'
 
   match "/signup", to: "users#new"
-
+   match '/knowd', to: "Pages#knowd"
   match '/about', to: "Pages#about"
   match '/help', to: "Pages#help"
   match '/contact', to: "Pages#contact"
