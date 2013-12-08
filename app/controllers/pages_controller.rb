@@ -37,5 +37,8 @@ class PagesController < ApplicationController
 		
 	end
 	
+	def leep2
+		
+	end
 
 end
