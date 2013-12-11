@@ -25,7 +25,7 @@ TheBrands::Application.routes.draw do
   resources :links
   resources :user_sessions, only: [:new, :create, :destroy]
   match '/feed' => 'uploads#feed', :as => :feed, :defaults => { :format => 'atom' }
-
+  match "/migd", to: "Pages#migd"
   match "/link-up", to: "Pages#link_up"
   match "/r_u_lost", to: "Pages#lost_page"
   match '/terms', to: 'Pages#terms'

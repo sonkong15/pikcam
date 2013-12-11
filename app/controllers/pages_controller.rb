@@ -40,5 +40,8 @@ class PagesController < ApplicationController
 	def leep2
 		
 	end
+	def migd
+		
+	end
 
 end
