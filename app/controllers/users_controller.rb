@@ -45,11 +45,11 @@ class UsersController < ApplicationController
        @friends = Array.new
        if session["fb_access_token"].present?
          @graph = Koala::Facebook::GraphAPI.new(session["fb_access_token"])
-         @profile_image = @graph.get_picture("me")
-         @fbprofile = @graph.get_object("1839323679")
-         @friends = @graph.get_connections("me", "friends")
-         @feed = @graph.get_connections("me", "likes")
-         @search = @graph.search("donnie")
+         #@profile_image = @graph.get_picture("me")
+         #@fbprofile = @graph.get_object("1839323679")
+         #@friends = @graph.get_connections("me", "friends")
+         #@feed = @graph.get_connections("me", "likes")
+         #@search = @graph.search("donnie")
          #@wall = @graph.put_wall_post("Hey, im playing around with my new site pikcam!!!!", {"picture" => @pics}, "")
         #@pic = @graph.put_picture(@pics)
         @pics = "http://s3.amazonaws.com/pik.pikcam.com/273/original.jpg?1352049026"
