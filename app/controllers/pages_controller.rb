@@ -43,5 +43,9 @@ class PagesController < ApplicationController
 	def migd
 		
 	end
+	
+	def play_and_win
+		
+	end
 
 end

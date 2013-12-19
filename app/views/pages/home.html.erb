@@ -91,9 +91,12 @@
 </form>
     </div>
     <div class="span9 mainbox">
+
       <!-- list of pictures -->
+
       <div class="order-pics">
         <div class="rest-of-pic ">
+          <div class="playtowin"><%= link_to image_tag("pikcamgame.jpg", :alt => "humorous pictures and lol photos"), "http://pikcam.com/play-and-win", :title => "humorous pictures and lol photos" %>  </div>
           <% @uploads_rest.each_with_index do |uploads, index| %>
           <H3 class="just-add"><%= link_to truncate( uploads.title, :length => 40), upload_url(uploads) %></H3>
           <div class="home-picturebox" >

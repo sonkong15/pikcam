@@ -104,12 +104,12 @@ label, input, textarea, select{
 .footer{
 	margin: 0px 0px 0px 0px;
 	background-color: #2C2C2C;
-background-image: -moz-linear-gradient(top, #070707, #222);
-background-image: -ms-linear-gradient(top, #070707, #222);
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#070707), to(#222));
-background-image: -webkit-linear-gradient(top, #070707, #222);
-background-image: -o-linear-gradient(top, #070707, #222);
-background-image: linear-gradient(top, #070707, #222);
+background-image: -moz-linear-gradient(top, #070707, #000);
+background-image: -ms-linear-gradient(top, #070707, #000);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#070707), to(#000));
+background-image: -webkit-linear-gradient(top, #070707, #000);
+background-image: -o-linear-gradient(top, #070707, #000);
+background-image: linear-gradient(top, #070707, #000);
 background-repeat: repeat-x;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF333333', endColorstr='#FF222222', GradientType=0);
 -webkit-border-radius: 0px;
@@ -307,7 +307,7 @@ a:hover{
 	width: 628px;
 	background-color: white;
 	padding: 0px 10px 20px 10px;
-	margin: 253px 0px 0px -6px;
+	margin: 330px 0px 0px -6px;
 	border: 10px solid black;
 	-webkit-box-shadow:  -4px 0px 10px 0px rgba(54, 54, 54, 0.66);
 	-moz-box-shadow:  -4px 0px 10px 0px rgba(54, 54, 54, 0.66);
@@ -356,7 +356,7 @@ a:hover{
 	min-width: 1060px;
 	height: 100%;
 	padding: 0px 0px 0px 0px;
-	background-color: rgb(115, 255, 185);
+	background-color: 000;/*rgb(115, 255, 185)*/
 }
 .category{
 	width: 420px;
@@ -500,7 +500,7 @@ width: 143px;
 	position: absolute;
 	display: inline-block;
 	margin: 39px 0px 0px 0px;
-	width: 473px;
+	width: 675px;
 	-moz-border-radius-bottomright: 10px;
 	-moz-border-radius-bottomleft: 27px;
 	border-bottom-right-radius: 0px;
@@ -572,7 +572,7 @@ a.cat:hover {color: #DDD;}
 	
 	padding: 10px;
 	position: absolute;
-	margin: 102px 0px 0px -6px;
+	margin: 178px 0px 0px -6px;
 	width: 708px;
 	color: white; 
 	-moz-border-radius-bottomright: 0px;
@@ -937,7 +937,7 @@ background-image: -webkit-gradient(
 .next-pev{
 	background-color: #73ffb9;
 	width: 313px;
-	margin: 9px 0px 6px 0px;
+	margin: 9px 185px 6px 0px;
 	padding: 5px 0px 7px 0px;
 	float: right;
 	-webkit-box-shadow: -1px 2px 13px 2px rgba(0, 0, 0, 0.66);
@@ -1826,4 +1826,42 @@ border-top-left-radius: 10px;
 }
 .help_me{
 	color: red;
+}
+.playtowin{
+	padding: 5px 0px 0px 7px;
+	margin: 10px 0px 15px 0px;
+	width: 100%;
+	color: white; 
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px; 
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+	background-color: black; 
+	font-size: 27px;
+    -webkit-box-shadow: -12px 1px 22px 1px rgba(255, 0, 0, 1);
+	-moz-box-shadow: -12px 1px 22px 1px rgba(255, 0, 0, 1);
+	box-shadow: -12px 1px 22px 1px rgba(255, 0, 0, 1);
+}
+a{
+	color: #A30D0D;
+}
+.upload-bacgraound2{
+	background-image: image-url("Puppet-adj.jpg");
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:right bottom; 
+}
+.show-container2{
+	padding: 11px 5px 0px 15px;
+clear: both;
+margin: 61px auto;
+margin-bottom: 1px;
+width: 900px;
+min-height: 900px;
+
+
 }
