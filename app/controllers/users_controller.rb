@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @user_uploads = @user.uploads.order("created_at DESC").page(params[:page]).per(15)
     @user_flaggings = Upload.joins(:flaggings).where( "flagger_id = ? AND flag = ?", "#{@user.id}", "like" ).page(params[:page]).per(30)
     my_facebook
+    poll_winners
   end
 
   def new
@@ -40,7 +41,10 @@ class UsersController < ApplicationController
 
       end
     end
-
+    def poll_winners
+      @user = User.find(params[:id]) 
+        @score = @user.uploads
+    end
     def my_facebook
        @friends = Array.new
        if session["fb_access_token"].present?
