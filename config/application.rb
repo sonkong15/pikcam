@@ -55,5 +55,17 @@ module TheBrands
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.action_mailer.default_url_options = { host: "www.pikcam.com" }
+    config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+  :address        => 'smtp.sendgrid.net',
+  :port           => '587',
+  :authentication => :plain,
+  :user_name      => 'app7828144@heroku.com',
+  :password       => 'rdahexhh',
+  :domain         => 'www.pikcam.com',
+  :enable_starttls_auto => true
+}
   end
 end
