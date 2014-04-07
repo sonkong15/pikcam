@@ -25,7 +25,7 @@ group :assets do
   gem "httparty", "~> 0.11.0"
   gem 'bootstrap-sass', '~> 2.1.0.0'
   gem 'simple_form'
-  gem 'authlogic', '~> 3.4.0'
+  gem 'authlogic', ' 3.4.0'
   gem 'client_side_validations'
   gem 'client_side_validations-simple_form'
   gem "paperclip", "~> 3.0"
@@ -66,7 +66,7 @@ gem 'jquery-rails', "~> 2.1.3"
   gem "cancan"
   gem 'bootstrap-sass', '~> 2.1.0.0'
   gem 'simple_form'
-  gem 'authlogic', '~> 3.4.0'
+  gem 'authlogic', ' 3.4.0'
   gem 'client_side_validations'
   gem 'client_side_validations-simple_form'
   gem "paperclip", "~> 3.0"
