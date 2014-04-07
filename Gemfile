@@ -19,7 +19,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
   gem 'thin'
-  #gem 'bcrypt-ruby', '~> 3.0.0'
+  gem 'bcrypt-ruby', '~> 3.0.0'
   gem "friendly_id", "~> 4.0.9"
   gem "cancan"
   gem "httparty", "~> 0.11.0"
@@ -61,7 +61,7 @@ gem 'jquery-rails', "~> 2.1.3"
 # gem 'ruby-debug19', :require => 'ruby-debug'
   group :production do
   gem 'thin'
-  #gem 'bcrypt-ruby', '~> 3.0.0'
+  gem 'bcrypt-ruby', '~> 3.0.0'
   gem "friendly_id", "~> 4.0.9"
   gem "cancan"
   gem 'bootstrap-sass', '~> 2.1.0.0'
